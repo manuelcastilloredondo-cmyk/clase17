@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clase 17</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="author" content="Manuel Castillo Redondo">
+<meta name="description" content="Clase 17, la clase de los chicos. Programación diaria y tareas para el alumnado: talleres, fichas, juegos interactivos y PDF para imprimir.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap">
+<link rel="icon" href="recursos/logo/icono-17.svg" type="image/svg+xml">
+<link rel="stylesheet" href="recursos/comun.css">
+<style>
+  /* Portada diaria: menú bosque · banda salvia · HOY en grande · días anteriores por semana · programación. */
+  .banda { background: var(--salvia); border-bottom: 3px solid var(--bosque); }
+  .banda-dentro { max-width: 1180px; margin: 0 auto; padding-block: 36px 32px; display: grid; gap: 12px; }
+  .banda h1 { font-family: var(--f-titulo); font-weight: 900; letter-spacing: .02em; line-height: .95; font-size: clamp(40px, 7vw, 84px); margin: 0; color: var(--crema); }
+  .banda .antetitulo { font-family: var(--f-titulo); font-weight: 800; font-size: 18px; letter-spacing: .2em; color: var(--bosque); margin: 0; }
+  .banda p { margin: 0; max-width: 58ch; font-weight: 700; color: var(--bosque); font-size: 17px; }
+  .contenido { max-width: 1180px; margin: 0 auto; padding-block: 28px 8px; display: grid; gap: 40px; }
+  .cabeza { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; border-bottom: 3px solid var(--bosque); padding-bottom: 8px; margin-bottom: 16px; }
+  .cabeza h2 { font-family: var(--f-titulo); font-weight: 900; font-size: 28px; letter-spacing: .05em; margin: 0; flex: 1; }
+  .cabeza span { color: var(--suave); font-size: 14px; font-weight: 700; }
+  /* hoy */
+  .hoy { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); background: var(--papel); border: var(--borde); border-radius: var(--radio); overflow: hidden; }
+  @media (max-width: 760px) { .hoy { grid-template-columns: 1fr; } }
+  .hoy .imagen { background: #fff; border-right: var(--borde); display: grid; place-items: center; padding: 24px; }
+  @media (max-width: 760px) { .hoy .imagen { border-right: 0; border-bottom: var(--borde); } }
+  .hoy .imagen img { max-height: 240px; width: auto; }
+  .hoy .texto { padding: 24px; display: grid; gap: 10px; align-content: center; min-width: 0; }
+  .hoy .fecha { font-size: 14px; letter-spacing: .14em; font-weight: 700; color: var(--pino); }
+  .hoy h3 { font-family: var(--f-titulo); font-weight: 900; font-size: clamp(28px, 4vw, 44px); margin: 0; letter-spacing: .03em; line-height: 1.05; }
+  .hoy .tema { color: var(--suave); font-weight: 700; }
+  .hoy .taller { background: var(--menta); color: var(--bosque); border-radius: 999px; padding: 4px 14px; font-weight: 700; font-size: 14px; justify-self: start; }
+  .botones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .botones .btn { font-size: 17px; min-height: 52px; padding: 8px 22px; }
+  /* semanas */
+  .semana + .semana { margin-top: 26px; }
+  .semana h3 { font-family: var(--f-titulo); font-weight: 800; font-size: 18px; letter-spacing: .08em; margin: 0 0 10px; color: var(--pino); }
+  .dias { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+  .dia { background: var(--papel); border: var(--borde); border-radius: var(--radio); display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 10px; padding: 10px; align-items: center; }
+  .dia img { width: 64px; height: 64px; object-fit: contain; }
+  .dia b { display: block; font-family: var(--f-titulo); font-weight: 800; font-size: 15px; letter-spacing: .05em; }
+  .dia small { display: block; color: var(--suave); font-size: 12px; }
+  .dia .enlaces { grid-column: 1 / -1; display: flex; gap: 6px; }
+  .dia .enlaces .btn { flex: 1; justify-content: center; min-height: 40px; font-size: 13px; padding: 4px 8px; }
+  #contenido[data-filtro="juegos"] [data-f="ficha"], #contenido[data-filtro="fichas"] [data-f="juego"] { display: none; }
+  /* esta semana */
+  .semana-actual { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+  @media (max-width: 980px) { .semana-actual { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .semana-actual { grid-template-columns: 1fr; } }
+  .jornada { background: var(--papel); border: var(--borde); border-radius: var(--radio); display: grid; grid-template-rows: auto auto 1fr auto; overflow: hidden; }
+  .jornada .cab { background: var(--bosque); color: var(--crema); padding: 8px 12px; display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+  .jornada .cab b { font-family: var(--f-titulo); font-weight: 900; font-size: 18px; letter-spacing: .06em; }
+  .jornada .cab span { font-family: var(--f-titulo); font-weight: 800; font-size: 22px; }
+  .jornada .img { background: #fff; display: grid; place-items: center; padding: 10px; border-bottom: 2px solid var(--menta); }
+  .jornada .img img { height: 96px; width: auto; }
+  .jornada .info { padding: 10px 12px 4px; display: grid; gap: 4px; align-content: start; min-width: 0; }
+  .jornada .info .juego { font-family: var(--f-titulo); font-weight: 800; font-size: 16px; letter-spacing: .04em; line-height: 1.15; }
+  .jornada .info small { color: var(--suave); font-size: 12px; line-height: 1.35; }
+  .jornada .info .taller { font-size: 11px; font-weight: 700; color: var(--bosque); background: var(--menta); border-radius: 999px; padding: 2px 8px; justify-self: start; }
+  .jornada .enlaces { display: flex; gap: 6px; padding: 8px 12px 12px; }
+  .jornada .enlaces .btn { flex: 1; justify-content: center; min-height: 40px; font-size: 13px; padding: 4px 6px; }
+  .jornada.es-hoy { border-color: var(--salvia); box-shadow: 0 0 0 4px var(--salvia); }
+  .jornada.es-hoy .cab { background: var(--salvia); color: var(--bosque); }
+  .jornada.sin-clase { opacity: .55; grid-template-rows: auto 1fr; }
+  .jornada.sin-clase .vacio-dia { display: grid; place-items: center; padding: 20px; font-weight: 700; color: var(--suave); font-size: 14px; text-align: center; }
+  @media (max-width: 640px) {
+    .jornada { grid-template-columns: 88px minmax(0, 1fr); grid-template-rows: auto auto auto; }
+    .jornada .cab { grid-column: 1 / -1; }
+    .jornada .img { border-bottom: 0; border-right: 2px solid var(--menta); }
+    .jornada .img img { height: 64px; }
+    .jornada .enlaces { grid-column: 1 / -1; padding-top: 0; }
+    .jornada.sin-clase .vacio-dia { grid-column: 1 / -1; padding: 10px; }
+  }
+  /* programación */
+  .prog { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .bloque { background: var(--papel); border: var(--borde); border-radius: var(--radio); padding: 16px; display: grid; gap: 8px; align-content: start; }
+  .bloque .fechas { font-size: 12px; letter-spacing: .14em; color: var(--salvia); font-weight: 700; }
+  .bloque h4 { font-family: var(--f-titulo); font-weight: 900; font-size: 20px; margin: 0; letter-spacing: .04em; }
+  .bloque p { margin: 0; font-size: 14px; color: var(--suave); }
+  .bloque ul { margin: 0; padding-left: 18px; font-size: 14px; }
+  .bloque .casa { font-size: 12px; letter-spacing: .12em; font-weight: 700; color: var(--pino); }
+  .vacio { padding: 24px; border: 2px dashed var(--salvia); border-radius: var(--radio); color: var(--suave); }
+</style>
+</head>
+<body>
+  <nav class="menu" aria-label="Menú principal"><div class="menu-dentro">
+    <a class="marca" href="#inicio"><img src="recursos/logo/logo-horizontal.svg" alt="CLASE 17 · LA CLASE DE LOS CHICOS"></a>
+    <ul>
+      <li><a class="opcion" href="#inicio" data-sec="inicio">INICIO</a></li>
+      <li><a class="opcion" href="#programacion" data-sec="programacion">PROGRAMACIÓN</a></li>
+      <li><a class="opcion" href="#juegos" data-sec="juegos">JUEGOS</a></li>
+      <li><a class="opcion" href="#fichas" data-sec="fichas">FICHAS</a></li>
+    </ul>
+  </div></nav>
+
+  <header class="banda gutter" id="inicio">
+    <div class="banda-dentro">
+      <p class="antetitulo">La clase de los chicos</p>
+      <h1>Clase 17</h1>
+      <p>Programación diaria y tareas para el alumnado: talleres, fichas, juegos interactivos y PDF para imprimir. Todo con pictogramas, para trabajar en clase y en casa.</p>
+    </div>
+  </header>
+
+  <div class="contenido gutter" id="contenido">
+    <section aria-labelledby="t-hoy">
+      <div class="cabeza"><h2 id="t-hoy">Hoy</h2><span id="centro"></span></div>
+      <div id="hoy"><p class="vacio">Cargando…</p></div>
+    </section>
+
+    <section aria-labelledby="t-semana">
+      <div class="cabeza"><h2 id="t-semana">Esta semana</h2><span id="tema-semana"></span></div>
+      <div class="semana-actual" id="semana"></div>
+    </section>
+
+    <section aria-labelledby="t-lista">
+      <div class="cabeza"><h2 id="t-lista">Semanas anteriores</h2><a href="#inicio" id="ver-todo" hidden>Ver todo</a></div>
+      <div id="lista"></div>
+    </section>
+
+    <section id="programacion" aria-labelledby="t-prog">
+      <div class="cabeza"><h2 id="t-prog">Programación del mes</h2><span id="mes"></span></div>
+      <div class="prog" id="prog"></div>
+    </section>
+
+    <footer class="creditos">
+      Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.<br>
+      Web educativa sin ánimo de lucro. No recoge datos personales.
+    </footer>
+  </div>
+
+<script>
+/* VISTA_PREVIA = true muestra todo el mes (para revisar); en la web publicada va en false. */
+const VISTA_PREVIA = false;
+const HOY_FIJO = null; // 'AAAA-MM-DD' para simular otro día al revisar
+const DIAS = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
+const MESES = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const hoyISO = HOY_FIJO || iso(new Date());
+function fechaTxt(f) { const [a, m, d] = f.split('-').map(Number); return `${DIAS[new Date(a, m - 1, d).getDay()]} ${d} DE ${MESES[m - 1]}`; }
+const $ = id => document.getElementById(id);
+
+function seccion() {
+  const s = (location.hash || '#inicio').slice(1);
+  const filtro = s === 'juegos' || s === 'fichas' ? s : '';
+  const cont = $('contenido');
+  if (filtro) cont.dataset.filtro = filtro; else delete cont.dataset.filtro;
+  $('t-lista').textContent = filtro === 'juegos' ? 'Todos los juegos' : filtro === 'fichas' ? 'Todas las fichas' : (VISTA_PREVIA ? 'Resto del mes' : 'Semanas anteriores');
+  $('ver-todo').hidden = !filtro;
+  document.querySelectorAll('.menu a.opcion').forEach(a => a.dataset.sec === (s || 'inicio') ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+  if (filtro) $('t-lista').scrollIntoView({ block: 'start' });
+}
+addEventListener('hashchange', seccion);
+
+Promise.all([
+  fetch('actividades/catalogo.json').then(r => r.json()),
+  fetch(`programacion/${hoyISO.slice(0, 7)}.json`).then(r => r.ok ? r.json() : null).catch(() => null)
+]).then(([cat, prog]) => {
+  const visibles = cat.filter(a => VISTA_PREVIA || a.fecha <= hoyISO).sort((a, b) => b.fecha.localeCompare(a.fecha));
+  const hoy = visibles.find(a => a.fecha === hoyISO) || visibles[0];
+  if (hoy) {
+    $('centro').textContent = hoy.centro;
+    const base = `actividades/${hoy.id}/`;
+    $('hoy').innerHTML = `<article class="hoy">
+      <div class="imagen"><img class="picto" src="${hoy.portada}" alt=""></div>
+      <div class="texto">
+        <div class="fecha">${hoy.fecha === hoyISO ? 'HOY · ' : ''}${fechaTxt(hoy.fecha)}</div>
+        <h3>${hoy.titulo}</h3>
+        <div class="tema">${hoy.tema} · FICHA: ${hoy.ficha_tipo}</div>
+        ${hoy.taller ? `<span class="taller">TALLER: ${hoy.taller}</span>` : ''}
+        <div class="botones">
+          <a class="btn btn-primario" href="${base + hoy.juego}">Jugar</a>
+          <a class="btn" href="${base + hoy.ficha}">Ficha</a>
+        </div>
+      </div></article>`;
+  } else { $('hoy').innerHTML = '<p class="vacio">Pronto habrá actividades.</p>'; }
+
+  // esta semana: de lunes a viernes, con todos sus días aunque aún no hayan llegado
+  const [ha, hm, hd] = hoyISO.split('-').map(Number);
+  const ref = new Date(ha, hm - 1, hd);
+  const lunes = new Date(ref); lunes.setDate(ref.getDate() - ((ref.getDay() + 6) % 7));
+  const semana = Array.from({ length: 5 }, (_, i) => { const d = new Date(lunes); d.setDate(lunes.getDate() + i); return iso(d); });
+  const porFecha = Object.fromEntries(cat.map(a => [a.fecha, a]));
+  const temas = [...new Set(semana.map(f => porFecha[f]?.tema).filter(Boolean))];
+  $('tema-semana').textContent = temas.join(' · ');
+  $('semana').innerHTML = semana.map(f => {
+    const a = porFecha[f]; const [, , d] = f.split('-').map(Number);
+    const nombre = DIAS[new Date(f + 'T12:00').getDay()];
+    const cab = `<div class="cab"><b>${f === hoyISO ? 'HOY · ' : ''}${nombre}</b><span>${d}</span></div>`;
+    if (!a) return `<article class="jornada sin-clase">${cab}<div class="vacio-dia">SIN CLASE</div></article>`;
+    const base = `actividades/${a.id}/`;
+    return `<article class="jornada${f === hoyISO ? ' es-hoy' : ''}">${cab}
+      <div class="img"><img class="picto" src="${a.portada}" alt=""></div>
+      <div class="info"><div class="juego">${a.titulo}</div><small>FICHA: ${a.ficha_tipo}</small>
+        ${a.taller ? `<span class="taller">TALLER: ${a.taller}</span>` : ''}</div>
+      <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base + a.juego}">Juego</a>
+        <a class="btn" data-f="ficha" href="${base + a.ficha}">Ficha</a></div></article>`;
+  }).join('');
+
+  const resto = visibles.filter(a => !semana.includes(a.fecha));
+  if (!resto.length) { $('lista').innerHTML = '<p class="vacio">Aquí irán apareciendo las semanas anteriores.</p>'; }
+  else {
+    const grupos = {};
+    resto.forEach(a => (grupos[a.tema] ||= []).push(a));
+    $('lista').innerHTML = Object.entries(grupos).map(([tema, dias]) => `
+      <div class="semana"><h3>${tema}</h3><div class="dias">${dias.map(a => {
+        const base = `actividades/${a.id}/`;
+        return `<div class="dia"><img class="picto" src="${a.portada}" alt="">
+          <div><b>${a.titulo}</b><small>${fechaTxt(a.fecha)}</small></div>
+          <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base + a.juego}">Juego</a>
+          <a class="btn" data-f="ficha" href="${base + a.ficha}">Ficha</a></div></div>`;
+      }).join('')}</div></div>`).join('');
+  }
+
+  if (prog) {
+    const [a, m] = prog.mes.split('-').map(Number);
+    $('mes').textContent = `${MESES[m - 1]} ${a} · ${prog.centro_interes.toUpperCase()}`;
+    $('prog').innerHTML = prog.semanas.map(s => {
+      const f1 = s.dias[0].split('-')[2] * 1, f2 = s.dias[s.dias.length - 1].split('-')[2] * 1;
+      return `<div class="bloque"><div class="fechas">DEL ${f1} AL ${f2} DE ${MESES[m - 1]}</div><h4>${s.tema}</h4><p>${s.objetivo}</p>
+        <div class="casa">PARA REFORZAR EN CASA</div><ul>${s.casa.map(c => `<li>${c}</li>`).join('')}</ul></div>`;
+    }).join('');
+  }
+  seccion();
+}).catch(() => { $('hoy').innerHTML = '<p class="vacio">No se han podido cargar las actividades.</p>'; });
+</script>
+</body>
+</html>

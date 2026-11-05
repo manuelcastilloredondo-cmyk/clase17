@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ficha · Clase 17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap">
+<link rel="icon" href="../../recursos/logo/icono-17.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../recursos/comun.css">
+<style>
+  /* Ficha del día: la página A4 dibujada en la web + botón para descargar e imprimir. */
+  main { max-width: 900px; margin: 0 auto; }
+  .fecha-dia { font-size: 14px; letter-spacing: .14em; color: var(--suave); font-weight: 700; }
+  .hoja { background: #fff; border: var(--borde); border-radius: var(--radio); padding: 10px; display: grid; place-items: center; min-height: 300px; }
+  .hoja canvas { width: 100%; height: auto; display: block; }
+  .acciones { display: flex; gap: 10px; flex-wrap: wrap; padding-block: 16px; }
+  .acciones .btn { font-size: 17px; min-height: 52px; padding: 8px 22px; }
+  .aviso { color: var(--suave); font-size: 13px; margin: 0; }
+</style>
+</head>
+<body>
+  <nav class="menu" aria-label="Menú principal"><div class="menu-dentro">
+    <a class="marca" href="../../"><img src="../../recursos/logo/logo-horizontal.svg" alt="CLASE 17 · LA CLASE DE LOS CHICOS"></a>
+    <ul><li><a class="opcion" href="../../">INICIO</a></li><li><a class="opcion" href="../../#programacion">PROGRAMACIÓN</a></li><li><a class="opcion" href="../../#juegos">JUEGOS</a></li><li><a class="opcion" href="../../#fichas" aria-current="page">FICHAS</a></li></ul>
+  </div></nav>
+
+  <main class="gutter">
+    <header class="barra">
+      <div style="flex:1;min-width:0">
+        <div class="fecha-dia" id="fecha"></div>
+        <h1 id="titulo" style="margin:0">Ficha del día</h1>
+      </div>
+    </header>
+    <div class="hoja" id="hoja"><p class="aviso">Cargando la ficha…</p></div>
+    <div class="acciones">
+      <a class="btn btn-primario" href="ficha.pdf" download>Descargar PDF</a>
+      <a class="btn" href="juego.html">Ir al juego</a>
+    </div>
+    <p class="aviso">Para imprimir: descarga el PDF e imprímelo en A4, a una cara.</p>
+    <footer class="creditos">Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.</footer>
+  </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
+<script>
+const DIAS = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
+const MESES = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+fetch('datos.json').then(r => r.json()).then(d => {
+  const [a, m, dd] = d.fecha.split('-').map(Number);
+  document.getElementById('fecha').textContent = `${DIAS[new Date(a, m - 1, dd).getDay()]} ${dd} DE ${MESES[m - 1]} · ${d.tema}`;
+  if (d.ficha_titulo) { document.getElementById('titulo').textContent = d.ficha_titulo; document.title = d.ficha_titulo + ' · Clase 17'; }
+}).catch(() => {});
+
+async function pintar() {
+  const hoja = document.getElementById('hoja');
+  try {
+    // el worker ya está cargado por <script>: pdf.js lo usa en la propia página
+    const pdf = await pdfjsLib.getDocument({ url: 'ficha.pdf' }).promise;
+    hoja.innerHTML = '';
+    for (let n = 1; n <= pdf.numPages; n++) {
+      const pagina = await pdf.getPage(n);
+      const escala = Math.min(3, (hoja.clientWidth * (devicePixelRatio || 1)) / pagina.getViewport({ scale: 1 }).width);
+      const vista = pagina.getViewport({ scale: escala });
+      const lienzo = document.createElement('canvas');
+      lienzo.width = vista.width; lienzo.height = vista.height;
+      hoja.appendChild(lienzo);
+      await pagina.render({ canvasContext: lienzo.getContext('2d'), viewport: vista }).promise;
+    }
+  } catch (e) {
+    hoja.innerHTML = '<p class="aviso">No se ha podido mostrar la ficha aquí. Usa el botón «Descargar PDF».</p>';
+  }
+}
+pintar();
+</script>
+</body>
+</html>

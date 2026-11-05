@@ -1,0 +1,134 @@
+{
+  "fecha": "2026-11-12",
+  "tema": "LA DUCHA Y LOS DIENTES",
+  "juego": "ordena",
+  "titulo": "ORDENA LOS PASOS: LA DUCHA Y LOS DIENTES",
+  "ficha_titulo": "ORDENA LOS PASOS: LA DUCHA Y LOS DIENTES",
+  "elementos": [
+    {
+      "palabra": "ALBORNOZ",
+      "voz": "el albornoz",
+      "picto": "../../recursos/pictos/5369.png"
+    },
+    {
+      "palabra": "SECADOR",
+      "voz": "el secador",
+      "picto": "../../recursos/pictos/2560.png"
+    },
+    {
+      "palabra": "DUCHA",
+      "voz": "la ducha",
+      "picto": "../../recursos/pictos/2370.png"
+    },
+    {
+      "palabra": "CHAMPÚ",
+      "voz": "el champú",
+      "picto": "../../recursos/pictos/2699.png"
+    },
+    {
+      "palabra": "GEL",
+      "voz": "el gel",
+      "picto": "../../recursos/pictos/3335.png"
+    },
+    {
+      "palabra": "ESPONJA",
+      "voz": "la esponja",
+      "picto": "../../recursos/pictos/2749.png"
+    },
+    {
+      "palabra": "CEPILLO DE DIENTES",
+      "voz": "el cepillo de dientes",
+      "picto": "../../recursos/pictos/2694.png"
+    },
+    {
+      "palabra": "PASTA DE DIENTES",
+      "voz": "la pasta de dientes",
+      "picto": "../../recursos/pictos/2858.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Lavarse los dientes",
+    "lista": [
+      {
+        "palabra": "COGER EL CEPILLO",
+        "voz": "coger el cepillo",
+        "picto": "../../recursos/pictos/2694.png"
+      },
+      {
+        "palabra": "PONER PASTA",
+        "voz": "poner la pasta",
+        "picto": "../../recursos/pictos/30087.png"
+      },
+      {
+        "palabra": "CEPILLAR",
+        "voz": "cepillar los dientes",
+        "picto": "../../recursos/pictos/31880.png"
+      },
+      {
+        "palabra": "ENJUAGAR",
+        "voz": "enjuagar la boca",
+        "picto": "../../recursos/pictos/30032.png"
+      },
+      {
+        "palabra": "SECAR LA BOCA",
+        "voz": "secar la boca",
+        "picto": "../../recursos/pictos/2593.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Es para los dientes o para el pelo?",
+    "elementos": [
+      {
+        "palabra": "CEPILLO DE DIENTES",
+        "voz": "el cepillo de dientes",
+        "picto": "../../recursos/pictos/2694.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "PASTA DE DIENTES",
+        "voz": "la pasta de dientes",
+        "picto": "../../recursos/pictos/2858.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "VASO",
+        "voz": "el vaso",
+        "picto": "../../recursos/pictos/2610.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "CHAMPÚ",
+        "voz": "el champú",
+        "picto": "../../recursos/pictos/2699.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "PEINE",
+        "voz": "el peine",
+        "picto": "../../recursos/pictos/2852.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "SECADOR",
+        "voz": "el secador",
+        "picto": "../../recursos/pictos/2560.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "CEPILLO DEL PELO",
+        "voz": "el cepillo del pelo",
+        "picto": "../../recursos/pictos/2695.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "PARA LOS DIENTES",
+      "picto": "../../recursos/pictos/2663.png"
+    },
+    "b": {
+      "nombre": "PARA EL PELO",
+      "picto": "../../recursos/pictos/2851.png"
+    }
+  }
+}

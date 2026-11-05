@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juego · Clase 17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap">
+<link rel="icon" href="../../recursos/logo/icono-17.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../recursos/comun.css">
+<style>
+  /* Juego del día: una plantilla, cinco mecánicas (toca, une, memoria, ordena, clasifica). */
+  body { display: flex; flex-direction: column; min-height: 100%; }
+  main { flex: 1; display: flex; flex-direction: column; width: 100%; max-width: 1280px; margin: 0 auto; }
+  .fecha-dia { font-size: 14px; letter-spacing: .14em; color: var(--suave); font-weight: 700; }
+  .consigna {
+    display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap;
+    background: var(--papel); border: var(--borde); border-radius: var(--radio); padding: 12px 18px; margin-bottom: 18px;
+  }
+  .consigna p { margin: 0; font-family: var(--f-titulo); font-weight: 800; letter-spacing: .04em; font-size: clamp(22px, 3.8vw, 48px); text-align: center; text-wrap: balance; }
+  .consigna strong { color: var(--pino); }
+  .altavoz { width: 64px; height: 64px; flex: none; border-radius: 50%; border: none; background: var(--pino); color: var(--crema); font-size: 28px; }
+  .zona { flex: 1; display: flex; flex-direction: column; gap: 16px; }
+  .carta {
+    background: var(--papel); border: var(--borde); border-radius: var(--radio); padding: 10px;
+    display: grid; place-items: center; gap: 4px; width: 100%; max-width: 100%; transition: transform .15s, background .15s;
+  }
+  .carta img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+  .carta .nombre { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(13px, 1.6vw, 20px); letter-spacing: .04em; text-align: center; }
+  .carta.bien { border-color: var(--bien); background: var(--bien-fondo); animation: saltar .5s; }
+  .carta.mal { border-color: var(--error); animation: sacudir .4s; }
+  .rejilla { display: grid; gap: clamp(10px, 1.8vw, 24px); align-content: center; flex: 1; }
+  .puntos { display: flex; justify-content: center; gap: 10px; padding-block: 8px; }
+  .punto { width: 20px; height: 20px; border-radius: 50%; border: 3px solid var(--bosque); }
+  .punto.hecho { background: var(--bien); border-color: var(--bien); }
+  .controles { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .controles .btn[aria-pressed="true"] { background: var(--bosque); color: var(--crema); }
+  /* une */
+  .tablero { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(14px, 4vw, 56px); }
+  .columna { display: grid; gap: 12px; }
+  .pieza { border: var(--borde); border-radius: var(--radio); background: var(--papel); min-height: clamp(90px, 15vh, 150px); padding: 8px; display: flex; align-items: center; justify-content: center; }
+  .pieza img { height: clamp(70px, 13vh, 130px); width: auto; }
+  .pieza.palabra { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(16px, 2.6vw, 28px); letter-spacing: .04em; text-align: center; }
+  .pieza[aria-pressed="true"] { outline: 6px solid var(--salvia); outline-offset: 2px; }
+  .pieza.hecha { border-color: var(--bien); background: var(--bien-fondo); opacity: .75; }
+  .pieza.mal { border-color: var(--error); animation: sacudir .4s; }
+  /* memoria */
+  .memo { perspective: 900px; aspect-ratio: 1; border: none; background: none; padding: 0; }
+  .memo .cara { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform .35s; }
+  .memo.girada .cara, .memo.hecha .cara { transform: rotateY(180deg); }
+  .memo .frente, .memo .dorso { position: absolute; inset: 0; backface-visibility: hidden; border: var(--borde); border-radius: var(--radio); display: grid; place-items: center; }
+  .memo .dorso { background: var(--salvia); }
+  .memo .dorso img { width: 52%; }
+  .memo .frente { background: var(--papel); transform: rotateY(180deg); padding: 8px; }
+  .memo .frente img { width: 82%; aspect-ratio: 1; object-fit: contain; }
+  .memo.hecha .frente { border-color: var(--bien); background: var(--bien-fondo); }
+  /* ordena */
+  .huecos { display: grid; gap: 12px; }
+  .hueco { border: 3px dashed var(--salvia); border-radius: var(--radio); aspect-ratio: 1; display: grid; place-items: center; position: relative; background: var(--papel); }
+  .hueco .num { position: absolute; top: 6px; left: 10px; font-family: var(--f-titulo); font-weight: 900; font-size: 22px; color: var(--salvia); }
+  .hueco img { width: 80%; aspect-ratio: 1; object-fit: contain; }
+  .hueco.lleno { border-style: solid; border-color: var(--bien); background: var(--bien-fondo); }
+  /* clasifica */
+  .cajas { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 3vw, 40px); }
+  .caja { border: var(--borde); border-radius: var(--radio); background: var(--papel); padding: 12px; min-height: 220px; display: grid; grid-template-rows: auto 1fr; gap: 8px; }
+  .caja .cab { display: flex; align-items: center; gap: 12px; font-family: var(--f-titulo); font-weight: 900; font-size: clamp(16px, 2.4vw, 28px); letter-spacing: .04em; }
+  .caja .cab img { width: clamp(56px, 7vw, 96px); background: #fff; border-radius: 10px; }
+  .caja .dentro { display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start; }
+  .caja .dentro img { width: 64px; background: #fff; border-radius: 8px; }
+  .caja.mal { border-color: var(--error); animation: sacudir .4s; }
+  .actual { display: grid; place-items: center; }
+  .actual .carta { width: min(260px, 60vw); }
+  .final { flex: 1; display: grid; place-items: center; text-align: center; gap: 18px; align-content: center; padding-block: 40px; }
+  .final h2 { font-family: var(--f-titulo); font-weight: 900; font-size: clamp(44px, 8vw, 96px); margin: 0; color: var(--bien); }
+  @media (max-width: 600px) { .pieza img { height: 64px; } .pieza { min-height: 80px; } }
+</style>
+</head>
+<body>
+  <nav class="menu" aria-label="Menú principal"><div class="menu-dentro">
+    <a class="marca" href="../../"><img src="../../recursos/logo/logo-horizontal.svg" alt="CLASE 17 · LA CLASE DE LOS CHICOS"></a>
+    <ul><li><a class="opcion" href="../../">INICIO</a></li><li><a class="opcion" href="../../#programacion">PROGRAMACIÓN</a></li><li><a class="opcion" href="../../#juegos" aria-current="page">JUEGOS</a></li><li><a class="opcion" href="../../#fichas">FICHAS</a></li></ul>
+  </div></nav>
+
+  <main class="gutter">
+    <header class="barra">
+      <div style="flex:1;min-width:0">
+        <div class="fecha-dia" id="fecha"></div>
+        <h1 id="titulo" style="margin:0">Juego del día</h1>
+      </div>
+      <div class="controles" id="controles"></div>
+    </header>
+    <div class="consigna">
+      <p id="frase">Cargando…</p>
+      <button class="altavoz" id="repetir" aria-label="Escuchar otra vez">🔊</button>
+    </div>
+    <div class="zona" id="zona"></div>
+    <section class="final" id="final" hidden>
+      <h2>¡Muy bien!</h2>
+      <button class="btn btn-primario" id="otra" style="font-size:22px;padding:14px 30px">Jugar otra vez</button>
+    </section>
+    <footer class="creditos">Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.</footer>
+  </main>
+
+<script src="../../recursos/comun.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+let D, frase = '';
+const dias = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
+const meses = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+
+function decirConsigna(html, voz) { $('frase').innerHTML = html; frase = voz; Aula.decir(voz); }
+function img(src, alt = '') { return `<img class="picto" src="${src}" alt="${alt}">`; }
+function sacudir(el) { el.classList.remove('mal'); void el.offsetWidth; el.classList.add('mal'); }
+function terminar() { $('zona').hidden = true; $('final').hidden = false; Aula.decir('¡Muy bien! Has terminado'); }
+function limpiar() { $('zona').hidden = false; $('final').hidden = true; $('zona').innerHTML = ''; $('controles').innerHTML = ''; }
+
+/* ── TOCA: la voz pide un picto y hay que tocarlo ── */
+function toca(nivel = 4) {
+  limpiar();
+  const RONDAS = 8; let ronda = 0, bloqueado = false, objetivo;
+  [2, 4, 6].forEach(n => {
+    const b = document.createElement('button'); b.className = 'btn'; b.textContent = n;
+    b.setAttribute('aria-pressed', n === nivel); b.setAttribute('aria-label', n + ' pictos');
+    b.onclick = () => toca(n); $('controles').appendChild(b);
+  });
+  const rej = document.createElement('div'); rej.className = 'rejilla';
+  rej.style.gridTemplateColumns = `repeat(${nivel === 6 ? 3 : nivel}, minmax(0, 1fr))`;
+  if (innerWidth < 640 && nivel > 2) rej.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
+  const pts = document.createElement('div'); pts.className = 'puntos';
+  $('zona').append(rej, pts);
+  const orden = Aula.barajar(D.elementos).concat(Aula.barajar(D.elementos)).slice(0, RONDAS);
+  function marcar() { pts.innerHTML = Array.from({ length: RONDAS }, (_, i) => `<span class="punto${i < ronda ? ' hecho' : ''}"></span>`).join(''); }
+  function nueva() {
+    bloqueado = false; objetivo = orden[ronda];
+    const otros = Aula.barajar(D.elementos.filter(e => e !== objetivo)).slice(0, nivel - 1);
+    rej.innerHTML = '';
+    Aula.barajar([objetivo, ...otros]).forEach(e => {
+      const b = document.createElement('button'); b.className = 'carta'; b.setAttribute('aria-label', e.palabra);
+      b.innerHTML = img(e.picto, e.palabra) + `<span class="nombre">${e.palabra}</span>`;
+      b.onclick = () => {
+        if (bloqueado) return;
+        if (e === objetivo) {
+          bloqueado = true; b.classList.add('bien'); Aula.decir('¡Muy bien! ' + e.voz); ronda++; marcar();
+          setTimeout(() => ronda >= RONDAS ? terminar() : nueva(), 1500);
+        } else { sacudir(b); Aula.decir('Prueba otra vez'); }
+      };
+      rej.appendChild(b);
+    });
+    marcar();
+    decirConsigna(`TOCA <strong>${objetivo.voz.toUpperCase()}</strong>`, 'Toca ' + objetivo.voz);
+  }
+  nueva();
+}
+
+/* ── UNE: tocar un dibujo y luego su nombre ── */
+function une() {
+  limpiar();
+  const grupos = []; const todos = Aula.barajar(D.elementos);
+  for (let i = 0; i < todos.length; i += 4) grupos.push(todos.slice(i, i + 4));
+  let g = 0, elegido = null;
+  decirConsigna('TOCA UN DIBUJO Y DESPUÉS <strong>SU NOMBRE</strong>', 'Toca un dibujo y después su nombre');
+  const tab = document.createElement('div'); tab.className = 'tablero';
+  const izq = document.createElement('div'); izq.className = 'columna';
+  const der = document.createElement('div'); der.className = 'columna';
+  tab.append(izq, der); $('zona').appendChild(tab);
+  function ronda() {
+    izq.innerHTML = ''; der.innerHTML = ''; elegido = null;
+    Aula.barajar(grupos[g]).forEach(e => {
+      const b = document.createElement('button'); b.className = 'pieza dibujo'; b.innerHTML = img(e.picto);
+      b.setAttribute('aria-label', e.palabra); b.setAttribute('aria-pressed', 'false');
+      b.onclick = () => { if (b.classList.contains('hecha')) return; izq.querySelectorAll('.pieza').forEach(x => x.setAttribute('aria-pressed', 'false')); b.setAttribute('aria-pressed', 'true'); elegido = { b, e }; };
+      izq.appendChild(b);
+    });
+    Aula.barajar(grupos[g]).forEach(e => {
+      const b = document.createElement('button'); b.className = 'pieza palabra'; b.textContent = e.palabra;
+      b.onclick = () => {
+        if (b.classList.contains('hecha')) return;
+        if (!elegido) { Aula.decir(e.voz); return; }
+        if (elegido.e === e) {
+          Aula.decir('¡Bien! ' + e.voz);
+          [b, elegido.b].forEach(x => { x.classList.add('hecha'); x.setAttribute('aria-pressed', 'false'); }); elegido = null;
+          if (!der.querySelector('.pieza:not(.hecha)')) { g++; setTimeout(() => g >= grupos.length ? terminar() : ronda(), 1100); }
+        } else { sacudir(b); Aula.decir('Prueba otra vez'); }
+      };
+      der.appendChild(b);
+    });
+  }
+  ronda();
+}
+
+/* ── MEMORIA: encontrar las parejas ── */
+function memoria(pares = 4) {
+  limpiar();
+  [4, 6].forEach(n => {
+    const b = document.createElement('button'); b.className = 'btn'; b.textContent = n + ' parejas';
+    b.setAttribute('aria-pressed', n === pares); b.onclick = () => memoria(n); $('controles').appendChild(b);
+  });
+  decirConsigna('BUSCA <strong>LAS PAREJAS</strong>', 'Busca las parejas');
+  const elegidos = Aula.barajar(D.elementos).slice(0, pares);
+  const cartas = Aula.barajar([...elegidos, ...elegidos]);
+  const rej = document.createElement('div'); rej.className = 'rejilla';
+  const cols = innerWidth < 640 ? (pares === 4 ? 4 : 3) : (pares === 4 ? 4 : 6);
+  rej.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+  rej.style.maxWidth = pares === 4 ? '760px' : '1100px'; rej.style.margin = '0 auto'; rej.style.width = '100%';
+  $('zona').appendChild(rej);
+  let abiertas = [], hechas = 0, bloqueo = false;
+  cartas.forEach(e => {
+    const b = document.createElement('button'); b.className = 'memo'; b.setAttribute('aria-label', 'Carta');
+    b.innerHTML = `<div class="cara"><div class="dorso"><img src="../../recursos/logo/icono-17.svg" alt=""></div><div class="frente">${img(e.picto, e.palabra)}</div></div>`;
+    b.onclick = () => {
+      if (bloqueo || b.classList.contains('girada') || b.classList.contains('hecha')) return;
+      b.classList.add('girada'); Aula.decir(e.voz); abiertas.push({ b, e });
+      if (abiertas.length === 2) {
+        const [x, y] = abiertas; abiertas = [];
+        if (x.e === y.e) {
+          setTimeout(() => { x.b.classList.add('hecha'); y.b.classList.add('hecha'); Aula.decir('¡Pareja! ' + e.voz); hechas++; if (hechas === pares) setTimeout(terminar, 1200); }, 500);
+        } else {
+          bloqueo = true; setTimeout(() => { x.b.classList.remove('girada'); y.b.classList.remove('girada'); bloqueo = false; }, 1300);
+        }
+      }
+    };
+    rej.appendChild(b);
+  });
+}
+
+/* ── ORDENA: poner los pasos en orden (solo acepta el paso correcto) ── */
+function ordena() {
+  limpiar();
+  const pasos = D.pasos.lista; let siguiente = 0;
+  decirConsigna(`<strong>${D.pasos.titulo.toUpperCase()}</strong>: ¿QUÉ VA PRIMERO?`, D.pasos.titulo + '. ¿Qué va primero?');
+  const cols = `repeat(${pasos.length}, minmax(0, 1fr))`;
+  const ancho = `min(100%, ${pasos.length * 190}px)`;
+  const huecos = document.createElement('div'); huecos.className = 'huecos'; huecos.style.gridTemplateColumns = cols;
+  huecos.style.width = ancho; huecos.style.margin = '0 auto';
+  pasos.forEach((p, i) => { const h = document.createElement('div'); h.className = 'hueco'; h.innerHTML = `<span class="num">${i + 1}</span>`; huecos.appendChild(h); });
+  const piezas = document.createElement('div'); piezas.className = 'rejilla'; piezas.style.gridTemplateColumns = cols; piezas.style.flex = 'none';
+  piezas.style.width = ancho; piezas.style.margin = '0 auto';
+  Aula.barajar(pasos).forEach(p => {
+    const b = document.createElement('button'); b.className = 'carta'; b.setAttribute('aria-label', p.palabra);
+    b.innerHTML = img(p.picto, p.palabra) + `<span class="nombre">${p.palabra}</span>`;
+    b.onclick = () => {
+      if (p === pasos[siguiente]) {
+        const h = huecos.children[siguiente]; h.classList.add('lleno'); h.insertAdjacentHTML('beforeend', img(p.picto, p.palabra));
+        b.style.visibility = 'hidden'; Aula.decir(`${siguiente + 1}. ${p.voz}`); siguiente++;
+        if (siguiente === pasos.length) setTimeout(terminar, 1400);
+        else setTimeout(() => decirConsigna(`¿Y DESPUÉS? <strong>PASO ${siguiente + 1}</strong>`, '¿Y después?'), 1300);
+      } else { sacudir(b); Aula.decir('Ese no va ahora'); }
+    };
+    piezas.appendChild(b);
+  });
+  $('zona').append(huecos, piezas);
+}
+
+/* ── CLASIFICA: llevar cada picto a su caja ── */
+function clasifica() {
+  limpiar();
+  const C = D.clasifica; const cola = Aula.barajar(C.elementos); let i = 0;
+  const cajas = document.createElement('div'); cajas.className = 'cajas';
+  const dentro = {};
+  ['a', 'b'].forEach(k => {
+    const c = document.createElement('button'); c.className = 'caja'; c.setAttribute('aria-label', C[k].nombre);
+    c.innerHTML = `<div class="cab">${img(C[k].picto)}<span>${C[k].nombre}</span></div><div class="dentro"></div>`;
+    dentro[k] = c.querySelector('.dentro');
+    c.onclick = () => {
+      const e = cola[i]; if (!e) return;
+      if (e.grupo === k) {
+        dentro[k].insertAdjacentHTML('beforeend', img(e.picto, e.palabra)); Aula.decir('¡Bien! ' + e.voz); i++;
+        if (i >= cola.length) setTimeout(terminar, 1200); else mostrar();
+      } else { sacudir(c); Aula.decir('Prueba en la otra caja'); }
+    };
+    cajas.appendChild(c);
+  });
+  const actual = document.createElement('div'); actual.className = 'actual';
+  function mostrar() {
+    const e = cola[i];
+    actual.innerHTML = `<div class="carta">${img(e.picto, e.palabra)}<span class="nombre">${e.palabra}</span></div>`;
+    decirConsigna(`${C.pregunta.toUpperCase()} <strong>${e.palabra}</strong>`, `${C.pregunta} ${e.voz}`);
+  }
+  $('zona').append(actual, cajas); mostrar();
+}
+
+const juegos = { toca, une, memoria, ordena, clasifica };
+$('repetir').onclick = () => frase && Aula.decir(frase);
+$('otra').onclick = () => juegos[D.juego]();
+Aula.datos().then(d => {
+  D = d;
+  const [a, m, dd] = d.fecha.split('-').map(Number); const f = new Date(a, m - 1, dd);
+  $('fecha').textContent = `${dias[f.getDay()]} ${dd} DE ${meses[m - 1]} · ${d.tema}`;
+  $('titulo').textContent = d.titulo; document.title = d.titulo + ' · Clase 17';
+  juegos[d.juego]();
+}).catch(() => { $('frase').textContent = 'No se ha podido cargar el juego.'; });
+</script>
+</body>
+</html>

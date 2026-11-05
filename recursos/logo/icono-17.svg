@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Clase 17">
+<title>CLASE 17 · LA CLASE DE LOS CHICOS</title>
+<circle cx="150" cy="150" r="138" fill="#1c3d1f"/>
+<circle cx="150" cy="150" r="112" fill="#6b9a67" stroke="#f3efd8" stroke-width="12"/>
+<path transform="translate(6 6) translate(85.16 202.80) skewX(-9)" d="M16.4 -66.08 0.64 -58.4V-87.52L33.68 -105.60000000000001H47.36V0.0H16.4ZM59.12 -105.60000000000001H140.4V-85.28L91.84 0.0H57.84L104.32 -78.88H59.12Z" fill="#1c3d1f" stroke="#1c3d1f" stroke-width="10" stroke-linejoin="round"/>
+<path transform="translate(85.16 202.80) skewX(-9)" d="M16.4 -66.08 0.64 -58.4V-87.52L33.68 -105.60000000000001H47.36V0.0H16.4ZM59.12 -105.60000000000001H140.4V-85.28L91.84 0.0H57.84L104.32 -78.88H59.12Z" fill="#f3efd8" stroke="#1c3d1f" stroke-width="9" stroke-linejoin="round" paint-order="stroke"/>
+</svg>

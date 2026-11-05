@@ -1,0 +1,140 @@
+{
+  "fecha": "2026-11-05",
+  "tema": "MANOS Y CARA LIMPIAS",
+  "juego": "ordena",
+  "titulo": "ORDENA LOS PASOS: MANOS Y CARA LIMPIAS",
+  "ficha_titulo": "ORDENA LOS PASOS: MANOS Y CARA LIMPIAS",
+  "elementos": [
+    {
+      "palabra": "LAVAR LAS MANOS",
+      "voz": "lavar las manos",
+      "picto": "../../recursos/pictos/8975.png"
+    },
+    {
+      "palabra": "LAVAR LA CARA",
+      "voz": "lavar la cara",
+      "picto": "../../recursos/pictos/4939.png"
+    },
+    {
+      "palabra": "SECAR LAS MANOS",
+      "voz": "secar las manos",
+      "picto": "../../recursos/pictos/2566.png"
+    },
+    {
+      "palabra": "PAÑUELO",
+      "voz": "el pañuelo",
+      "picto": "../../recursos/pictos/17284.png"
+    },
+    {
+      "palabra": "JABÓN",
+      "voz": "el jabón",
+      "picto": "../../recursos/pictos/2964.png"
+    },
+    {
+      "palabra": "AGUA",
+      "voz": "el agua",
+      "picto": "../../recursos/pictos/32464.png"
+    },
+    {
+      "palabra": "TOALLA",
+      "voz": "la toalla",
+      "picto": "../../recursos/pictos/2593.png"
+    },
+    {
+      "palabra": "GRIFO",
+      "voz": "el grifo",
+      "picto": "../../recursos/pictos/2414.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Lavarse las manos",
+    "lista": [
+      {
+        "palabra": "ABRIR EL GRIFO",
+        "voz": "abrir el grifo",
+        "picto": "../../recursos/pictos/21341.png"
+      },
+      {
+        "palabra": "ECHAR JABÓN",
+        "voz": "echar jabón",
+        "picto": "../../recursos/pictos/34846.png"
+      },
+      {
+        "palabra": "FROTAR",
+        "voz": "frotar las manos",
+        "picto": "../../recursos/pictos/36910.png"
+      },
+      {
+        "palabra": "ACLARAR",
+        "voz": "aclarar con agua",
+        "picto": "../../recursos/pictos/2443.png"
+      },
+      {
+        "palabra": "SECAR",
+        "voz": "secar las manos",
+        "picto": "../../recursos/pictos/2566.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Es para el aseo?",
+    "elementos": [
+      {
+        "palabra": "JABÓN",
+        "voz": "el jabón",
+        "picto": "../../recursos/pictos/2964.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "TOALLA",
+        "voz": "la toalla",
+        "picto": "../../recursos/pictos/2593.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "PEINE",
+        "voz": "el peine",
+        "picto": "../../recursos/pictos/2852.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "CEPILLO DE DIENTES",
+        "voz": "el cepillo de dientes",
+        "picto": "../../recursos/pictos/2694.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "PELOTA",
+        "voz": "la pelota",
+        "picto": "../../recursos/pictos/3241.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "COCHE",
+        "voz": "el coche",
+        "picto": "../../recursos/pictos/6981.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "LIBRO",
+        "voz": "el libro",
+        "picto": "../../recursos/pictos/2450.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "VASO",
+        "voz": "el vaso",
+        "picto": "../../recursos/pictos/2610.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "SÍ, ES DE ASEO",
+      "picto": "../../recursos/pictos/6912.png"
+    },
+    "b": {
+      "nombre": "NO ES DE ASEO",
+      "picto": "../../recursos/pictos/5526.png"
+    }
+  }
+}

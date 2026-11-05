@@ -1,0 +1,140 @@
+{
+  "fecha": "2026-11-19",
+  "tema": "ME VISTO Y ME PONGO GUAPO",
+  "juego": "ordena",
+  "titulo": "ORDENA LOS PASOS: ME VISTO Y ME PONGO GUAPO",
+  "ficha_titulo": "ORDENA LOS PASOS: ME VISTO Y ME PONGO GUAPO",
+  "elementos": [
+    {
+      "palabra": "COLONIA",
+      "voz": "la colonia",
+      "picto": "../../recursos/pictos/35673.png"
+    },
+    {
+      "palabra": "ESPEJO",
+      "voz": "el espejo",
+      "picto": "../../recursos/pictos/8573.png"
+    },
+    {
+      "palabra": "CAMISETA",
+      "voz": "la camiseta",
+      "picto": "../../recursos/pictos/2309.png"
+    },
+    {
+      "palabra": "PANTALÓN",
+      "voz": "el pantalón",
+      "picto": "../../recursos/pictos/2565.png"
+    },
+    {
+      "palabra": "CALCETINES",
+      "voz": "los calcetines",
+      "picto": "../../recursos/pictos/2298.png"
+    },
+    {
+      "palabra": "ZAPATOS",
+      "voz": "los zapatos",
+      "picto": "../../recursos/pictos/2622.png"
+    },
+    {
+      "palabra": "CHAQUETA",
+      "voz": "la chaqueta",
+      "picto": "../../recursos/pictos/4872.png"
+    },
+    {
+      "palabra": "PEINAR",
+      "voz": "peinarse",
+      "picto": "../../recursos/pictos/2512.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Me visto",
+    "lista": [
+      {
+        "palabra": "CAMISETA",
+        "voz": "ponerse la camiseta",
+        "picto": "../../recursos/pictos/2781.png"
+      },
+      {
+        "palabra": "PANTALÓN",
+        "voz": "ponerse el pantalón",
+        "picto": "../../recursos/pictos/31666.png"
+      },
+      {
+        "palabra": "CALCETINES",
+        "voz": "ponerse los calcetines",
+        "picto": "../../recursos/pictos/2298.png"
+      },
+      {
+        "palabra": "ZAPATOS",
+        "voz": "ponerse los zapatos",
+        "picto": "../../recursos/pictos/37935.png"
+      },
+      {
+        "palabra": "PEINARSE",
+        "voz": "peinarse",
+        "picto": "../../recursos/pictos/2512.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Es ropa para el calor o para el frío?",
+    "elementos": [
+      {
+        "palabra": "BAÑADOR",
+        "voz": "el bañador",
+        "picto": "../../recursos/pictos/2601.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "GAFAS DE SOL",
+        "voz": "las gafas de sol",
+        "picto": "../../recursos/pictos/3330.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "SANDALIAS",
+        "voz": "las sandalias",
+        "picto": "../../recursos/pictos/2556.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "CAMISETA DE TIRANTES",
+        "voz": "la camiseta de tirantes",
+        "picto": "../../recursos/pictos/2310.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "ABRIGO",
+        "voz": "el abrigo",
+        "picto": "../../recursos/pictos/8122.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "BUFANDA",
+        "voz": "la bufanda",
+        "picto": "../../recursos/pictos/2290.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "GORRO",
+        "voz": "el gorro",
+        "picto": "../../recursos/pictos/2412.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "GUANTES",
+        "voz": "los guantes",
+        "picto": "../../recursos/pictos/2415.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "CALOR",
+      "picto": "../../recursos/pictos/35561.png"
+    },
+    "b": {
+      "nombre": "FRÍO",
+      "picto": "../../recursos/pictos/35557.png"
+    }
+  }
+}

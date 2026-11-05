@@ -1,0 +1,18 @@
+{
+  "curso": "2026-2027",
+  "fuente": "Resolución de 17 de marzo de 2026 (BOC n.º 61, de 30 de marzo de 2026), corregida en BOC n.º 75, de 20 de abril de 2026. Fechas tomadas de resúmenes de prensa; verificar con el centro.",
+  "inicio": "2026-09-09",
+  "fin": "2027-06-22",
+  "no_lectivos": [
+    { "desde": "2026-10-12", "hasta": "2026-10-12", "motivo": "Fiesta Nacional" },
+    { "desde": "2026-11-02", "hasta": "2026-11-02", "motivo": "Día siguiente a Todos los Santos" },
+    { "desde": "2026-12-07", "hasta": "2026-12-08", "motivo": "Día del Enseñante y del Estudiante · Inmaculada Concepción" },
+    { "desde": "2026-12-23", "hasta": "2027-01-08", "motivo": "Vacaciones de Navidad" },
+    { "desde": "2027-03-22", "hasta": "2027-03-26", "motivo": "Semana Santa" }
+  ],
+  "por_confirmar": [
+    { "fecha": "2026-12-22", "motivo": "Algunas fuentes sitúan el inicio de las vacaciones de Navidad el 22 de diciembre" }
+  ],
+  "dias_del_centro": [],
+  "nota_dias_del_centro": "Añadir aquí los días de libre disposición del centro, el Carnaval y los festivos locales de Teguise, con el mismo formato que no_lectivos."
+}

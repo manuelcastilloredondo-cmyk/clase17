@@ -1,0 +1,135 @@
+{
+  "fecha": "2026-11-25",
+  "tema": "NOS ACERCAMOS A LA NAVIDAD",
+  "juego": "memoria",
+  "titulo": "MEMORIA: NOS ACERCAMOS A LA NAVIDAD",
+  "ficha_titulo": "RECORTA Y PEGA: NOS ACERCAMOS A LA NAVIDAD",
+  "elementos": [
+    {
+      "palabra": "BELÉN",
+      "voz": "el belén",
+      "picto": "../../recursos/pictos/24873.png"
+    },
+    {
+      "palabra": "PAPÁ NOEL",
+      "voz": "Papá Noel",
+      "picto": "../../recursos/pictos/3139.png"
+    },
+    {
+      "palabra": "REYES MAGOS",
+      "voz": "los Reyes Magos",
+      "picto": "../../recursos/pictos/3124.png"
+    },
+    {
+      "palabra": "TURRÓN",
+      "voz": "el turrón",
+      "picto": "../../recursos/pictos/2784.png"
+    },
+    {
+      "palabra": "ÁRBOL DE NAVIDAD",
+      "voz": "el árbol de Navidad",
+      "picto": "../../recursos/pictos/24859.png"
+    },
+    {
+      "palabra": "ESTRELLA",
+      "voz": "la estrella",
+      "picto": "../../recursos/pictos/3100.png"
+    },
+    {
+      "palabra": "REGALO",
+      "voz": "el regalo",
+      "picto": "../../recursos/pictos/25381.png"
+    },
+    {
+      "palabra": "BOLA DE NAVIDAD",
+      "voz": "la bola de Navidad",
+      "picto": "../../recursos/pictos/8296.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Decoramos el árbol",
+    "lista": [
+      {
+        "palabra": "PONER EL ÁRBOL",
+        "voz": "poner el árbol",
+        "picto": "../../recursos/dibujos/arbol-1.png"
+      },
+      {
+        "palabra": "PONER LAS LUCES",
+        "voz": "poner las luces",
+        "picto": "../../recursos/dibujos/arbol-2.png"
+      },
+      {
+        "palabra": "COLGAR LAS BOLAS",
+        "voz": "colgar las bolas",
+        "picto": "../../recursos/dibujos/arbol-3.png"
+      },
+      {
+        "palabra": "PONER LA ESTRELLA",
+        "voz": "poner la estrella",
+        "picto": "../../recursos/dibujos/arbol-4.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Es de Navidad o de verano?",
+    "elementos": [
+      {
+        "palabra": "ÁRBOL DE NAVIDAD",
+        "voz": "el árbol de Navidad",
+        "picto": "../../recursos/pictos/24859.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "REGALO",
+        "voz": "el regalo",
+        "picto": "../../recursos/pictos/25381.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "TURRÓN",
+        "voz": "el turrón",
+        "picto": "../../recursos/pictos/2784.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "PAPÁ NOEL",
+        "voz": "Papá Noel",
+        "picto": "../../recursos/pictos/3139.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "BAÑADOR",
+        "voz": "el bañador",
+        "picto": "../../recursos/pictos/2601.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "GAFAS DE SOL",
+        "voz": "las gafas de sol",
+        "picto": "../../recursos/pictos/3330.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "SANDALIAS",
+        "voz": "las sandalias",
+        "picto": "../../recursos/pictos/2556.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "HELADO",
+        "voz": "el helado",
+        "picto": "../../recursos/pictos/3348.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "NAVIDAD",
+      "picto": "../../recursos/pictos/3134.png"
+    },
+    "b": {
+      "nombre": "VERANO",
+      "picto": "../../recursos/pictos/2798.png"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/* CLASE 17 · estilos comunes.
+   Concepto: plano y minimalista. Menú fijo verde bosque arriba, fondo crema,
+   bloques salvia, todo en mayúsculas. Un solo aspecto (claro) a propósito: es la identidad de la clase. */
+:root {
+  --bosque: #1c3d1f;   /* menú, texto principal, contornos */
+  --pino: #2f5d31;     /* botones, acentos */
+  --salvia: #6b9a67;   /* bandas y bloques */
+  --menta: #bedab4;    /* detalles suaves */
+  --crema: #f3efd8;    /* fondo */
+  --papel: #fbf9ee;    /* tarjetas */
+  --tinta: var(--bosque);
+  --suave: #4f6b4c;
+  --bien: #2e7d32;
+  --bien-fondo: #dcefd4;
+  --error: #b4541a;
+  --naranja: #f08a24; --amarillo: #f5c518; --verde: #3a9e4f; --azul: #2f7fd1; /* clave Fitzgerald (SAAC) */
+  --borde: 3px solid var(--bosque);
+  --radio: 14px;
+  --f-titulo: "League Spartan", "Arial Black", system-ui, sans-serif;
+  --f-texto: "Quicksand", "Arial", system-ui, sans-serif;
+  --gutter-l: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { min-height: 100%; }
+body {
+  margin: 0; background: var(--crema); color: var(--tinta);
+  font-family: var(--f-texto); font-weight: 600; font-size: 17px; line-height: 1.55;
+  text-transform: uppercase; letter-spacing: .03em;
+}
+img { max-width: 100%; }
+button { font: inherit; color: inherit; cursor: pointer; text-transform: inherit; letter-spacing: inherit; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--salvia); outline-offset: 3px; }
+.gutter { padding-left: var(--gutter-l); padding-right: var(--gutter-r); }
+.picto { background: #fff; border-radius: 10px; }
+
+/* ── Menú destacado ── */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bosque); }
+.menu { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bosque); border-bottom: 6px solid var(--salvia); }
+.menu-dentro {
+  max-width: 1180px; margin: 0 auto; min-height: 76px;
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  padding-block: 10px;
+  padding-left: var(--gutter-l); padding-right: var(--gutter-r);
+}
+.marca { display: block; line-height: 0; flex: none; }
+.marca img { height: 60px; width: auto; }
+.menu ul { list-style: none; margin: 0 0 0 auto; padding: 0; display: flex; gap: 6px; flex-wrap: wrap; }
+.menu a.opcion {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 4px 16px;
+  font-family: var(--f-titulo); font-weight: 700; font-size: 17px; letter-spacing: .08em;
+  color: var(--crema); text-decoration: none; border-radius: 999px; border: 2px solid transparent;
+}
+.menu a.opcion:hover { border-color: var(--menta); }
+.menu a.opcion[aria-current="page"] { background: var(--crema); color: var(--bosque); }
+@media (max-width: 640px) {
+  .menu-dentro { gap: 8px; }
+  .marca img { height: 48px; }
+  .menu ul { margin-left: 0; width: 100%; display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 2px; }
+  .menu a.opcion { justify-content: center; padding: 4px 8px; font-size: 12.5px; letter-spacing: .02em; }
+}
+
+/* ── Piezas comunes ── */
+.barra { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-block: 16px; }
+.barra h1 { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(24px, 3vw, 36px); letter-spacing: .04em; margin: 0; flex: 1; min-width: 0; text-wrap: balance; }
+.btn {
+  border: var(--borde); background: var(--papel); border-radius: 999px;
+  padding: 6px 18px; font-family: var(--f-titulo); font-weight: 700; letter-spacing: .06em;
+  text-decoration: none; color: var(--bosque);
+  display: inline-flex; align-items: center; gap: 8px; min-height: 48px;
+}
+.btn-primario { background: var(--pino); color: var(--crema); border-color: var(--pino); }
+.creditos { font-size: 12px; color: var(--suave); padding-block: 20px; text-align: center; text-transform: none; letter-spacing: 0; }
+.creditos a { color: inherit; }
+@keyframes sacudir { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-10px)} 75%{transform:translateX(10px)} }
+@keyframes saltar { 0%{transform:scale(1)} 50%{transform:scale(1.08)} 100%{transform:scale(1)} }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

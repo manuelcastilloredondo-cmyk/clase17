@@ -1,0 +1,744 @@
+{
+  "mes": "2026-11",
+  "centro_interes": "Nos cuidamos y nos ponemos guapos",
+  "rutina": {
+    "lunes": {
+      "juego": "toca",
+      "ficha": "colorear"
+    },
+    "martes": {
+      "juego": "une",
+      "ficha": "lineas"
+    },
+    "miercoles": {
+      "juego": "memoria",
+      "ficha": "recortar"
+    },
+    "jueves": {
+      "juego": "ordena",
+      "ficha": "secuencia"
+    },
+    "viernes": {
+      "juego": "clasifica",
+      "ficha": "puntos"
+    }
+  },
+  "semanas": [
+    {
+      "id": "s1",
+      "tema": "Manos y cara limpias",
+      "dias": [
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06"
+      ],
+      "objetivo": "Reconocer los objetos del aseo y seguir los pasos para lavarse las manos.",
+      "taller": {
+        "tipo": "Hogar",
+        "titulo": "Nos lavamos las manos en el baño",
+        "dia": "2026-11-04"
+      },
+      "casa": [
+        "Lavarse las manos antes de comer, diciendo cada paso.",
+        "Buscar en el baño el jabón, la toalla y el grifo.",
+        "Secarse las manos con su propia toalla."
+      ],
+      "vocabulario": [
+        {
+          "palabra": "JABÓN",
+          "voz": "el jabón",
+          "id": 2964
+        },
+        {
+          "palabra": "AGUA",
+          "voz": "el agua",
+          "id": 32464
+        },
+        {
+          "palabra": "TOALLA",
+          "voz": "la toalla",
+          "id": 2593
+        },
+        {
+          "palabra": "GRIFO",
+          "voz": "el grifo",
+          "id": 2414
+        },
+        {
+          "palabra": "LAVAR LAS MANOS",
+          "voz": "lavar las manos",
+          "id": 8975
+        },
+        {
+          "palabra": "LAVAR LA CARA",
+          "voz": "lavar la cara",
+          "id": 4939
+        },
+        {
+          "palabra": "SECAR LAS MANOS",
+          "voz": "secar las manos",
+          "id": 2566
+        },
+        {
+          "palabra": "PAÑUELO",
+          "voz": "el pañuelo",
+          "id": 17284
+        }
+      ],
+      "pasos": {
+        "titulo": "Lavarse las manos",
+        "lista": [
+          {
+            "palabra": "ABRIR EL GRIFO",
+            "voz": "abrir el grifo",
+            "id": 21341
+          },
+          {
+            "palabra": "ECHAR JABÓN",
+            "voz": "echar jabón",
+            "id": 34846
+          },
+          {
+            "palabra": "FROTAR",
+            "voz": "frotar las manos",
+            "id": 36910
+          },
+          {
+            "palabra": "ACLARAR",
+            "voz": "aclarar con agua",
+            "id": 2443
+          },
+          {
+            "palabra": "SECAR",
+            "voz": "secar las manos",
+            "id": 2566
+          }
+        ]
+      },
+      "clasifica": {
+        "pregunta": "¿Es para el aseo?",
+        "a": {
+          "nombre": "SÍ, ES DE ASEO",
+          "id": 6912
+        },
+        "b": {
+          "nombre": "NO ES DE ASEO",
+          "id": 5526
+        },
+        "elementos": [
+          {
+            "palabra": "JABÓN",
+            "voz": "el jabón",
+            "id": 2964,
+            "grupo": "a"
+          },
+          {
+            "palabra": "TOALLA",
+            "voz": "la toalla",
+            "id": 2593,
+            "grupo": "a"
+          },
+          {
+            "palabra": "PEINE",
+            "voz": "el peine",
+            "id": 2852,
+            "grupo": "a"
+          },
+          {
+            "palabra": "CEPILLO DE DIENTES",
+            "voz": "el cepillo de dientes",
+            "id": 2694,
+            "grupo": "a"
+          },
+          {
+            "palabra": "PELOTA",
+            "voz": "la pelota",
+            "id": 3241,
+            "grupo": "b"
+          },
+          {
+            "palabra": "COCHE",
+            "voz": "el coche",
+            "id": 6981,
+            "grupo": "b"
+          },
+          {
+            "palabra": "LIBRO",
+            "voz": "el libro",
+            "id": 2450,
+            "grupo": "b"
+          },
+          {
+            "palabra": "VASO",
+            "voz": "el vaso",
+            "id": 2610,
+            "grupo": "b"
+          }
+        ]
+      },
+      "puntos": "jabon",
+      "aula": [
+        "Presentación del vocabulario con los objetos reales del baño.",
+        "Taller de hogar: lavado de manos en el baño, paso a paso.",
+        "Práctica del lavado de manos antes del comedor verbalizando cada paso.",
+        "Repaso: cada alumno muestra un objeto y lo nombra."
+      ]
+    },
+    {
+      "id": "s2",
+      "tema": "La ducha y los dientes",
+      "dias": [
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13"
+      ],
+      "objetivo": "Nombrar los objetos de la ducha y seguir los pasos para lavarse los dientes.",
+      "taller": {
+        "tipo": "Hogar",
+        "titulo": "Preparamos el neceser",
+        "dia": "2026-11-11"
+      },
+      "casa": [
+        "Lavarse los dientes después de cenar con el cepillo y la pasta.",
+        "En la ducha, nombrar juntos el champú, el gel y la esponja.",
+        "Colgar el albornoz o la toalla al terminar."
+      ],
+      "vocabulario": [
+        {
+          "palabra": "DUCHA",
+          "voz": "la ducha",
+          "id": 2370
+        },
+        {
+          "palabra": "CHAMPÚ",
+          "voz": "el champú",
+          "id": 2699
+        },
+        {
+          "palabra": "GEL",
+          "voz": "el gel",
+          "id": 3335
+        },
+        {
+          "palabra": "ESPONJA",
+          "voz": "la esponja",
+          "id": 2749
+        },
+        {
+          "palabra": "CEPILLO DE DIENTES",
+          "voz": "el cepillo de dientes",
+          "id": 2694
+        },
+        {
+          "palabra": "PASTA DE DIENTES",
+          "voz": "la pasta de dientes",
+          "id": 2858
+        },
+        {
+          "palabra": "ALBORNOZ",
+          "voz": "el albornoz",
+          "id": 5369
+        },
+        {
+          "palabra": "SECADOR",
+          "voz": "el secador",
+          "id": 2560
+        }
+      ],
+      "pasos": {
+        "titulo": "Lavarse los dientes",
+        "lista": [
+          {
+            "palabra": "COGER EL CEPILLO",
+            "voz": "coger el cepillo",
+            "id": 2694
+          },
+          {
+            "palabra": "PONER PASTA",
+            "voz": "poner la pasta",
+            "id": 30087
+          },
+          {
+            "palabra": "CEPILLAR",
+            "voz": "cepillar los dientes",
+            "id": 31880
+          },
+          {
+            "palabra": "ENJUAGAR",
+            "voz": "enjuagar la boca",
+            "id": 30032
+          },
+          {
+            "palabra": "SECAR LA BOCA",
+            "voz": "secar la boca",
+            "id": 2593
+          }
+        ]
+      },
+      "clasifica": {
+        "pregunta": "¿Es para los dientes o para el pelo?",
+        "a": {
+          "nombre": "PARA LOS DIENTES",
+          "id": 2663
+        },
+        "b": {
+          "nombre": "PARA EL PELO",
+          "id": 2851
+        },
+        "elementos": [
+          {
+            "palabra": "CEPILLO DE DIENTES",
+            "voz": "el cepillo de dientes",
+            "id": 2694,
+            "grupo": "a"
+          },
+          {
+            "palabra": "PASTA DE DIENTES",
+            "voz": "la pasta de dientes",
+            "id": 2858,
+            "grupo": "a"
+          },
+          {
+            "palabra": "VASO",
+            "voz": "el vaso",
+            "id": 2610,
+            "grupo": "a"
+          },
+          {
+            "palabra": "CHAMPÚ",
+            "voz": "el champú",
+            "id": 2699,
+            "grupo": "b"
+          },
+          {
+            "palabra": "PEINE",
+            "voz": "el peine",
+            "id": 2852,
+            "grupo": "b"
+          },
+          {
+            "palabra": "SECADOR",
+            "voz": "el secador",
+            "id": 2560,
+            "grupo": "b"
+          },
+          {
+            "palabra": "CEPILLO DEL PELO",
+            "voz": "el cepillo del pelo",
+            "id": 2695,
+            "grupo": "b"
+          }
+        ]
+      },
+      "puntos": "diente",
+      "aula": [
+        "Caja sorpresa con los objetos reales de la ducha: identificación y denominación.",
+        "Exploración sensorial de champú, gel y esponja.",
+        "Taller de hogar: preparación del neceser personal (cepillo, pasta, peine, toalla).",
+        "Cepillado de dientes tras el comedor siguiendo la secuencia visual.",
+        "Repaso con el neceser de cada alumno."
+      ]
+    },
+    {
+      "id": "s3",
+      "tema": "Me visto y me pongo guapo",
+      "dias": [
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20"
+      ],
+      "objetivo": "Nombrar las prendas de ropa, vestirse en orden y elegir la ropa según el tiempo.",
+      "taller": {
+        "tipo": "Hogar",
+        "titulo": "Doblamos la ropa",
+        "dia": "2026-11-18"
+      },
+      "casa": [
+        "Por la mañana, elegir juntos la ropa mirando si hace frío o calor.",
+        "Vestirse en orden: camiseta, pantalón, calcetines y zapatos.",
+        "Peinarse delante del espejo antes de salir."
+      ],
+      "vocabulario": [
+        {
+          "palabra": "CAMISETA",
+          "voz": "la camiseta",
+          "id": 2309
+        },
+        {
+          "palabra": "PANTALÓN",
+          "voz": "el pantalón",
+          "id": 2565
+        },
+        {
+          "palabra": "CALCETINES",
+          "voz": "los calcetines",
+          "id": 2298
+        },
+        {
+          "palabra": "ZAPATOS",
+          "voz": "los zapatos",
+          "id": 2622
+        },
+        {
+          "palabra": "CHAQUETA",
+          "voz": "la chaqueta",
+          "id": 4872
+        },
+        {
+          "palabra": "PEINAR",
+          "voz": "peinarse",
+          "id": 2512
+        },
+        {
+          "palabra": "COLONIA",
+          "voz": "la colonia",
+          "id": 35673
+        },
+        {
+          "palabra": "ESPEJO",
+          "voz": "el espejo",
+          "id": 8573
+        }
+      ],
+      "pasos": {
+        "titulo": "Me visto",
+        "lista": [
+          {
+            "palabra": "CAMISETA",
+            "voz": "ponerse la camiseta",
+            "id": 2781
+          },
+          {
+            "palabra": "PANTALÓN",
+            "voz": "ponerse el pantalón",
+            "id": 31666
+          },
+          {
+            "palabra": "CALCETINES",
+            "voz": "ponerse los calcetines",
+            "id": 2298
+          },
+          {
+            "palabra": "ZAPATOS",
+            "voz": "ponerse los zapatos",
+            "id": 37935
+          },
+          {
+            "palabra": "PEINARSE",
+            "voz": "peinarse",
+            "id": 2512
+          }
+        ]
+      },
+      "clasifica": {
+        "pregunta": "¿Es ropa para el calor o para el frío?",
+        "a": {
+          "nombre": "CALOR",
+          "id": 35561
+        },
+        "b": {
+          "nombre": "FRÍO",
+          "id": 35557
+        },
+        "elementos": [
+          {
+            "palabra": "BAÑADOR",
+            "voz": "el bañador",
+            "id": 2601,
+            "grupo": "a"
+          },
+          {
+            "palabra": "GAFAS DE SOL",
+            "voz": "las gafas de sol",
+            "id": 3330,
+            "grupo": "a"
+          },
+          {
+            "palabra": "SANDALIAS",
+            "voz": "las sandalias",
+            "id": 2556,
+            "grupo": "a"
+          },
+          {
+            "palabra": "CAMISETA DE TIRANTES",
+            "voz": "la camiseta de tirantes",
+            "id": 2310,
+            "grupo": "a"
+          },
+          {
+            "palabra": "ABRIGO",
+            "voz": "el abrigo",
+            "id": 8122,
+            "grupo": "b"
+          },
+          {
+            "palabra": "BUFANDA",
+            "voz": "la bufanda",
+            "id": 2290,
+            "grupo": "b"
+          },
+          {
+            "palabra": "GORRO",
+            "voz": "el gorro",
+            "id": 2412,
+            "grupo": "b"
+          },
+          {
+            "palabra": "GUANTES",
+            "voz": "los guantes",
+            "id": 2415,
+            "grupo": "b"
+          }
+        ]
+      },
+      "puntos": "camiseta",
+      "aula": [
+        "Identificación de la ropa que lleva puesta cada alumno.",
+        "Peinado ante el espejo con apoyo visual.",
+        "Taller de hogar: doblado de camisetas y pantalones.",
+        "Ponerse y quitarse la chaqueta en orden en las salidas al recreo.",
+        "Observación del tiempo atmosférico y elección de la ropa adecuada."
+      ]
+    },
+    {
+      "id": "s4",
+      "tema": "Nos acercamos a la Navidad",
+      "dias": [
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-30"
+      ],
+      "objetivo": "Conocer el vocabulario de la Navidad y preparar el aula para las fiestas.",
+      "taller": {
+        "tipo": "Manualidades",
+        "titulo": "Hacemos un adorno para el árbol",
+        "dia": "2026-11-25"
+      },
+      "casa": [
+        "Buscar adornos de Navidad por la calle y nombrarlos.",
+        "Ayudar a decorar el árbol en casa: luces, bolas y estrella.",
+        "Envolver juntos un regalo pequeño."
+      ],
+      "vocabulario": [
+        {
+          "palabra": "ÁRBOL DE NAVIDAD",
+          "voz": "el árbol de Navidad",
+          "id": 24859
+        },
+        {
+          "palabra": "ESTRELLA",
+          "voz": "la estrella",
+          "id": 3100
+        },
+        {
+          "palabra": "REGALO",
+          "voz": "el regalo",
+          "id": 25381
+        },
+        {
+          "palabra": "BOLA DE NAVIDAD",
+          "voz": "la bola de Navidad",
+          "id": 8296
+        },
+        {
+          "palabra": "BELÉN",
+          "voz": "el belén",
+          "id": 24873
+        },
+        {
+          "palabra": "PAPÁ NOEL",
+          "voz": "Papá Noel",
+          "id": 3139
+        },
+        {
+          "palabra": "REYES MAGOS",
+          "voz": "los Reyes Magos",
+          "id": 3124
+        },
+        {
+          "palabra": "TURRÓN",
+          "voz": "el turrón",
+          "id": 2784
+        }
+      ],
+      "pasos": {
+        "titulo": "Decoramos el árbol",
+        "propio": true,
+        "lista": [
+          {
+            "palabra": "PONER EL ÁRBOL",
+            "voz": "poner el árbol",
+            "dibujo": "arbol-1"
+          },
+          {
+            "palabra": "PONER LAS LUCES",
+            "voz": "poner las luces",
+            "dibujo": "arbol-2"
+          },
+          {
+            "palabra": "COLGAR LAS BOLAS",
+            "voz": "colgar las bolas",
+            "dibujo": "arbol-3"
+          },
+          {
+            "palabra": "PONER LA ESTRELLA",
+            "voz": "poner la estrella",
+            "dibujo": "arbol-4"
+          }
+        ]
+      },
+      "clasifica": {
+        "pregunta": "¿Es de Navidad o de verano?",
+        "a": {
+          "nombre": "NAVIDAD",
+          "id": 3134
+        },
+        "b": {
+          "nombre": "VERANO",
+          "id": 2798
+        },
+        "elementos": [
+          {
+            "palabra": "ÁRBOL DE NAVIDAD",
+            "voz": "el árbol de Navidad",
+            "id": 24859,
+            "grupo": "a"
+          },
+          {
+            "palabra": "REGALO",
+            "voz": "el regalo",
+            "id": 25381,
+            "grupo": "a"
+          },
+          {
+            "palabra": "TURRÓN",
+            "voz": "el turrón",
+            "id": 2784,
+            "grupo": "a"
+          },
+          {
+            "palabra": "PAPÁ NOEL",
+            "voz": "Papá Noel",
+            "id": 3139,
+            "grupo": "a"
+          },
+          {
+            "palabra": "BAÑADOR",
+            "voz": "el bañador",
+            "id": 2601,
+            "grupo": "b"
+          },
+          {
+            "palabra": "GAFAS DE SOL",
+            "voz": "las gafas de sol",
+            "id": 3330,
+            "grupo": "b"
+          },
+          {
+            "palabra": "SANDALIAS",
+            "voz": "las sandalias",
+            "id": 2556,
+            "grupo": "b"
+          },
+          {
+            "palabra": "HELADO",
+            "voz": "el helado",
+            "id": 3348,
+            "grupo": "b"
+          }
+        ]
+      },
+      "puntos": "estrella",
+      "aula": [
+        "Montaje del árbol de Navidad del aula, sin adornos.",
+        "Búsqueda de adornos navideños por el centro.",
+        "Taller de manualidades: elaboración de un adorno para el árbol.",
+        "Decoración del árbol del aula siguiendo la secuencia visual.",
+        "Colocación de los adornos elaborados en el taller.",
+        "Repaso general del vocabulario del mes."
+      ]
+    }
+  ],
+  "contexto": "El centro de interés del mes, «Nos cuidamos y nos ponemos guapos», se aborda desde situaciones funcionales y significativas de la vida diaria (higiene, vestido, cuidado de la imagen personal) y se cierra con una unidad de anticipación a las fiestas navideñas, que enlaza con el centro de interés de diciembre. Todo el trabajo se apoya en Sistemas Aumentativos y Alternativos de Comunicación (pictogramas ARASAAC) y en una estructura diaria estable y predecible.",
+  "objetivos": {
+    "AP": [
+      "Identificar y denominar, por vía oral, gestual o pictográfica, los útiles de higiene personal y las prendas de vestir de uso cotidiano.",
+      "Ejecutar, con el grado de apoyo que precise cada alumno, las secuencias de lavado de manos, cepillado dental y vestido.",
+      "Seleccionar la ropa adecuada en función de la temperatura y del tiempo atmosférico.",
+      "Responsabilizarse del cuidado y orden de sus objetos de aseo personal (neceser)."
+    ],
+    "AS": [
+      "Comprender y seguir consignas orales sencillas apoyadas en pictogramas.",
+      "Asociar pictograma y palabra escrita del vocabulario del centro de interés (lectura global).",
+      "Conocer las tradiciones navideñas de su entorno y participar en la preparación del aula para las fiestas.",
+      "Respetar los turnos y colaborar con los compañeros en las actividades grupales en la pizarra digital."
+    ],
+    "AL": [
+      "Mantener la atención en una tarea estructurada hasta su finalización.",
+      "Desarrollar destrezas manipulativas y de motricidad fina: colorear, repasar trazos, recortar y pegar.",
+      "Seguir una secuencia de pasos para completar una tarea doméstica (lavado de manos, neceser, doblado de ropa, elaboración de un adorno).",
+      "Utilizar con autonomía creciente dispositivos digitales táctiles (pizarra digital y tableta) como herramienta de trabajo."
+    ]
+  },
+  "criterios": [
+    [
+      "AP",
+      "Identifica y denomina los útiles de higiene y las prendas de vestir trabajados."
+    ],
+    [
+      "AP",
+      "Ejecuta la secuencia de lavado de manos con el apoyo indicado en su ACUS."
+    ],
+    [
+      "AP",
+      "Ejecuta la secuencia de cepillado dental con el apoyo indicado en su ACUS."
+    ],
+    [
+      "AP",
+      "Se viste siguiendo el orden de la secuencia visual."
+    ],
+    [
+      "AP",
+      "Elige ropa adecuada a la temperatura."
+    ],
+    [
+      "AS",
+      "Comprende y sigue consignas orales apoyadas en pictogramas."
+    ],
+    [
+      "AS",
+      "Asocia pictograma y palabra escrita del vocabulario del mes."
+    ],
+    [
+      "AS",
+      "Reconoce elementos y tradiciones de la Navidad."
+    ],
+    [
+      "AL",
+      "Mantiene la atención hasta finalizar la tarea."
+    ],
+    [
+      "AL",
+      "Realiza las tareas de motricidad fina (colorear, repasar, recortar, pegar)."
+    ],
+    [
+      "AL",
+      "Completa la tarea doméstica del taller siguiendo los pasos."
+    ],
+    [
+      "AL",
+      "Utiliza la pizarra digital o la tableta para responder."
+    ]
+  ],
+  "recursos": [
+    "Objetos reales de aseo y vestido; neceser individual; ropa para el taller de doblado; materiales de manualidades."
+  ]
+}

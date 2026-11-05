@@ -1,0 +1,15 @@
+{
+  "curso": "2026-2027",
+  "nota": "Centros de interés mensuales de la Clase 17. Las ideas de subtemas y talleres son orientativas: no todo el trabajo se basa en el centro de interés.",
+  "meses": {
+    "2026-10": { "centro": "Nuestra escuela de Tahíche" },
+    "2026-11": { "centro": "Nos cuidamos y nos ponemos guapos", "extra": "Nos acercamos a la Navidad" },
+    "2026-12": { "centro": "La Navidad con la familia", "ideas": ["La familia", "Navidad: árbol, belén, regalo, turrón"], "talleres": ["Manualidades: tarjeta navideña", "Cocina: galletas"] },
+    "2027-01": { "centro": "La casa donde vivo con mi familia", "ideas": ["Partes de la casa", "Objetos y herramientas de casa"], "talleres": ["Hogar: hacer la cama", "Bricolaje: herramientas básicas"] },
+    "2027-02": { "centro": "El Carnaval de mi colegio", "ideas": ["Disfraces y carnaval", "Oficios (disfraces de profesiones)"], "talleres": ["Manualidades: máscara"] },
+    "2027-03": { "centro": "Nos vamos de paseo a la calle", "ideas": ["Seguridad vial: semáforo, paso de peatones", "Tiendas y dinero: comprar"], "talleres": ["Cocina: lista de la compra y receta"] },
+    "2027-04": { "centro": "Conocemos y cuidamos las plantas de nuestro centro", "ideas": ["Partes de la planta y sus cuidados", "Frutas y verduras"], "talleres": ["Huerto: sembrar y regar"] },
+    "2027-05": { "centro": "Conocemos y cuidamos los animales", "ideas": ["Animales domésticos", "Animales de Lanzarote: camello, cabra, lagarto, pardela"], "talleres": ["Hogar: cuidar una mascota"] },
+    "2027-06": { "centro": "Nos vamos de vacaciones", "ideas": ["Playa y verano", "Repaso del curso"], "talleres": ["Cocina: merienda de playa"] }
+  }
+}
