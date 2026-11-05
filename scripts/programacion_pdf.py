@@ -57,6 +57,8 @@ FICHA = {
     "secuencia": ("Ordena los pasos", "Recortado de los pasos de la rutina y pegado en orden numerado (secuenciación temporal).", "AP"),
     "puntos": ("Une los puntos", "Unión de puntos numerados, coloreado de la figura y repaso de la palabra (conteo, trazo, lectura).", "AL"),
 }
+EXTRA = {"igual": "Busca el igual", "sombras": "Cada uno con su sombra", "diferente": "Busca el diferente",
+         "cuenta": "Cuenta (1–3)", "tamano": "Grande y pequeño"}
 AMBITO = {"AP": "Autonomía Personal", "AS": "Autonomía Social", "AL": "Autonomía Laboral"}
 
 # ── estilos ──
@@ -209,7 +211,7 @@ def construir(prog_path, salida):
         cl = s["clasifica"]
         filas.append([f"U{i}", voc, f"<i>{s['pasos']['titulo']}</i>: {pasos}", f"{cl['pregunta']} ({cl['a']['nombre'].lower()} / {cl['b']['nombre'].lower()})"])
     h += [tabla(filas, [1.2 * cm, 5.2 * cm, 5.4 * cm, ancho_util - 11.8 * cm])]
-    h += [P("Contenidos procedimentales y actitudinales comunes: seguimiento de rutinas, discriminación visual y auditiva, lectura global, grafomotricidad, "
+    h += [P("Contenidos procedimentales y actitudinales comunes: seguimiento de rutinas, discriminación visual y auditiva, percepción figura-fondo (sombras), conteo hasta 3–5, conceptos de tamaño, lectura global, grafomotricidad, "
             "uso funcional de los objetos, hábitos de higiene y cuidado personal, respeto de turnos y valoración del trabajo propio.", "p")]
 
     # 6. Metodología
@@ -221,6 +223,7 @@ def construir(prog_path, salida):
         "<b>Análisis de tareas.</b> Las rutinas de higiene y vestido se descomponen en 4–5 pasos que se trabajan en la aplicación, en la ficha y en la situación real.",
         "<b>Funcionalidad y generalización.</b> Lo trabajado en pantalla y en papel se traslada el mismo día a una situación real del aula, del baño o del taller.",
         "<b>Graduación de la dificultad.</b> Las aplicaciones permiten variar el número de opciones (2, 4 o 6 pictogramas; 4 o 6 parejas) para ajustar la demanda a cada alumno.",
+        "<b>Actividades complementarias de nivel inicial.</b> Cada día se añaden tres actividades digitales (colorear con el dedo, pintar puntitos y un juego de percepción o de conceptos básicos: igual, sombras, diferente, cuenta, grande y pequeño) y dos fichas imprimibles equivalentes, para trabajar atención, discriminación visual, conteo y motricidad fina con distintos niveles de exigencia.",
         "<b>Agrupamientos.</b> Actividad digital en gran grupo en la pizarra digital o individual en tableta; ficha individual; taller en pequeño grupo con apoyo del adulto.",
     ])
 
@@ -243,7 +246,11 @@ def construir(prog_path, salida):
                 juego_txt += f" Rutina: {s['pasos']['titulo'].lower()}."
             if rut["juego"] == "clasifica":
                 juego_txt += f" Criterio: {s['clasifica']['pregunta'].lower()}"
-            filas.append([f"{DIAS[d.weekday()][:3]}. {d.day}", juego_txt, f"<b>{fi[0]}</b>. {fi[1]}", aula, " ".join(amb)])
+            ex = EXTRA.get(rut.get("extra"), "")
+            if ex:
+                juego_txt += f"<br/><i>Complementarias:</i> Colorea con el dedo · Pinta los puntitos · {ex}."
+            ficha_txt = f"<b>{fi[0]}</b>. {fi[1]}" + (f"<br/><i>Complementarias:</i> Pinta los puntitos · {ex}." if ex else "")
+            filas.append([f"{DIAS[d.weekday()][:3]}. {d.day}", juego_txt, ficha_txt, aula, " ".join(amb)])
         bloque += [tabla(filas, [1.35 * cm, 5.6 * cm, 4.2 * cm, ancho_util - 12.75 * cm, 1.6 * cm], centrar=(4,))]
         h += bloque
 
@@ -286,7 +293,7 @@ def construir(prog_path, salida):
     h += [P("11. Recursos", "h1")]
     h += lista([
         "Pizarra digital interactiva del aula y tabletas táctiles.",
-        f"Web de aula «Clase 17 · La clase de los chicos»: {n_dias} actividades interactivas y {n_dias} fichas imprimibles del mes.",
+        f"Web de aula «Clase 17 · La clase de los chicos»: {n_dias * 4} actividades interactivas y {n_dias * 3} fichas imprimibles del mes (4 y 3 por día).",
         *prog["recursos"],
         f"Pictogramas de ARASAAC (autor: Sergio Palao; origen: ARASAAC, https://arasaac.org; propiedad: Gobierno de Aragón; licencia CC BY-NC-SA). Materiales, actividades interactivas e ilustraciones propias elaborados por {AUTOR} ({MARCA}).",
     ])

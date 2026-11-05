@@ -22,14 +22,14 @@ Logos en `recursos/logo/` (se regeneran con `scripts/logo.py`).
 ## Estructura
 ```
 index.html                         portada: HOY, ESTA SEMANA, semanas anteriores, programación del mes
-plantillas/juego.html, ficha.html  se copian a cada día (leen datos.json)
+plantillas/dia.html, juego.html, ficha.html  se copian a cada día (leen datos.json); juego.html?modo=… elige el juego
 programacion/
   centros-interes.json             centro de interés de cada mes (octubre–junio) + ideas orientativas
   calendario-2026-27.json          calendario escolar: no lectivos, por confirmar, días del centro
   AAAA-MM.json                     programación del mes (fuente única de web y PDF)
   AAAA-MM-programacion.pdf         programación formal del mes
 actividades/catalogo.json          todos los días publicados (acumulativo)
-actividades/AAAA-MM-DD/            datos.json · juego.html · ficha.html · ficha.pdf
+actividades/AAAA-MM-DD/            datos.json · dia.html · juego.html · ficha.html · ficha.pdf · puntitos.pdf · extra.pdf
 recursos/pictos, pictos-bn         pictos ARASAAC en color y en blanco y negro (descarga construir.py)
 scripts/dias_lectivos.py           días lectivos de un mes por semanas
 scripts/construir.py               genera los días del mes y actualiza el catálogo
@@ -37,13 +37,19 @@ scripts/programacion_pdf.py        genera el PDF formal del mes
 ```
 
 ## Rutina semanal fija (no cambiar sin que lo pida el docente)
-| Día | Juego (`juego`) | Ficha (`ficha`) |
-|---|---|---|
-| Lunes | toca | colorear |
-| Martes | une | lineas |
-| Miércoles | memoria (taller ese día) | recortar |
-| Jueves | ordena | secuencia |
-| Viernes | clasifica | puntos |
+Cada día: 4 actividades digitales y 3 fichas PDF, reunidas en `dia.html`.
+| Día | Juego del día (`juego`) | Ficha (`ficha`) | Complementaria (`extra`) |
+|---|---|---|---|
+| Lunes | toca | colorear | igual |
+| Martes | une | lineas | sombras |
+| Miércoles | memoria (taller ese día) | recortar | diferente |
+| Jueves | ordena | secuencia | cuenta |
+| Viernes | clasifica | puntos | tamano |
+
+Además, todos los días: **Colorea con el dedo** (pictos en blanco y negro) y **Pinta los puntitos**
+(digital y `puntitos.pdf`; el dibujo de puntitos se genera solo con `scripts/arte.py` a partir del primer picto
+del día que da círculos grandes). La complementaria tiene versión digital (`juego.html?modo=extra`) y PDF (`extra.pdf`).
+Nivel de referencia: equivalente a Infantil 3 años; apoyo en pictos, pero no todo depende de ellos (siluetas, números, tamaños).
 
 ## Cómo preparar el mes siguiente (procedimiento de la tarea mensual)
 1. `python3 scripts/dias_lectivos.py AAAA-MM` → semanas y días lectivos. Si una semana tiene 1–2 días sueltos,
@@ -57,7 +63,7 @@ scripts/programacion_pdf.py        genera el PDF formal del mes
    el dibujo tiene que representar exactamente la palabra. Si no hay picto adecuado para un paso,
    dibuja una ilustración propia (ver `dibujar_arboles` en `construir.py`) y usa `"dibujo"` en vez de `"id"`.
 4. Escribe `programacion/AAAA-MM.json` copiando la estructura de `programacion/2026-11.json`:
-   `semanas[]` (id, tema, dias, objetivo, taller {tipo, titulo, dia = miércoles}, casa[3], vocabulario[8], pasos, clasifica, puntos, aula[uno por día]),
+   `rutina` (con `extra` por día, como en noviembre), `semanas[]` (id, tema, dias, objetivo, taller {tipo, titulo, dia = miércoles}, casa[3], vocabulario[8], pasos, clasifica, puntos, aula[uno por día]),
    y los textos del PDF: `contexto`, `objetivos` {AP, AS, AL} (4 cada uno), `criterios` (10–12, [ámbito, texto]), `recursos`.
    `puntos` es una figura de `FIGURAS` en `scripts/fichas_dia.py` (estrella, camiseta, diente, jabon);
    si el tema pide otra, añádela allí (coordenadas 0–1, contorno en sentido horario).

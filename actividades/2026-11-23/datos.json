@@ -8,42 +8,50 @@
     {
       "palabra": "ÁRBOL DE NAVIDAD",
       "voz": "el árbol de Navidad",
-      "picto": "../../recursos/pictos/24859.png"
+      "picto": "../../recursos/pictos/24859.png",
+      "bn": "../../recursos/pictos-bn/24859.png"
     },
     {
       "palabra": "ESTRELLA",
       "voz": "la estrella",
-      "picto": "../../recursos/pictos/3100.png"
+      "picto": "../../recursos/pictos/3100.png",
+      "bn": "../../recursos/pictos-bn/3100.png"
     },
     {
       "palabra": "REGALO",
       "voz": "el regalo",
-      "picto": "../../recursos/pictos/25381.png"
+      "picto": "../../recursos/pictos/25381.png",
+      "bn": "../../recursos/pictos-bn/25381.png"
     },
     {
       "palabra": "BOLA DE NAVIDAD",
       "voz": "la bola de Navidad",
-      "picto": "../../recursos/pictos/8296.png"
+      "picto": "../../recursos/pictos/8296.png",
+      "bn": "../../recursos/pictos-bn/8296.png"
     },
     {
       "palabra": "BELÉN",
       "voz": "el belén",
-      "picto": "../../recursos/pictos/24873.png"
+      "picto": "../../recursos/pictos/24873.png",
+      "bn": "../../recursos/pictos-bn/24873.png"
     },
     {
       "palabra": "PAPÁ NOEL",
       "voz": "Papá Noel",
-      "picto": "../../recursos/pictos/3139.png"
+      "picto": "../../recursos/pictos/3139.png",
+      "bn": "../../recursos/pictos-bn/3139.png"
     },
     {
       "palabra": "REYES MAGOS",
       "voz": "los Reyes Magos",
-      "picto": "../../recursos/pictos/3124.png"
+      "picto": "../../recursos/pictos/3124.png",
+      "bn": "../../recursos/pictos-bn/3124.png"
     },
     {
       "palabra": "TURRÓN",
       "voz": "el turrón",
-      "picto": "../../recursos/pictos/2784.png"
+      "picto": "../../recursos/pictos/2784.png",
+      "bn": "../../recursos/pictos-bn/2784.png"
     }
   ],
   "pasos": {
@@ -52,22 +60,26 @@
       {
         "palabra": "PONER EL ÁRBOL",
         "voz": "poner el árbol",
-        "picto": "../../recursos/dibujos/arbol-1.png"
+        "picto": "../../recursos/dibujos/arbol-1.png",
+        "bn": "../../recursos/dibujos/arbol-1.png"
       },
       {
         "palabra": "PONER LAS LUCES",
         "voz": "poner las luces",
-        "picto": "../../recursos/dibujos/arbol-2.png"
+        "picto": "../../recursos/dibujos/arbol-2.png",
+        "bn": "../../recursos/dibujos/arbol-2.png"
       },
       {
         "palabra": "COLGAR LAS BOLAS",
         "voz": "colgar las bolas",
-        "picto": "../../recursos/dibujos/arbol-3.png"
+        "picto": "../../recursos/dibujos/arbol-3.png",
+        "bn": "../../recursos/dibujos/arbol-3.png"
       },
       {
         "palabra": "PONER LA ESTRELLA",
         "voz": "poner la estrella",
-        "picto": "../../recursos/dibujos/arbol-4.png"
+        "picto": "../../recursos/dibujos/arbol-4.png",
+        "bn": "../../recursos/dibujos/arbol-4.png"
       }
     ]
   },
@@ -78,48 +90,56 @@
         "palabra": "ÁRBOL DE NAVIDAD",
         "voz": "el árbol de Navidad",
         "picto": "../../recursos/pictos/24859.png",
+        "bn": "../../recursos/pictos-bn/24859.png",
         "grupo": "a"
       },
       {
         "palabra": "REGALO",
         "voz": "el regalo",
         "picto": "../../recursos/pictos/25381.png",
+        "bn": "../../recursos/pictos-bn/25381.png",
         "grupo": "a"
       },
       {
         "palabra": "TURRÓN",
         "voz": "el turrón",
         "picto": "../../recursos/pictos/2784.png",
+        "bn": "../../recursos/pictos-bn/2784.png",
         "grupo": "a"
       },
       {
         "palabra": "PAPÁ NOEL",
         "voz": "Papá Noel",
         "picto": "../../recursos/pictos/3139.png",
+        "bn": "../../recursos/pictos-bn/3139.png",
         "grupo": "a"
       },
       {
         "palabra": "BAÑADOR",
         "voz": "el bañador",
         "picto": "../../recursos/pictos/2601.png",
+        "bn": "../../recursos/pictos-bn/2601.png",
         "grupo": "b"
       },
       {
         "palabra": "GAFAS DE SOL",
         "voz": "las gafas de sol",
         "picto": "../../recursos/pictos/3330.png",
+        "bn": "../../recursos/pictos-bn/3330.png",
         "grupo": "b"
       },
       {
         "palabra": "SANDALIAS",
         "voz": "las sandalias",
         "picto": "../../recursos/pictos/2556.png",
+        "bn": "../../recursos/pictos-bn/2556.png",
         "grupo": "b"
       },
       {
         "palabra": "HELADO",
         "voz": "el helado",
         "picto": "../../recursos/pictos/3348.png",
+        "bn": "../../recursos/pictos-bn/3348.png",
         "grupo": "b"
       }
     ],
@@ -131,5 +151,232 @@
       "nombre": "VERANO",
       "picto": "../../recursos/pictos/2798.png"
     }
-  }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.2785,
+        "y": 0.1585,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.6085,
+        "y": 0.1585,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.196,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.361,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.526,
+        "y": 0.3014,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.691,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.856,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.2785,
+        "y": 0.4443,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.4435,
+        "y": 0.4443,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.6085,
+        "y": 0.4443,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.7735,
+        "y": 0.4443,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.196,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.361,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.526,
+        "y": 0.5872,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.691,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.856,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.2785,
+        "y": 0.7301,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.4435,
+        "y": 0.7301,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.6085,
+        "y": 0.7301,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.7735,
+        "y": 0.7301,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.196,
+        "y": 0.873,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.361,
+        "y": 0.873,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.526,
+        "y": 0.873,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.691,
+        "y": 0.873,
+        "c": "VERDE"
+      }
+    ],
+    "r": 0.066,
+    "colores": [
+      {
+        "nombre": "ROJO",
+        "hex": "#e53935"
+      },
+      {
+        "nombre": "VERDE",
+        "hex": "#43a047"
+      },
+      {
+        "nombre": "MARRÓN",
+        "hex": "#6d4c41"
+      }
+    ],
+    "palabra": "REGALO",
+    "voz": "el regalo",
+    "picto": "../../recursos/pictos/25381.png",
+    "bn": "../../recursos/pictos-bn/25381.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "ÁRBOL DE NAVIDAD",
+      "voz": "el árbol de Navidad",
+      "picto": "../../recursos/pictos/24859.png",
+      "bn": "../../recursos/pictos-bn/24859.png"
+    },
+    {
+      "palabra": "ESTRELLA",
+      "voz": "la estrella",
+      "picto": "../../recursos/pictos/3100.png",
+      "bn": "../../recursos/pictos-bn/3100.png"
+    },
+    {
+      "palabra": "REGALO",
+      "voz": "el regalo",
+      "picto": "../../recursos/pictos/25381.png",
+      "bn": "../../recursos/pictos-bn/25381.png"
+    },
+    {
+      "palabra": "BOLA DE NAVIDAD",
+      "voz": "la bola de Navidad",
+      "picto": "../../recursos/pictos/8296.png",
+      "bn": "../../recursos/pictos-bn/8296.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "toca",
+      "titulo": "TOCA Y ESCUCHA",
+      "desc": "Escucha y toca el dibujo que te piden.",
+      "picto": "../../recursos/pictos/24859.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/3100.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/25381.png"
+    },
+    {
+      "modo": "igual",
+      "titulo": "BUSCA EL IGUAL",
+      "desc": "Mira el modelo y toca el dibujo igual.",
+      "picto": "../../recursos/pictos/8296.png",
+      "sombra": false
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "COLOREA",
+      "desc": "Colorea 4 dibujos.",
+      "picto": "../../recursos/pictos-bn/3100.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/25381.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "BUSCA EL IGUAL",
+      "desc": "Rodea el dibujo igual al modelo.",
+      "picto": "../../recursos/pictos/25381.png"
+    }
+  ],
+  "taller": null
 }

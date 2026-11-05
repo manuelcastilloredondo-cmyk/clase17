@@ -4,23 +4,28 @@
   "rutina": {
     "lunes": {
       "juego": "toca",
-      "ficha": "colorear"
+      "ficha": "colorear",
+      "extra": "igual"
     },
     "martes": {
       "juego": "une",
-      "ficha": "lineas"
+      "ficha": "lineas",
+      "extra": "sombras"
     },
     "miercoles": {
       "juego": "memoria",
-      "ficha": "recortar"
+      "ficha": "recortar",
+      "extra": "diferente"
     },
     "jueves": {
       "juego": "ordena",
-      "ficha": "secuencia"
+      "ficha": "secuencia",
+      "extra": "cuenta"
     },
     "viernes": {
       "juego": "clasifica",
-      "ficha": "puntos"
+      "ficha": "puntos",
+      "extra": "tamano"
     }
   },
   "semanas": [

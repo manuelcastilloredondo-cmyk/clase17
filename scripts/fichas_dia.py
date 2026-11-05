@@ -30,6 +30,12 @@ NOMBRES = {
     "recortar": ("RECORTA Y PEGA", "RECORTA LOS DIBUJOS Y PÉGALOS JUNTO A SU NOMBRE."),
     "secuencia": ("ORDENA LOS PASOS", "RECORTA LOS PASOS Y PÉGALOS EN ORDEN."),
     "puntos": ("UNE LOS PUNTOS", "UNE LOS PUNTOS DEL 1 AL ÚLTIMO, COLOREA Y REPASA LA PALABRA."),
+    "puntitos": ("PINTA LOS PUNTITOS", "RELLENA CADA CÍRCULO CON SU COLOR: ROTULADOR DE PUNTA REDONDA, GOMET O DEDO."),
+    "igual": ("BUSCA EL IGUAL", "MIRA EL DIBUJO DE LA IZQUIERDA Y RODEA EL QUE ES IGUAL."),
+    "sombras": ("CADA UNO CON SU SOMBRA", "UNE CADA DIBUJO CON SU SOMBRA."),
+    "diferente": ("BUSCA EL DIFERENTE", "RODEA EL DIBUJO QUE ES DIFERENTE EN CADA FILA."),
+    "cuenta": ("CUENTA", "CUENTA LOS DIBUJOS Y RODEA EL NÚMERO."),
+    "tamano": ("GRANDE Y PEQUEÑO", "RODEA EL GRANDE Y TACHA EL PEQUEÑO."),
 }
 
 # Figuras para unir puntos (coordenadas 0..1, sentido horario, y = arriba)
@@ -260,6 +266,161 @@ def generar(salida, tipo, tema, fecha_txt, elementos, pasos=None, figura="estrel
     cabecera(c, titulo, consigna, tema, fecha_txt)
     TIPOS[tipo](c, elementos if tipo != "secuencia" else None, pasos=pasos, figura=figura, semilla=semilla) if tipo != "secuencia" \
         else secuencia(c, pasos, semilla=semilla)
+    pie(c)
+    c.showPage()
+    c.save()
+
+
+# ── fichas de percepción y conceptos (nivel inicial) ──
+from reportlab.lib.utils import ImageReader  # noqa: E402
+
+HEXR = {"ROJO": "#e53935", "AZUL": "#1e88e5", "AMARILLO": "#fdd835", "VERDE": "#43a047",
+        "NARANJA": "#fb8c00", "MORADO": "#8e24aa", "MARRÓN": "#6d4c41", "ROSA": "#ec407a"}
+
+
+def _picto_tenue(c, ruta, x, y, lado, alfa=0.16):
+    from PIL import Image
+    im = Image.open(ruta).convert("RGBA")
+    a = im.split()[3].point(lambda v: int(v * alfa))
+    im.putalpha(a)
+    c.drawImage(ImageReader(im), x, y, lado, lado, mask="auto")
+
+
+def puntitos_ficha(c, el=None, arte=None, **_):
+    lado = ANCHO - 2 * M - 40
+    x0, y0 = M + 20, 150
+    _picto_tenue(c, arte["bn"], x0, y0, lado)
+    r = arte["r"] * lado
+    for p in arte["puntos"]:
+        x, y = x0 + p["x"] * lado, y0 + (1 - p["y"]) * lado
+        c.setFillColor(white)
+        c.setStrokeColor(HexColor(HEXR[p["c"]]))
+        c.setLineWidth(4)
+        c.circle(x, y, r * 0.92, stroke=1, fill=1)
+    # leyenda de colores
+    c.setFont("Titulo", 12)
+    xl = M
+    for col in arte["colores"]:
+        c.setFillColor(HexColor(col["hex"]))
+        c.circle(xl + 12, 112, 11, stroke=0, fill=1)
+        c.setFillColor(BOSQUE)
+        c.drawString(xl + 30, 107, col["nombre"])
+        xl += 40 + c.stringWidth(col["nombre"], "Titulo", 12) + 20
+    c.setFont("Texto", 10)
+    c.drawString(M, 80, f"ES: {arte['palabra']}")
+    c.setStrokeColor(BOSQUE)
+
+
+def _filas(n=4):
+    alto = (ALTO - 190 - 60) / n
+    return [ALTO - 180 - (i + 1) * alto for i in range(n)], alto
+
+
+def igual_ficha(c, el, semilla=1, **_):
+    azar = random.Random(semilla)
+    ys, alto = _filas()
+    lado = alto - 30
+    for i, y in enumerate(ys):
+        modelo = el[i % len(el)]
+        caja(c, M, y + 6, lado + 12, lado + 12, grosor=3.5, color=PINO)
+        picto(c, modelo["color"], M + 6, y + 12, lado)
+        otros = azar.sample([e for e in el if e is not modelo], 3)
+        ops = otros + [modelo]
+        azar.shuffle(ops)
+        paso = (ANCHO - 2 * M - lado - 40) / 4
+        for k, e in enumerate(ops):
+            x = M + lado + 40 + k * paso
+            picto(c, e["color"], x + (paso - lado * 0.85) / 2, y + 16, lado * 0.85)
+
+
+def sombras_ficha(c, el, semilla=1, **_):
+    from arte import sombra
+    azar = random.Random(semilla)
+    items = el[:4]
+    orden = items[:]
+    while any(a is b for a, b in zip(orden, items)):
+        azar.shuffle(orden)
+    ys, alto = _filas()
+    lado = alto - 34
+    for y, e, o in zip(ys, items, orden):
+        caja(c, M, y + 8, lado + 12, lado + 12)
+        picto(c, e["color"], M + 6, y + 14, lado)
+        c.setFillColor(BOSQUE)
+        c.circle(M + lado + 30, y + 14 + lado / 2, 5, stroke=0, fill=1)
+        xs = ANCHO - M - lado - 12
+        caja(c, xs, y + 8, lado + 12, lado + 12, color=GRIS)
+        picto(c, sombra(o["id"], o["color"]), xs + 6, y + 14, lado)
+        c.circle(xs - 18, y + 14 + lado / 2, 5, stroke=0, fill=1)
+
+
+def diferente_ficha(c, el, semilla=1, **_):
+    azar = random.Random(semilla)
+    ys, alto = _filas()
+    lado = min(alto - 34, (ANCHO - 2 * M) / 5 - 14)
+    for i, y in enumerate(ys):
+        base = el[i % len(el)]
+        otro = azar.choice([e for e in el if e is not base])
+        pos = azar.randrange(5)
+        paso = (ANCHO - 2 * M) / 5
+        c.setStrokeColor(MENTA)
+        c.setLineWidth(1.5)
+        c.line(M, y + 4, ANCHO - M, y + 4)
+        for k in range(5):
+            e = otro if k == pos else base
+            picto(c, e["color"], M + k * paso + (paso - lado) / 2, y + 16, lado)
+
+
+def cuenta_ficha(c, el, semilla=1, **_):
+    azar = random.Random(semilla)
+    ys, alto = _filas()
+    cantidades = [1, 2, 3, azar.choice([1, 2, 3])]
+    azar.shuffle(cantidades)
+    for i, (y, n) in enumerate(zip(ys, cantidades)):
+        e = el[i % len(el)]
+        caja(c, M, y + 8, 330, alto - 20)
+        lado = min(92, (330 - 20) / 3 - 8)
+        for k in range(n):
+            picto(c, e["color"], M + 12 + k * (lado + 10), y + 8 + (alto - 20 - lado) / 2, lado)
+        for k, num in enumerate((1, 2, 3)):
+            cx = M + 380 + k * 48
+            cy = y + alto / 2 + 4
+            c.setFont("Titulo", 34)
+            c.setFillColor(BOSQUE)
+            c.drawCentredString(cx, cy, str(num))
+            for d in range(num):
+                c.setFillColor(SALVIA)
+                c.circle(cx - (num - 1) * 6 + d * 12, cy - 16, 4, stroke=0, fill=1)
+
+
+def tamano_ficha(c, el, semilla=1, **_):
+    azar = random.Random(semilla)
+    ys, alto = _filas()
+    grande = alto - 30
+    for i, y in enumerate(ys):
+        e = el[i % len(el)]
+        tams = [grande, grande * 0.45]
+        azar.shuffle(tams)
+        paso = (ANCHO - 2 * M) / 2
+        for k, t in enumerate(tams):
+            picto(c, e["color"], M + k * paso + (paso - t) / 2, y + 14 + (grande - t) / 2, t)
+        c.setStrokeColor(MENTA)
+        c.setLineWidth(1.5)
+        c.line(M, y + 4, ANCHO - M, y + 4)
+
+
+TIPOS.update({"puntitos": puntitos_ficha, "igual": igual_ficha, "sombras": sombras_ficha,
+              "diferente": diferente_ficha, "cuenta": cuenta_ficha, "tamano": tamano_ficha})
+
+
+def generar_extra(salida, tipo, tema, fecha_txt, elementos, arte=None, semilla=1):
+    """Fichas complementarias: puntitos (necesita arte) y las de percepción/conceptos."""
+    titulo, consigna = NOMBRES[tipo]
+    c = canvas.Canvas(str(salida), pagesize=A4)
+    c.setTitle(f"{titulo} · {tema} · Clase 17")
+    c.setAuthor("Manuel Castillo Redondo")
+    c.setCreator("Manu en clase · Manuel Castillo Redondo")
+    cabecera(c, titulo, consigna, tema, fecha_txt)
+    TIPOS[tipo](c, elementos, arte=arte, semilla=semilla)
     pie(c)
     c.showPage()
     c.save()

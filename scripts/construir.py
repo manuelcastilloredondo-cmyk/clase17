@@ -16,6 +16,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import arte  # noqa: E402
 import fichas_dia  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
@@ -26,7 +27,26 @@ DIAS_SEMANA = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "d
 DIAS_TXT = ["LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO", "DOMINGO"]
 MESES_TXT = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"]
 JUEGOS = {"toca": "TOCA Y ESCUCHA", "une": "UNE CADA DIBUJO", "memoria": "MEMORIA",
-          "ordena": "ORDENA LOS PASOS", "clasifica": "CLASIFICA"}
+          "ordena": "ORDENA LOS PASOS", "clasifica": "CLASIFICA",
+          "colorear": "COLOREA CON EL DEDO", "puntitos": "PINTA LOS PUNTITOS", "igual": "BUSCA EL IGUAL",
+          "sombras": "CADA UNO CON SU SOMBRA", "diferente": "BUSCA EL DIFERENTE", "cuenta": "CUENTA",
+          "tamano": "GRANDE Y PEQUEÑO"}
+DESC = {
+    "toca": "Escucha y toca el dibujo que te piden.", "une": "Une cada dibujo con su nombre.",
+    "memoria": "Busca las parejas.", "ordena": "Pon los pasos en orden.", "clasifica": "Lleva cada dibujo a su caja.",
+    "colorear": "Elige un color y toca las zonas del dibujo para pintarlas.",
+    "puntitos": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+    "igual": "Mira el modelo y toca el dibujo igual.", "sombras": "Toca la sombra de cada dibujo.",
+    "diferente": "Toca el dibujo que no es como los demás.", "cuenta": "Cuenta los dibujos y toca el número (1–3 o 1–5).",
+    "tamano": "Escucha y toca el grande o el pequeño.",
+}
+DESC_FICHA = {
+    "colorear": "Colorea 4 dibujos.", "lineas": "Repasa los caminos.", "recortar": "Recorta y pega junto a su nombre.",
+    "secuencia": "Recorta y ordena los pasos.", "puntos": "Une los puntos y colorea.",
+    "puntitos": "Rotulador de punta redonda, gomets o dedo.", "igual": "Rodea el dibujo igual al modelo.",
+    "sombras": "Une cada dibujo con su sombra.", "diferente": "Rodea el que es diferente.",
+    "cuenta": "Cuenta y rodea el número.", "tamano": "Rodea el grande y tacha el pequeño.",
+}
 
 
 def bajar(pid):
@@ -68,8 +88,26 @@ def item(e, rel="../../"):
         bajar(e["id"])
         web = f"{rel}recursos/pictos/{e['id']}.png"
         color, bn = PICTOS / f"{e['id']}.png", PICTOS_BN / f"{e['id']}.png"
-    return {"palabra": e["palabra"], "voz": e["voz"], "picto": web, **({"grupo": e["grupo"]} if "grupo" in e else {})}, \
-           {"palabra": e["palabra"], "color": color, "bn": bn}
+    web_bn = web if "dibujo" in e else f"{rel}recursos/pictos-bn/{e['id']}.png"
+    return {"palabra": e["palabra"], "voz": e["voz"], "picto": web, "bn": web_bn, **({"grupo": e["grupo"]} if "grupo" in e else {})}, \
+           {"palabra": e["palabra"], "voz": e["voz"], "color": color, "bn": bn, "id": e.get("id", e.get("dibujo"))}
+
+
+def arte_puntitos(vocab):
+    """Elige el primer picto del día que da un buen dibujo de puntitos (círculos grandes)."""
+    mejor = None
+    for e in vocab:
+        if "id" not in e:
+            continue
+        a = arte.puntitos(PICTOS / f"{e['id']}.png", max_puntos=24, max_colores=3)
+        if not a:
+            continue
+        if a["r"] >= 0.05 and len(a["puntos"]) >= 10:
+            mejor = (e, a)
+            break
+        if not mejor or a["r"] > mejor[1]["r"]:
+            mejor = (e, a)
+    return mejor
 
 
 def rotar(lista, n):
@@ -108,18 +146,39 @@ def main(ruta):
                 bajar(cl[k]["id"])
             datos["clasifica"] = {"pregunta": cl["pregunta"], "elementos": list(web_cl),
                                   **{k: {"nombre": cl[k]["nombre"], "picto": f"../../recursos/pictos/{cl[k]['id']}.png"} for k in ("a", "b")}}
+            # actividades complementarias
+            extra = rut.get("extra", "igual")
+            e_pt, a_pt = arte_puntitos(vocab)
+            datos["puntitos"] = {**a_pt, "palabra": e_pt["palabra"], "voz": e_pt["voz"],
+                                 "picto": f"../../recursos/pictos/{e_pt['id']}.png", "bn": f"../../recursos/pictos-bn/{e_pt['id']}.png",
+                                 "hex": arte.HEX}
+            datos["colorear"] = [w for w in web_el if "pictos/" in w["picto"]][:4]
+            datos["actividades"] = [{"modo": m, "titulo": JUEGOS[m], "desc": DESC[m], "picto": web_el[k % len(web_el)]["picto"]}
+                                    for k, m in enumerate([rut["juego"], "colorear", "puntitos", extra])]
+            datos["actividades"][2]["picto"] = datos["puntitos"]["picto"]
+            datos["actividades"][3]["sombra"] = extra == "sombras"
+            datos["fichas"] = [{"pdf": "ficha.pdf", "titulo": fichas_dia.NOMBRES[rut["ficha"]][0], "desc": DESC_FICHA[rut["ficha"]], "picto": web_el[1]["bn"]},
+                               {"pdf": "puntitos.pdf", "titulo": fichas_dia.NOMBRES["puntitos"][0], "desc": DESC_FICHA["puntitos"], "picto": datos["puntitos"]["bn"]},
+                               {"pdf": "extra.pdf", "titulo": fichas_dia.NOMBRES[extra][0], "desc": DESC_FICHA[extra], "picto": web_el[2]["picto"]}]
+            datos["taller"] = sem["taller"]["titulo"] if sem["taller"]["dia"] == fecha else None
             carpeta = RAIZ / "actividades" / fecha
             carpeta.mkdir(parents=True, exist_ok=True)
             (carpeta / "datos.json").write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
             shutil.copyfile(plantilla, carpeta / "juego.html")
             shutil.copyfile(RAIZ / "plantillas/ficha.html", carpeta / "ficha.html")
+            shutil.copyfile(RAIZ / "plantillas/dia.html", carpeta / "dia.html")
             fecha_txt = f"{DIAS_TXT[f.weekday()]} {f.day} DE {MESES_TXT[f.month - 1]}"
             fichas_dia.generar(carpeta / "ficha.pdf", rut["ficha"], tema, fecha_txt, list(pdf_el),
                                pasos=list(pdf_pasos), figura=sem["puntos"] if not repaso else "estrella", semilla=f.day)
+            arte_pdf = {**a_pt, "bn": PICTOS_BN / f"{e_pt['id']}.png", "palabra": e_pt["palabra"]}
+            fichas_dia.generar_extra(carpeta / "puntitos.pdf", "puntitos", tema, fecha_txt, list(pdf_el), arte=arte_pdf, semilla=f.day)
+            fichas_dia.generar_extra(carpeta / "extra.pdf", extra, tema, fecha_txt,
+                                     [p for p in pdf_el if isinstance(p["id"], int)], semilla=f.day)
             catalogo.append({
                 "id": fecha, "fecha": fecha, "semana": sem["id"], "tema": tema, "centro": prog["centro_interes"].upper(),
                 "titulo": JUEGOS[rut["juego"]], "ficha_tipo": fichas_dia.NOMBRES[rut["ficha"]][0],
-                "portada": f"recursos/pictos/{vocab[0]['id']}.png", "juego": "juego.html", "ficha": "ficha.html", "pdf": "ficha.pdf",
+                "portada": f"recursos/pictos/{vocab[0]['id']}.png", "juego": "juego.html", "ficha": "ficha.html", "pdf": "ficha.pdf", "dia": "dia.html",
+                "n_juegos": len(datos["actividades"]), "n_fichas": len(datos["fichas"]),
                 "taller": sem["taller"]["titulo"] if sem["taller"]["dia"] == fecha else None,
             })
             print(f"{fecha} {dia:9} {rut['juego']:9} {rut['ficha']:9} {tema}")
@@ -133,7 +192,8 @@ def main(ruta):
     from pypdf import PdfWriter
     w = PdfWriter()
     for a in catalogo:
-        w.append(str(RAIZ / "actividades" / a["id"] / "ficha.pdf"))
+        for nombre in ("ficha.pdf", "puntitos.pdf", "extra.pdf"):
+            w.append(str(RAIZ / "actividades" / a["id"] / nombre))
     w.write(str(RAIZ / "programacion" / f"{prog['mes']}-fichas.pdf"))
     print(f"{len(catalogo)} días creados")
 

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Actividades del día · Clase 17</title>
+<meta name="author" content="Manuel Castillo Redondo">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap">
+<link rel="icon" href="../../recursos/logo/icono-17.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../recursos/comun.css">
+<style>
+  /* Día: todas las actividades del día en dos bloques, pantalla e imprimir. */
+  main { max-width: 1180px; margin: 0 auto; }
+  .fecha-dia { font-size: 14px; letter-spacing: .14em; color: var(--suave); font-weight: 700; }
+  .cabeza { display: flex; align-items: baseline; gap: 14px; border-bottom: 3px solid var(--bosque); padding-bottom: 8px; margin: 26px 0 14px; }
+  .cabeza h2 { font-family: var(--f-titulo); font-weight: 900; font-size: 26px; letter-spacing: .05em; margin: 0; flex: 1; }
+  .cabeza span { color: var(--suave); font-size: 13px; font-weight: 700; }
+  .rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
+  .act { background: var(--papel); border: var(--borde); border-radius: var(--radio); text-decoration: none; color: var(--bosque);
+         display: grid; grid-template-rows: auto 1fr; overflow: hidden; transition: transform .15s; }
+  .act:hover { transform: translateY(-3px); }
+  .act .img { background: #fff; border-bottom: 2px solid var(--menta); display: grid; place-items: center; padding: 14px; aspect-ratio: 16 / 10; }
+  .act .img img { height: 100%; width: auto; max-height: 130px; }
+  .act .img svg { height: 100%; max-height: 130px; width: auto; }
+  .act .txt { padding: 12px 14px 14px; display: grid; gap: 4px; align-content: start; }
+  .act b { font-family: var(--f-titulo); font-weight: 900; font-size: 19px; letter-spacing: .04em; line-height: 1.1; }
+  .act small { color: var(--suave); font-size: 12.5px; line-height: 1.35; }
+  .act .etq { justify-self: start; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--menta); }
+  .act .sombra img { filter: brightness(0) opacity(.72); background: transparent; }
+  .act.principal { border-color: var(--pino); box-shadow: 0 0 0 4px var(--salvia); }
+  .taller { background: var(--menta); border-radius: var(--radio); padding: 12px 16px; font-weight: 700; margin-top: 10px; }
+  .vacio { padding: 24px; border: 2px dashed var(--salvia); border-radius: var(--radio); color: var(--suave); }
+</style>
+</head>
+<body>
+  <nav class="menu" aria-label="Menú principal"><div class="menu-dentro">
+    <a class="marca" href="../../"><img src="../../recursos/logo/logo-horizontal.svg" alt="CLASE 17 · LA CLASE DE LOS CHICOS"></a>
+    <ul><li><a class="opcion" href="../../">INICIO</a></li><li><a class="opcion" href="../../#programacion">PROGRAMACIÓN</a></li><li><a class="opcion" href="../../#juegos">JUEGOS</a></li><li><a class="opcion" href="../../#fichas">FICHAS</a></li></ul>
+  </div></nav>
+
+  <main class="gutter">
+    <header class="barra">
+      <div style="flex:1;min-width:0">
+        <div class="fecha-dia" id="fecha"></div>
+        <h1 id="titulo" style="margin:0">Actividades del día</h1>
+        <div id="taller"></div>
+      </div>
+    </header>
+
+    <section id="juegos">
+      <div class="cabeza"><h2>En pantalla</h2><span>PIZARRA DIGITAL · TABLET · MÓVIL</span></div>
+      <div class="rejilla" id="digital"><p class="vacio">Cargando…</p></div>
+    </section>
+
+    <section id="fichas">
+      <div class="cabeza"><h2>Para imprimir</h2><span>FICHAS A4 EN PDF</span></div>
+      <div class="rejilla" id="papel"></div>
+    </section>
+
+    <footer class="creditos">Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.</footer>
+  </main>
+
+<script>
+const DIAS = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
+const MESES = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
+const $ = id => document.getElementById(id);
+fetch('datos.json').then(r => r.json()).then(d => {
+  const [a, m, dd] = d.fecha.split('-').map(Number);
+  $('fecha').textContent = `${DIAS[new Date(a, m - 1, dd).getDay()]} ${dd} DE ${MESES[m - 1]} · ${d.tema}`;
+  $('titulo').textContent = 'Actividades del día'; document.title = `${DIAS[new Date(a, m - 1, dd).getDay()]} ${dd} · Clase 17`;
+  if (d.taller) $('taller').innerHTML = `<div class="taller">TALLER DE HOY: ${d.taller}</div>`;
+  const imgDe = x => x.picto ? `<img class="picto" src="${x.picto}" alt="">` : '';
+  $('digital').innerHTML = d.actividades.map((x, i) => `
+    <a class="act${i === 0 ? ' principal' : ''}" href="juego.html${x.modo === d.juego ? '' : '?modo=' + x.modo}">
+      <div class="img${x.sombra ? ' sombra' : ''}">${imgDe(x)}</div>
+      <div class="txt">${i === 0 ? '<span class="etq">JUEGO DEL DÍA</span>' : ''}<b>${x.titulo}</b><small>${x.desc}</small></div></a>`).join('');
+  $('papel').innerHTML = d.fichas.map(x => `
+    <a class="act" href="ficha.html?pdf=${x.pdf}">
+      <div class="img">${imgDe(x)}</div>
+      <div class="txt"><b>${x.titulo}</b><small>${x.desc}</small></div></a>`).join('');
+  if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+}).catch(() => { $('digital').innerHTML = '<p class="vacio">No se han podido cargar las actividades.</p>'; });
+</script>
+</body>
+</html>

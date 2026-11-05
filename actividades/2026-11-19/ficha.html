@@ -34,8 +34,8 @@
     </header>
     <div class="hoja" id="hoja"><p class="aviso">Cargando la ficha…</p></div>
     <div class="acciones">
-      <a class="btn btn-primario" href="ficha.pdf" download>Descargar PDF</a>
-      <a class="btn" href="juego.html">Ir al juego</a>
+      <a class="btn btn-primario" id="descargar" href="ficha.pdf" download>Descargar PDF</a>
+      <a class="btn" href="dia.html">Todas las actividades</a>
     </div>
     <p class="aviso">Para imprimir: descarga el PDF e imprímelo en A4, a una cara.</p>
     <footer class="creditos">Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.</footer>
@@ -44,19 +44,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js"></script>
 <script>
+const PDF = (new URLSearchParams(location.search).get('pdf') || 'ficha.pdf').replace(/[^a-z0-9_.-]/gi, '');
+document.getElementById('descargar').href = PDF;
 const DIAS = ['DOMINGO','LUNES','MARTES','MIÉRCOLES','JUEVES','VIERNES','SÁBADO'];
 const MESES = ['ENERO','FEBRERO','MARZO','ABRIL','MAYO','JUNIO','JULIO','AGOSTO','SEPTIEMBRE','OCTUBRE','NOVIEMBRE','DICIEMBRE'];
 fetch('datos.json').then(r => r.json()).then(d => {
   const [a, m, dd] = d.fecha.split('-').map(Number);
   document.getElementById('fecha').textContent = `${DIAS[new Date(a, m - 1, dd).getDay()]} ${dd} DE ${MESES[m - 1]} · ${d.tema}`;
-  if (d.ficha_titulo) { document.getElementById('titulo').textContent = d.ficha_titulo; document.title = d.ficha_titulo + ' · Clase 17'; }
+  const f = (d.fichas || []).find(x => x.pdf === PDF);
+  const t = f ? `${f.titulo}: ${d.tema}` : d.ficha_titulo;
+  if (t) { document.getElementById('titulo').textContent = t; document.title = t + ' · Clase 17'; }
 }).catch(() => {});
 
 async function pintar() {
   const hoja = document.getElementById('hoja');
   try {
     // el worker ya está cargado por <script>: pdf.js lo usa en la propia página
-    const pdf = await pdfjsLib.getDocument({ url: 'ficha.pdf' }).promise;
+    const pdf = await pdfjsLib.getDocument({ url: PDF }).promise;
     hoja.innerHTML = '';
     for (let n = 1; n <= pdf.numPages; n++) {
       const pagina = await pdf.getPage(n);

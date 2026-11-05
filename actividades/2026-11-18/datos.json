@@ -8,42 +8,50 @@
     {
       "palabra": "CHAQUETA",
       "voz": "la chaqueta",
-      "picto": "../../recursos/pictos/4872.png"
+      "picto": "../../recursos/pictos/4872.png",
+      "bn": "../../recursos/pictos-bn/4872.png"
     },
     {
       "palabra": "PEINAR",
       "voz": "peinarse",
-      "picto": "../../recursos/pictos/2512.png"
+      "picto": "../../recursos/pictos/2512.png",
+      "bn": "../../recursos/pictos-bn/2512.png"
     },
     {
       "palabra": "COLONIA",
       "voz": "la colonia",
-      "picto": "../../recursos/pictos/35673.png"
+      "picto": "../../recursos/pictos/35673.png",
+      "bn": "../../recursos/pictos-bn/35673.png"
     },
     {
       "palabra": "ESPEJO",
       "voz": "el espejo",
-      "picto": "../../recursos/pictos/8573.png"
+      "picto": "../../recursos/pictos/8573.png",
+      "bn": "../../recursos/pictos-bn/8573.png"
     },
     {
       "palabra": "CAMISETA",
       "voz": "la camiseta",
-      "picto": "../../recursos/pictos/2309.png"
+      "picto": "../../recursos/pictos/2309.png",
+      "bn": "../../recursos/pictos-bn/2309.png"
     },
     {
       "palabra": "PANTALÓN",
       "voz": "el pantalón",
-      "picto": "../../recursos/pictos/2565.png"
+      "picto": "../../recursos/pictos/2565.png",
+      "bn": "../../recursos/pictos-bn/2565.png"
     },
     {
       "palabra": "CALCETINES",
       "voz": "los calcetines",
-      "picto": "../../recursos/pictos/2298.png"
+      "picto": "../../recursos/pictos/2298.png",
+      "bn": "../../recursos/pictos-bn/2298.png"
     },
     {
       "palabra": "ZAPATOS",
       "voz": "los zapatos",
-      "picto": "../../recursos/pictos/2622.png"
+      "picto": "../../recursos/pictos/2622.png",
+      "bn": "../../recursos/pictos-bn/2622.png"
     }
   ],
   "pasos": {
@@ -52,27 +60,32 @@
       {
         "palabra": "CAMISETA",
         "voz": "ponerse la camiseta",
-        "picto": "../../recursos/pictos/2781.png"
+        "picto": "../../recursos/pictos/2781.png",
+        "bn": "../../recursos/pictos-bn/2781.png"
       },
       {
         "palabra": "PANTALÓN",
         "voz": "ponerse el pantalón",
-        "picto": "../../recursos/pictos/31666.png"
+        "picto": "../../recursos/pictos/31666.png",
+        "bn": "../../recursos/pictos-bn/31666.png"
       },
       {
         "palabra": "CALCETINES",
         "voz": "ponerse los calcetines",
-        "picto": "../../recursos/pictos/2298.png"
+        "picto": "../../recursos/pictos/2298.png",
+        "bn": "../../recursos/pictos-bn/2298.png"
       },
       {
         "palabra": "ZAPATOS",
         "voz": "ponerse los zapatos",
-        "picto": "../../recursos/pictos/37935.png"
+        "picto": "../../recursos/pictos/37935.png",
+        "bn": "../../recursos/pictos-bn/37935.png"
       },
       {
         "palabra": "PEINARSE",
         "voz": "peinarse",
-        "picto": "../../recursos/pictos/2512.png"
+        "picto": "../../recursos/pictos/2512.png",
+        "bn": "../../recursos/pictos-bn/2512.png"
       }
     ]
   },
@@ -83,48 +96,56 @@
         "palabra": "BAÑADOR",
         "voz": "el bañador",
         "picto": "../../recursos/pictos/2601.png",
+        "bn": "../../recursos/pictos-bn/2601.png",
         "grupo": "a"
       },
       {
         "palabra": "GAFAS DE SOL",
         "voz": "las gafas de sol",
         "picto": "../../recursos/pictos/3330.png",
+        "bn": "../../recursos/pictos-bn/3330.png",
         "grupo": "a"
       },
       {
         "palabra": "SANDALIAS",
         "voz": "las sandalias",
         "picto": "../../recursos/pictos/2556.png",
+        "bn": "../../recursos/pictos-bn/2556.png",
         "grupo": "a"
       },
       {
         "palabra": "CAMISETA DE TIRANTES",
         "voz": "la camiseta de tirantes",
         "picto": "../../recursos/pictos/2310.png",
+        "bn": "../../recursos/pictos-bn/2310.png",
         "grupo": "a"
       },
       {
         "palabra": "ABRIGO",
         "voz": "el abrigo",
         "picto": "../../recursos/pictos/8122.png",
+        "bn": "../../recursos/pictos-bn/8122.png",
         "grupo": "b"
       },
       {
         "palabra": "BUFANDA",
         "voz": "la bufanda",
         "picto": "../../recursos/pictos/2290.png",
+        "bn": "../../recursos/pictos-bn/2290.png",
         "grupo": "b"
       },
       {
         "palabra": "GORRO",
         "voz": "el gorro",
         "picto": "../../recursos/pictos/2412.png",
+        "bn": "../../recursos/pictos-bn/2412.png",
         "grupo": "b"
       },
       {
         "palabra": "GUANTES",
         "voz": "los guantes",
         "picto": "../../recursos/pictos/2415.png",
+        "bn": "../../recursos/pictos-bn/2415.png",
         "grupo": "b"
       }
     ],
@@ -136,5 +157,224 @@
       "nombre": "FRÍO",
       "picto": "../../recursos/pictos/35557.png"
     }
-  }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.3385,
+        "y": 0.131,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.5035,
+        "y": 0.131,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.6685,
+        "y": 0.131,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.256,
+        "y": 0.2739,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.421,
+        "y": 0.2739,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.586,
+        "y": 0.2739,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.751,
+        "y": 0.2739,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.1735,
+        "y": 0.4168,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.3385,
+        "y": 0.4168,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.5035,
+        "y": 0.4168,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.6685,
+        "y": 0.4168,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.8335,
+        "y": 0.4168,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.256,
+        "y": 0.5597,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.421,
+        "y": 0.5597,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.586,
+        "y": 0.5597,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.751,
+        "y": 0.5597,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.1735,
+        "y": 0.7026,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.3385,
+        "y": 0.7026,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.5035,
+        "y": 0.7026,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.6685,
+        "y": 0.7026,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.8335,
+        "y": 0.7026,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.256,
+        "y": 0.8454,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.586,
+        "y": 0.8454,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.751,
+        "y": 0.8454,
+        "c": "AMARILLO"
+      }
+    ],
+    "r": 0.066,
+    "colores": [
+      {
+        "nombre": "AMARILLO",
+        "hex": "#fdd835"
+      }
+    ],
+    "palabra": "CHAQUETA",
+    "voz": "la chaqueta",
+    "picto": "../../recursos/pictos/4872.png",
+    "bn": "../../recursos/pictos-bn/4872.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "CHAQUETA",
+      "voz": "la chaqueta",
+      "picto": "../../recursos/pictos/4872.png",
+      "bn": "../../recursos/pictos-bn/4872.png"
+    },
+    {
+      "palabra": "PEINAR",
+      "voz": "peinarse",
+      "picto": "../../recursos/pictos/2512.png",
+      "bn": "../../recursos/pictos-bn/2512.png"
+    },
+    {
+      "palabra": "COLONIA",
+      "voz": "la colonia",
+      "picto": "../../recursos/pictos/35673.png",
+      "bn": "../../recursos/pictos-bn/35673.png"
+    },
+    {
+      "palabra": "ESPEJO",
+      "voz": "el espejo",
+      "picto": "../../recursos/pictos/8573.png",
+      "bn": "../../recursos/pictos-bn/8573.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "memoria",
+      "titulo": "MEMORIA",
+      "desc": "Busca las parejas.",
+      "picto": "../../recursos/pictos/4872.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/2512.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/4872.png"
+    },
+    {
+      "modo": "diferente",
+      "titulo": "BUSCA EL DIFERENTE",
+      "desc": "Toca el dibujo que no es como los demás.",
+      "picto": "../../recursos/pictos/8573.png",
+      "sombra": false
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "RECORTA Y PEGA",
+      "desc": "Recorta y pega junto a su nombre.",
+      "picto": "../../recursos/pictos-bn/2512.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/4872.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "BUSCA EL DIFERENTE",
+      "desc": "Rodea el que es diferente.",
+      "picto": "../../recursos/pictos/35673.png"
+    }
+  ],
+  "taller": "Doblamos la ropa"
 }

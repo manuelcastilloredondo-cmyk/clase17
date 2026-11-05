@@ -73,6 +73,33 @@
   .final { flex: 1; display: grid; place-items: center; text-align: center; gap: 18px; align-content: center; padding-block: 40px; }
   .final h2 { font-family: var(--f-titulo); font-weight: 900; font-size: clamp(44px, 8vw, 96px); margin: 0; color: var(--bien); }
   @media (max-width: 600px) { .pieza img { height: 64px; } .pieza { min-height: 80px; } }
+  /* colorear / puntitos */
+  .lienzo-zona { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: start; }
+  @media (max-width: 760px) { .lienzo-zona { grid-template-columns: 1fr; } }
+  .lienzo { background: #fff; border: var(--borde); border-radius: var(--radio); padding: 8px; display: grid; place-items: center; }
+  .lienzo canvas, .lienzo svg { width: min(100%, 62vh); height: auto; aspect-ratio: 1; touch-action: manipulation; display: block; }
+  .paleta { display: grid; grid-template-columns: repeat(2, 64px); gap: 10px; align-content: start; }
+  @media (max-width: 760px) { .paleta { grid-template-columns: repeat(auto-fill, 56px); justify-content: center; } }
+  .color { width: 64px; height: 64px; border-radius: 50%; border: 4px solid var(--bosque); box-shadow: inset 0 0 0 3px #fff; }
+  @media (max-width: 760px) { .color { width: 56px; height: 56px; } }
+  .color[aria-pressed="true"] { outline: 5px solid var(--salvia); outline-offset: 3px; transform: scale(1.08); }
+  .paleta .btn { grid-column: 1 / -1; justify-content: center; }
+  .modelo { width: 100%; max-width: 140px; background: #fff; border-radius: 10px; border: 2px solid var(--menta); }
+  svg .punto-c { cursor: pointer; transition: fill .2s; }
+  svg .punto-c.mal { animation: sacudir .4s; }
+  /* modelo grande (igual, sombras) */
+  .modelo-grande { display: grid; place-items: center; }
+  .modelo-grande .carta { width: min(230px, 46vw); border-color: var(--pino); border-width: 5px; }
+  .sombra img, .sombra img.picto { filter: brightness(0) opacity(.72); background: transparent; }
+  .espejo img { transform: scaleX(-1); }
+  .grupo { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; align-items: center; min-height: 200px; background: var(--papel); border: var(--borde); border-radius: var(--radio); padding: 16px; }
+  .grupo img { width: clamp(70px, 12vw, 140px); }
+  .numeros { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; max-width: 640px; margin: 0 auto; width: 100%; }
+  .numeros .carta .nombre { font-size: clamp(40px, 7vw, 80px); line-height: 1; }
+  .numeros .carta .ptos { display: flex; gap: 6px; justify-content: center; }
+  .numeros .carta .ptos i { width: 14px; height: 14px; border-radius: 50%; background: var(--salvia); display: block; }
+  .tamanos { display: flex; justify-content: center; align-items: flex-end; gap: clamp(20px, 6vw, 80px); }
+  .tamanos .carta { width: auto; }
 </style>
 </head>
 <body>
@@ -88,6 +115,7 @@
         <h1 id="titulo" style="margin:0">Juego del día</h1>
       </div>
       <div class="controles" id="controles"></div>
+      <a class="btn" href="dia.html">Todas las actividades</a>
     </header>
     <div class="consigna">
       <p id="frase">Cargando…</p>
@@ -279,15 +307,232 @@ function clasifica() {
   $('zona').append(actual, cajas); mostrar();
 }
 
-const juegos = { toca, une, memoria, ordena, clasifica };
+
+/* ── COLOREA: pintar con el dedo (relleno por zonas) ── */
+const COLORES = [['ROJO','#e53935'],['AZUL','#1e88e5'],['AMARILLO','#fdd835'],['VERDE','#43a047'],['NARANJA','#fb8c00'],['MORADO','#8e24aa'],['MARRÓN','#6d4c41'],['ROSA','#ec407a']];
+function paletaHtml(lista, conGoma) {
+  return lista.map(([n, h], i) => `<button class="color" style="background:${h}" data-hex="${h}" aria-label="${n}" aria-pressed="${i === 0}"></button>`).join('')
+    + (conGoma ? '<button class="color" style="background:#fff" data-hex="#ffffff" aria-label="BORRAR" aria-pressed="false"></button>' : '');
+}
+function colorear(i = 0) {
+  limpiar();
+  const e = D.colorear[i % D.colorear.length];
+  decirConsigna(`ELIGE UN COLOR Y <strong>PINTA ${e.palabra}</strong>`, `Elige un color y pinta ${e.voz}`);
+  D.colorear.forEach((x, k) => {
+    const b = document.createElement('button'); b.className = 'btn'; b.textContent = k + 1; b.setAttribute('aria-label', x.palabra);
+    b.setAttribute('aria-pressed', k === i % D.colorear.length); b.onclick = () => colorear(k); $('controles').appendChild(b);
+  });
+  $('zona').innerHTML = `<div class="lienzo-zona"><div class="lienzo"><canvas id="cv" width="600" height="600"></canvas></div>
+    <div class="paleta">${paletaHtml(COLORES, true)}<img class="modelo" src="${e.picto}" alt="Modelo"><button class="btn" id="borrar">Empezar de nuevo</button><button class="btn btn-primario" id="fin">¡He terminado!</button></div></div>`;
+  const cv = $('cv'), cx = cv.getContext('2d', { willReadFrequently: true });
+  let color = COLORES[0][1];
+  document.querySelectorAll('.paleta .color').forEach(b => b.onclick = () => {
+    document.querySelectorAll('.paleta .color').forEach(x => x.setAttribute('aria-pressed', 'false'));
+    b.setAttribute('aria-pressed', 'true'); color = b.dataset.hex; Aula.decir(b.getAttribute('aria-label').toLowerCase());
+  });
+  const im = new Image();
+  function base() { cx.fillStyle = '#fff'; cx.fillRect(0, 0, 600, 600); cx.drawImage(im, 20, 20, 560, 560); }
+  im.onload = base; im.src = e.bn;
+  $('borrar').onclick = base;
+  $('fin').onclick = terminar;
+  cv.addEventListener('pointerdown', ev => {
+    const r = cv.getBoundingClientRect();
+    const x = Math.floor((ev.clientX - r.left) * 600 / r.width), y = Math.floor((ev.clientY - r.top) * 600 / r.height);
+    rellenar(cx, x, y, color);
+  });
+}
+function rellenar(cx, x0, y0, hex) {
+  const W = 600, H = 600, img = cx.getImageData(0, 0, W, H), d = img.data;
+  const lum = i => (d[i] + d[i + 1] + d[i + 2]) / 3;
+  const i0 = (y0 * W + x0) * 4;
+  if (lum(i0) < 110) return; // tocó una línea
+  const [r0, g0, b0] = [d[i0], d[i0 + 1], d[i0 + 2]];
+  const nr = parseInt(hex.slice(1, 3), 16), ng = parseInt(hex.slice(3, 5), 16), nb = parseInt(hex.slice(5, 7), 16);
+  if (Math.abs(r0 - nr) + Math.abs(g0 - ng) + Math.abs(b0 - nb) < 10) return;
+  const igual = i => lum(i) >= 110 && Math.abs(d[i] - r0) + Math.abs(d[i + 1] - g0) + Math.abs(d[i + 2] - b0) < 90;
+  const pila = [[x0, y0]], visto = new Uint8Array(W * H);
+  while (pila.length) {
+    const [x, y] = pila.pop(); const k = y * W + x;
+    if (x < 0 || y < 0 || x >= W || y >= H || visto[k]) continue;
+    visto[k] = 1; const i = k * 4;
+    if (!igual(i)) continue;
+    d[i] = nr; d[i + 1] = ng; d[i + 2] = nb; d[i + 3] = 255;
+    pila.push([x + 1, y], [x - 1, y], [x, y + 1], [x, y - 1]);
+  }
+  cx.putImageData(img, 0, 0);
+}
+
+/* ── PUNTITOS: rellenar cada círculo con su color ── */
+function puntitos(nivel = 'facil') {
+  limpiar();
+  const A = D.puntitos; let hechos = 0, color = null;
+  [['facil', 'Toca y pinta'], ['colores', 'Elige el color']].forEach(([n, t]) => {
+    const b = document.createElement('button'); b.className = 'btn'; b.textContent = t;
+    b.setAttribute('aria-pressed', n === nivel); b.onclick = () => puntitos(n); $('controles').appendChild(b);
+  });
+  decirConsigna(nivel === 'facil' ? 'TOCA LOS <strong>PUNTITOS</strong>' : 'ELIGE EL COLOR Y <strong>TOCA SU PUNTITO</strong>',
+    nivel === 'facil' ? 'Toca los puntitos' : 'Elige el color y toca su puntito');
+  const pal = A.colores.map(c => [c.nombre, c.hex]);
+  const circ = A.puntos.map((p, i) => `<circle class="punto-c" data-i="${i}" cx="${p.x * 600}" cy="${p.y * 600}" r="${A.r * 600 * 0.92}" fill="#fff" stroke="${A.hex[p.c]}" stroke-width="7"/>`).join('');
+  $('zona').innerHTML = `<div class="lienzo-zona"><div class="lienzo"><svg viewBox="0 0 600 600" role="img" aria-label="${A.palabra}">
+      <image href="${A.bn}" x="0" y="0" width="600" height="600" opacity=".18"/>${circ}</svg></div>
+    <div class="paleta">${nivel === 'colores' ? paletaHtml(pal, false) : ''}<img class="modelo" src="${A.picto}" alt="Modelo"></div></div>`;
+  if (nivel === 'colores') {
+    color = pal[0][1];
+    document.querySelectorAll('.paleta .color').forEach(b => b.onclick = () => {
+      document.querySelectorAll('.paleta .color').forEach(x => x.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true'); color = b.dataset.hex; Aula.decir(b.getAttribute('aria-label').toLowerCase());
+    });
+  }
+  document.querySelectorAll('.punto-c').forEach(el => el.addEventListener('pointerdown', () => {
+    const p = A.puntos[el.dataset.i], hex = A.hex[p.c];
+    if (el.dataset.ok) return;
+    if (nivel === 'colores' && color !== hex) { el.classList.remove('mal'); void el.getBoundingClientRect(); el.classList.add('mal'); Aula.decir('Ese color no'); return; }
+    el.setAttribute('fill', hex); el.dataset.ok = 1; hechos++;
+    if (hechos === A.puntos.length) { Aula.decir('¡Muy bien! Es ' + A.voz); setTimeout(terminar, 1400); }
+  }));
+}
+
+/* ── BUSCA EL IGUAL ── */
+function igual(nivel = 3) {
+  limpiar(); botonesNivel([3, 4], nivel, n => igual(n), n => n + ' dibujos');
+  const R = 6; let ronda = 0; const orden = Aula.barajar(D.elementos);
+  const modelo = document.createElement('div'); modelo.className = 'modelo-grande';
+  const rej = document.createElement('div'); rej.className = 'rejilla'; const pts = document.createElement('div'); pts.className = 'puntos';
+  rej.style.gridTemplateColumns = `repeat(${nivel}, minmax(0, 1fr))`; rej.style.maxWidth = nivel * 220 + 'px'; rej.style.margin = '0 auto'; rej.style.width = '100%';
+  $('zona').append(modelo, rej, pts);
+  function nueva() {
+    const obj = orden[ronda % orden.length];
+    modelo.innerHTML = `<div class="carta">${img(obj.picto, obj.palabra)}</div>`;
+    const ops = Aula.barajar([obj, ...Aula.barajar(D.elementos.filter(e => e !== obj)).slice(0, nivel - 1)]);
+    rej.innerHTML = ''; let ok = false;
+    ops.forEach(e => {
+      const b = document.createElement('button'); b.className = 'carta'; b.innerHTML = img(e.picto, e.palabra); b.setAttribute('aria-label', e.palabra);
+      b.onclick = () => { if (ok) return; if (e === obj) { ok = true; b.classList.add('bien'); Aula.decir('¡Igual! ' + e.voz); ronda++; marcarPuntos(pts, ronda, R); setTimeout(() => ronda >= R ? terminar() : nueva(), 1300); } else { sacudir(b); Aula.decir('No es igual'); } };
+      rej.appendChild(b);
+    });
+    marcarPuntos(pts, ronda, R);
+    decirConsigna('TOCA EL QUE ES <strong>IGUAL</strong>', 'Toca el que es igual');
+  }
+  nueva();
+}
+
+/* ── SOMBRAS: cada dibujo con su sombra ── */
+function sombras(nivel = 3) {
+  limpiar(); botonesNivel([2, 3, 4], nivel, n => sombras(n), n => n + ' sombras');
+  const R = 6; let ronda = 0; const orden = Aula.barajar(D.elementos);
+  const modelo = document.createElement('div'); modelo.className = 'modelo-grande';
+  const rej = document.createElement('div'); rej.className = 'rejilla'; const pts = document.createElement('div'); pts.className = 'puntos';
+  rej.style.gridTemplateColumns = `repeat(${nivel}, minmax(0, 1fr))`; rej.style.maxWidth = nivel * 220 + 'px'; rej.style.margin = '0 auto'; rej.style.width = '100%';
+  $('zona').append(modelo, rej, pts);
+  function nueva() {
+    const obj = orden[ronda % orden.length];
+    modelo.innerHTML = `<div class="carta">${img(obj.picto, obj.palabra)}<span class="nombre">${obj.palabra}</span></div>`;
+    const ops = Aula.barajar([obj, ...Aula.barajar(D.elementos.filter(e => e !== obj)).slice(0, nivel - 1)]);
+    rej.innerHTML = ''; let ok = false;
+    ops.forEach(e => {
+      const b = document.createElement('button'); b.className = 'carta sombra'; b.innerHTML = img(e.picto, ''); b.setAttribute('aria-label', 'Sombra');
+      b.onclick = () => { if (ok) return; if (e === obj) { ok = true; b.classList.remove('sombra'); b.classList.add('bien'); Aula.decir('¡Es su sombra! ' + e.voz); ronda++; marcarPuntos(pts, ronda, R); setTimeout(() => ronda >= R ? terminar() : nueva(), 1400); } else { sacudir(b); Aula.decir('Esa sombra no es'); } };
+      rej.appendChild(b);
+    });
+    marcarPuntos(pts, ronda, R);
+    const dv = obj.voz.startsWith('el ') ? 'del ' + obj.voz.slice(3) : 'de ' + obj.voz;
+    decirConsigna(`¿CUÁL ES LA SOMBRA <strong>${dv.toUpperCase()}</strong>?`, `¿Cuál es la sombra ${dv}?`);
+  }
+  nueva();
+}
+
+/* ── BUSCA EL DIFERENTE ── */
+function diferente(nivel = 'facil') {
+  limpiar(); botonesNivel(['facil', 'dificil'], nivel, n => diferente(n), n => n === 'facil' ? 'Fácil' : 'Difícil');
+  const R = 6; let ronda = 0;
+  const rej = document.createElement('div'); rej.className = 'rejilla'; const pts = document.createElement('div'); pts.className = 'puntos';
+  const n = nivel === 'facil' ? 4 : 6;
+  rej.style.gridTemplateColumns = `repeat(${innerWidth < 640 ? 2 : (n === 4 ? 4 : 3)}, minmax(0, 1fr))`; rej.style.maxWidth = (n === 4 ? 4 : 3) * 220 + 'px'; rej.style.margin = '0 auto'; rej.style.width = '100%';
+  $('zona').append(rej, pts);
+  function nueva() {
+    const base = Aula.barajar(D.elementos)[0];
+    const otro = Aula.barajar(D.elementos.filter(e => e !== base))[0];
+    const pos = Math.floor(Math.random() * n); let ok = false; rej.innerHTML = '';
+    for (let k = 0; k < n; k++) {
+      const dif = k === pos, e = dif ? (nivel === 'dificil' ? base : otro) : base;
+      const b = document.createElement('button'); b.className = 'carta' + (dif && nivel === 'dificil' ? ' espejo' : ''); b.innerHTML = img(e.picto, ''); b.setAttribute('aria-label', 'Dibujo');
+      b.onclick = () => { if (ok) return; if (dif) { ok = true; b.classList.add('bien'); Aula.decir('¡Muy bien! Ese es diferente'); ronda++; marcarPuntos(pts, ronda, R); setTimeout(() => ronda >= R ? terminar() : nueva(), 1300); } else { sacudir(b); Aula.decir('Ese es igual que los otros'); } };
+      rej.appendChild(b);
+    }
+    marcarPuntos(pts, ronda, R);
+    decirConsigna('TOCA EL QUE ES <strong>DIFERENTE</strong>', nivel === 'dificil' ? 'Toca el que es diferente. Fíjate bien, mira hacia dónde está' : 'Toca el que es diferente');
+  }
+  nueva();
+}
+
+/* ── CUENTA: ¿cuántos hay? ── */
+function cuenta(maximo = 3) {
+  limpiar(); botonesNivel([3, 5], maximo, n => cuenta(n), n => 'Hasta ' + n);
+  const R = 8; let ronda = 0;
+  const grupo = document.createElement('div'); grupo.className = 'grupo';
+  const nums = document.createElement('div'); nums.className = 'numeros'; nums.style.gridTemplateColumns = `repeat(${maximo}, minmax(0, 1fr))`; nums.style.maxWidth = maximo * 200 + 'px';
+  const pts = document.createElement('div'); pts.className = 'puntos';
+  $('zona').append(grupo, nums, pts);
+  let anterior = 0;
+  function nueva() {
+    let n; do { n = 1 + Math.floor(Math.random() * maximo); } while (n === anterior); anterior = n;
+    const e = Aula.barajar(D.elementos)[0];
+    grupo.innerHTML = Array.from({ length: n }, () => img(e.picto, e.palabra)).join('');
+    nums.innerHTML = ''; let ok = false;
+    for (let k = 1; k <= maximo; k++) {
+      const b = document.createElement('button'); b.className = 'carta';
+      b.innerHTML = `<span class="nombre">${k}</span><span class="ptos">${'<i></i>'.repeat(k)}</span>`;
+      b.onclick = () => { if (ok) return; if (k === n) { ok = true; b.classList.add('bien'); Aula.decir(`¡Sí! Hay ${k}`); ronda++; marcarPuntos(pts, ronda, R); setTimeout(() => ronda >= R ? terminar() : nueva(), 1400); } else { sacudir(b); Aula.decir('Cuenta otra vez'); } };
+      nums.appendChild(b);
+    }
+    marcarPuntos(pts, ronda, R);
+    decirConsigna('¿CUÁNTOS HAY? <strong>CUENTA</strong>', '¿Cuántos hay? Cuenta');
+  }
+  nueva();
+}
+
+/* ── GRANDE Y PEQUEÑO ── */
+function tamano() {
+  limpiar();
+  const R = 8; let ronda = 0;
+  const caja = document.createElement('div'); caja.className = 'tamanos'; const pts = document.createElement('div'); pts.className = 'puntos';
+  $('zona').append(caja, pts);
+  function nueva() {
+    const e = Aula.barajar(D.elementos)[0]; const pide = Math.random() < .5 ? 'grande' : 'pequeño';
+    const lados = Aula.barajar([['grande', 'min(300px, 40vw)'], ['pequeño', 'min(120px, 16vw)']]);
+    caja.innerHTML = ''; let ok = false;
+    lados.forEach(([t, w]) => {
+      const b = document.createElement('button'); b.className = 'carta'; b.style.width = w; b.innerHTML = img(e.picto, e.palabra);
+      b.onclick = () => { if (ok) return; if (t === pide) { ok = true; b.classList.add('bien'); Aula.decir(`¡Sí! Es el ${t}`); ronda++; marcarPuntos(pts, ronda, R); setTimeout(() => ronda >= R ? terminar() : nueva(), 1300); } else { sacudir(b); Aula.decir('Ese no. Mira bien'); } };
+      caja.appendChild(b);
+    });
+    marcarPuntos(pts, ronda, R);
+    decirConsigna(`TOCA EL <strong>${pide.toUpperCase()}</strong>`, `Toca el ${pide}`);
+  }
+  nueva();
+}
+
+function botonesNivel(lista, actual, fn, etiqueta) {
+  lista.forEach(n => { const b = document.createElement('button'); b.className = 'btn'; b.textContent = etiqueta(n); b.setAttribute('aria-pressed', n === actual); b.onclick = () => fn(n); $('controles').appendChild(b); });
+}
+function marcarPuntos(el, hechos, total) { el.innerHTML = Array.from({ length: total }, (_, i) => `<span class="punto${i < hechos ? ' hecho' : ''}"></span>`).join(''); }
+
+const juegos = { toca, une, memoria, ordena, clasifica, colorear, puntitos, igual, sombras, diferente, cuenta, tamano };
+const MODO = new URLSearchParams(location.search).get('modo');
+const TITULOS = { toca: 'TOCA Y ESCUCHA', une: 'UNE CADA DIBUJO', memoria: 'MEMORIA', ordena: 'ORDENA LOS PASOS', clasifica: 'CLASIFICA',
+  colorear: 'COLOREA CON EL DEDO', puntitos: 'PINTA LOS PUNTITOS', igual: 'BUSCA EL IGUAL', sombras: 'CADA UNO CON SU SOMBRA',
+  diferente: 'BUSCA EL DIFERENTE', cuenta: 'CUENTA', tamano: 'GRANDE Y PEQUEÑO' };
 $('repetir').onclick = () => frase && Aula.decir(frase);
-$('otra').onclick = () => juegos[D.juego]();
+$('otra').onclick = () => juegos[MODO && juegos[MODO] ? MODO : D.juego]();
 Aula.datos().then(d => {
   D = d;
   const [a, m, dd] = d.fecha.split('-').map(Number); const f = new Date(a, m - 1, dd);
   $('fecha').textContent = `${dias[f.getDay()]} ${dd} DE ${meses[m - 1]} · ${d.tema}`;
-  $('titulo').textContent = d.titulo; document.title = d.titulo + ' · Clase 17';
-  juegos[d.juego]();
+  const modo = MODO && juegos[MODO] ? MODO : d.juego;
+  const titulo = `${TITULOS[modo]}: ${d.tema}`;
+  $('titulo').textContent = titulo; document.title = titulo + ' · Clase 17';
+  juegos[modo]();
 }).catch(() => { $('frase').textContent = 'No se ha podido cargar el juego.'; });
 </script>
 </body>

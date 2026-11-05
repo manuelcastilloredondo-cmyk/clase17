@@ -8,42 +8,50 @@
     {
       "palabra": "SECAR LAS MANOS",
       "voz": "secar las manos",
-      "picto": "../../recursos/pictos/2566.png"
+      "picto": "../../recursos/pictos/2566.png",
+      "bn": "../../recursos/pictos-bn/2566.png"
     },
     {
       "palabra": "PAÑUELO",
       "voz": "el pañuelo",
-      "picto": "../../recursos/pictos/17284.png"
+      "picto": "../../recursos/pictos/17284.png",
+      "bn": "../../recursos/pictos-bn/17284.png"
     },
     {
       "palabra": "JABÓN",
       "voz": "el jabón",
-      "picto": "../../recursos/pictos/2964.png"
+      "picto": "../../recursos/pictos/2964.png",
+      "bn": "../../recursos/pictos-bn/2964.png"
     },
     {
       "palabra": "AGUA",
       "voz": "el agua",
-      "picto": "../../recursos/pictos/32464.png"
+      "picto": "../../recursos/pictos/32464.png",
+      "bn": "../../recursos/pictos-bn/32464.png"
     },
     {
       "palabra": "TOALLA",
       "voz": "la toalla",
-      "picto": "../../recursos/pictos/2593.png"
+      "picto": "../../recursos/pictos/2593.png",
+      "bn": "../../recursos/pictos-bn/2593.png"
     },
     {
       "palabra": "GRIFO",
       "voz": "el grifo",
-      "picto": "../../recursos/pictos/2414.png"
+      "picto": "../../recursos/pictos/2414.png",
+      "bn": "../../recursos/pictos-bn/2414.png"
     },
     {
       "palabra": "LAVAR LAS MANOS",
       "voz": "lavar las manos",
-      "picto": "../../recursos/pictos/8975.png"
+      "picto": "../../recursos/pictos/8975.png",
+      "bn": "../../recursos/pictos-bn/8975.png"
     },
     {
       "palabra": "LAVAR LA CARA",
       "voz": "lavar la cara",
-      "picto": "../../recursos/pictos/4939.png"
+      "picto": "../../recursos/pictos/4939.png",
+      "bn": "../../recursos/pictos-bn/4939.png"
     }
   ],
   "pasos": {
@@ -52,27 +60,32 @@
       {
         "palabra": "ABRIR EL GRIFO",
         "voz": "abrir el grifo",
-        "picto": "../../recursos/pictos/21341.png"
+        "picto": "../../recursos/pictos/21341.png",
+        "bn": "../../recursos/pictos-bn/21341.png"
       },
       {
         "palabra": "ECHAR JABÓN",
         "voz": "echar jabón",
-        "picto": "../../recursos/pictos/34846.png"
+        "picto": "../../recursos/pictos/34846.png",
+        "bn": "../../recursos/pictos-bn/34846.png"
       },
       {
         "palabra": "FROTAR",
         "voz": "frotar las manos",
-        "picto": "../../recursos/pictos/36910.png"
+        "picto": "../../recursos/pictos/36910.png",
+        "bn": "../../recursos/pictos-bn/36910.png"
       },
       {
         "palabra": "ACLARAR",
         "voz": "aclarar con agua",
-        "picto": "../../recursos/pictos/2443.png"
+        "picto": "../../recursos/pictos/2443.png",
+        "bn": "../../recursos/pictos-bn/2443.png"
       },
       {
         "palabra": "SECAR",
         "voz": "secar las manos",
-        "picto": "../../recursos/pictos/2566.png"
+        "picto": "../../recursos/pictos/2566.png",
+        "bn": "../../recursos/pictos-bn/2566.png"
       }
     ]
   },
@@ -83,48 +96,56 @@
         "palabra": "JABÓN",
         "voz": "el jabón",
         "picto": "../../recursos/pictos/2964.png",
+        "bn": "../../recursos/pictos-bn/2964.png",
         "grupo": "a"
       },
       {
         "palabra": "TOALLA",
         "voz": "la toalla",
         "picto": "../../recursos/pictos/2593.png",
+        "bn": "../../recursos/pictos-bn/2593.png",
         "grupo": "a"
       },
       {
         "palabra": "PEINE",
         "voz": "el peine",
         "picto": "../../recursos/pictos/2852.png",
+        "bn": "../../recursos/pictos-bn/2852.png",
         "grupo": "a"
       },
       {
         "palabra": "CEPILLO DE DIENTES",
         "voz": "el cepillo de dientes",
         "picto": "../../recursos/pictos/2694.png",
+        "bn": "../../recursos/pictos-bn/2694.png",
         "grupo": "a"
       },
       {
         "palabra": "PELOTA",
         "voz": "la pelota",
         "picto": "../../recursos/pictos/3241.png",
+        "bn": "../../recursos/pictos-bn/3241.png",
         "grupo": "b"
       },
       {
         "palabra": "COCHE",
         "voz": "el coche",
         "picto": "../../recursos/pictos/6981.png",
+        "bn": "../../recursos/pictos-bn/6981.png",
         "grupo": "b"
       },
       {
         "palabra": "LIBRO",
         "voz": "el libro",
         "picto": "../../recursos/pictos/2450.png",
+        "bn": "../../recursos/pictos-bn/2450.png",
         "grupo": "b"
       },
       {
         "palabra": "VASO",
         "voz": "el vaso",
         "picto": "../../recursos/pictos/2610.png",
+        "bn": "../../recursos/pictos-bn/2610.png",
         "grupo": "b"
       }
     ],
@@ -136,5 +157,228 @@
       "nombre": "NO ES DE ASEO",
       "picto": "../../recursos/pictos/5526.png"
     }
-  }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.259,
+        "y": 0.114,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.419,
+        "y": 0.114,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.579,
+        "y": 0.114,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.739,
+        "y": 0.114,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.179,
+        "y": 0.2526,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.339,
+        "y": 0.2526,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.499,
+        "y": 0.2526,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.659,
+        "y": 0.2526,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.259,
+        "y": 0.3911,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.419,
+        "y": 0.3911,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.579,
+        "y": 0.3911,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.739,
+        "y": 0.3911,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.179,
+        "y": 0.5297,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.339,
+        "y": 0.5297,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.499,
+        "y": 0.5297,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.659,
+        "y": 0.5297,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.819,
+        "y": 0.5297,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.259,
+        "y": 0.6682,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.419,
+        "y": 0.6682,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.579,
+        "y": 0.6682,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.739,
+        "y": 0.6682,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.899,
+        "y": 0.6682,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.179,
+        "y": 0.8068,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.339,
+        "y": 0.8068,
+        "c": "AMARILLO"
+      }
+    ],
+    "r": 0.064,
+    "colores": [
+      {
+        "nombre": "AMARILLO",
+        "hex": "#fdd835"
+      },
+      {
+        "nombre": "VERDE",
+        "hex": "#43a047"
+      }
+    ],
+    "palabra": "SECAR LAS MANOS",
+    "voz": "secar las manos",
+    "picto": "../../recursos/pictos/2566.png",
+    "bn": "../../recursos/pictos-bn/2566.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "SECAR LAS MANOS",
+      "voz": "secar las manos",
+      "picto": "../../recursos/pictos/2566.png",
+      "bn": "../../recursos/pictos-bn/2566.png"
+    },
+    {
+      "palabra": "PAÑUELO",
+      "voz": "el pañuelo",
+      "picto": "../../recursos/pictos/17284.png",
+      "bn": "../../recursos/pictos-bn/17284.png"
+    },
+    {
+      "palabra": "JABÓN",
+      "voz": "el jabón",
+      "picto": "../../recursos/pictos/2964.png",
+      "bn": "../../recursos/pictos-bn/2964.png"
+    },
+    {
+      "palabra": "AGUA",
+      "voz": "el agua",
+      "picto": "../../recursos/pictos/32464.png",
+      "bn": "../../recursos/pictos-bn/32464.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "clasifica",
+      "titulo": "CLASIFICA",
+      "desc": "Lleva cada dibujo a su caja.",
+      "picto": "../../recursos/pictos/2566.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/17284.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/2566.png"
+    },
+    {
+      "modo": "tamano",
+      "titulo": "GRANDE Y PEQUEÑO",
+      "desc": "Escucha y toca el grande o el pequeño.",
+      "picto": "../../recursos/pictos/32464.png",
+      "sombra": false
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "UNE LOS PUNTOS",
+      "desc": "Une los puntos y colorea.",
+      "picto": "../../recursos/pictos-bn/17284.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/2566.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "GRANDE Y PEQUEÑO",
+      "desc": "Rodea el grande y tacha el pequeño.",
+      "picto": "../../recursos/pictos/2964.png"
+    }
+  ],
+  "taller": null
 }

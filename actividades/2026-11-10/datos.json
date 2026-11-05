@@ -8,42 +8,50 @@
     {
       "palabra": "GEL",
       "voz": "el gel",
-      "picto": "../../recursos/pictos/3335.png"
+      "picto": "../../recursos/pictos/3335.png",
+      "bn": "../../recursos/pictos-bn/3335.png"
     },
     {
       "palabra": "ESPONJA",
       "voz": "la esponja",
-      "picto": "../../recursos/pictos/2749.png"
+      "picto": "../../recursos/pictos/2749.png",
+      "bn": "../../recursos/pictos-bn/2749.png"
     },
     {
       "palabra": "CEPILLO DE DIENTES",
       "voz": "el cepillo de dientes",
-      "picto": "../../recursos/pictos/2694.png"
+      "picto": "../../recursos/pictos/2694.png",
+      "bn": "../../recursos/pictos-bn/2694.png"
     },
     {
       "palabra": "PASTA DE DIENTES",
       "voz": "la pasta de dientes",
-      "picto": "../../recursos/pictos/2858.png"
+      "picto": "../../recursos/pictos/2858.png",
+      "bn": "../../recursos/pictos-bn/2858.png"
     },
     {
       "palabra": "ALBORNOZ",
       "voz": "el albornoz",
-      "picto": "../../recursos/pictos/5369.png"
+      "picto": "../../recursos/pictos/5369.png",
+      "bn": "../../recursos/pictos-bn/5369.png"
     },
     {
       "palabra": "SECADOR",
       "voz": "el secador",
-      "picto": "../../recursos/pictos/2560.png"
+      "picto": "../../recursos/pictos/2560.png",
+      "bn": "../../recursos/pictos-bn/2560.png"
     },
     {
       "palabra": "DUCHA",
       "voz": "la ducha",
-      "picto": "../../recursos/pictos/2370.png"
+      "picto": "../../recursos/pictos/2370.png",
+      "bn": "../../recursos/pictos-bn/2370.png"
     },
     {
       "palabra": "CHAMPÚ",
       "voz": "el champú",
-      "picto": "../../recursos/pictos/2699.png"
+      "picto": "../../recursos/pictos/2699.png",
+      "bn": "../../recursos/pictos-bn/2699.png"
     }
   ],
   "pasos": {
@@ -52,27 +60,32 @@
       {
         "palabra": "COGER EL CEPILLO",
         "voz": "coger el cepillo",
-        "picto": "../../recursos/pictos/2694.png"
+        "picto": "../../recursos/pictos/2694.png",
+        "bn": "../../recursos/pictos-bn/2694.png"
       },
       {
         "palabra": "PONER PASTA",
         "voz": "poner la pasta",
-        "picto": "../../recursos/pictos/30087.png"
+        "picto": "../../recursos/pictos/30087.png",
+        "bn": "../../recursos/pictos-bn/30087.png"
       },
       {
         "palabra": "CEPILLAR",
         "voz": "cepillar los dientes",
-        "picto": "../../recursos/pictos/31880.png"
+        "picto": "../../recursos/pictos/31880.png",
+        "bn": "../../recursos/pictos-bn/31880.png"
       },
       {
         "palabra": "ENJUAGAR",
         "voz": "enjuagar la boca",
-        "picto": "../../recursos/pictos/30032.png"
+        "picto": "../../recursos/pictos/30032.png",
+        "bn": "../../recursos/pictos-bn/30032.png"
       },
       {
         "palabra": "SECAR LA BOCA",
         "voz": "secar la boca",
-        "picto": "../../recursos/pictos/2593.png"
+        "picto": "../../recursos/pictos/2593.png",
+        "bn": "../../recursos/pictos-bn/2593.png"
       }
     ]
   },
@@ -83,42 +96,49 @@
         "palabra": "CEPILLO DE DIENTES",
         "voz": "el cepillo de dientes",
         "picto": "../../recursos/pictos/2694.png",
+        "bn": "../../recursos/pictos-bn/2694.png",
         "grupo": "a"
       },
       {
         "palabra": "PASTA DE DIENTES",
         "voz": "la pasta de dientes",
         "picto": "../../recursos/pictos/2858.png",
+        "bn": "../../recursos/pictos-bn/2858.png",
         "grupo": "a"
       },
       {
         "palabra": "VASO",
         "voz": "el vaso",
         "picto": "../../recursos/pictos/2610.png",
+        "bn": "../../recursos/pictos-bn/2610.png",
         "grupo": "a"
       },
       {
         "palabra": "CHAMPÚ",
         "voz": "el champú",
         "picto": "../../recursos/pictos/2699.png",
+        "bn": "../../recursos/pictos-bn/2699.png",
         "grupo": "b"
       },
       {
         "palabra": "PEINE",
         "voz": "el peine",
         "picto": "../../recursos/pictos/2852.png",
+        "bn": "../../recursos/pictos-bn/2852.png",
         "grupo": "b"
       },
       {
         "palabra": "SECADOR",
         "voz": "el secador",
         "picto": "../../recursos/pictos/2560.png",
+        "bn": "../../recursos/pictos-bn/2560.png",
         "grupo": "b"
       },
       {
         "palabra": "CEPILLO DEL PELO",
         "voz": "el cepillo del pelo",
         "picto": "../../recursos/pictos/2695.png",
+        "bn": "../../recursos/pictos-bn/2695.png",
         "grupo": "b"
       }
     ],
@@ -130,5 +150,228 @@
       "nombre": "PARA EL PELO",
       "picto": "../../recursos/pictos/2851.png"
     }
-  }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.4315,
+        "y": 0.0965,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.5665,
+        "y": 0.0965,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.7015,
+        "y": 0.0965,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.364,
+        "y": 0.2134,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.499,
+        "y": 0.2134,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.634,
+        "y": 0.2134,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.4315,
+        "y": 0.3303,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.5665,
+        "y": 0.3303,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.7015,
+        "y": 0.3303,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.364,
+        "y": 0.4472,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.499,
+        "y": 0.4472,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.634,
+        "y": 0.4472,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.769,
+        "y": 0.4472,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.4315,
+        "y": 0.5641,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.5665,
+        "y": 0.5641,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.7015,
+        "y": 0.5641,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.364,
+        "y": 0.681,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.499,
+        "y": 0.681,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.634,
+        "y": 0.681,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.4315,
+        "y": 0.798,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.5665,
+        "y": 0.798,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.7015,
+        "y": 0.798,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.499,
+        "y": 0.9149,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.634,
+        "y": 0.9149,
+        "c": "AMARILLO"
+      }
+    ],
+    "r": 0.054,
+    "colores": [
+      {
+        "nombre": "AZUL",
+        "hex": "#1e88e5"
+      },
+      {
+        "nombre": "AMARILLO",
+        "hex": "#fdd835"
+      }
+    ],
+    "palabra": "GEL",
+    "voz": "el gel",
+    "picto": "../../recursos/pictos/3335.png",
+    "bn": "../../recursos/pictos-bn/3335.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "GEL",
+      "voz": "el gel",
+      "picto": "../../recursos/pictos/3335.png",
+      "bn": "../../recursos/pictos-bn/3335.png"
+    },
+    {
+      "palabra": "ESPONJA",
+      "voz": "la esponja",
+      "picto": "../../recursos/pictos/2749.png",
+      "bn": "../../recursos/pictos-bn/2749.png"
+    },
+    {
+      "palabra": "CEPILLO DE DIENTES",
+      "voz": "el cepillo de dientes",
+      "picto": "../../recursos/pictos/2694.png",
+      "bn": "../../recursos/pictos-bn/2694.png"
+    },
+    {
+      "palabra": "PASTA DE DIENTES",
+      "voz": "la pasta de dientes",
+      "picto": "../../recursos/pictos/2858.png",
+      "bn": "../../recursos/pictos-bn/2858.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "une",
+      "titulo": "UNE CADA DIBUJO",
+      "desc": "Une cada dibujo con su nombre.",
+      "picto": "../../recursos/pictos/3335.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/2749.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/3335.png"
+    },
+    {
+      "modo": "sombras",
+      "titulo": "CADA UNO CON SU SOMBRA",
+      "desc": "Toca la sombra de cada dibujo.",
+      "picto": "../../recursos/pictos/2858.png",
+      "sombra": true
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "SIGUE LA LÍNEA",
+      "desc": "Repasa los caminos.",
+      "picto": "../../recursos/pictos-bn/2749.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/3335.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "CADA UNO CON SU SOMBRA",
+      "desc": "Une cada dibujo con su sombra.",
+      "picto": "../../recursos/pictos/2694.png"
+    }
+  ],
+  "taller": null
 }

@@ -171,8 +171,8 @@ Promise.all([
         <div class="tema">${hoy.tema} · FICHA: ${hoy.ficha_tipo}</div>
         ${hoy.taller ? `<span class="taller">TALLER: ${hoy.taller}</span>` : ''}
         <div class="botones">
-          <a class="btn btn-primario" href="${base + hoy.juego}">Jugar</a>
-          <a class="btn" href="${base + hoy.ficha}">Ficha</a>
+          <a class="btn btn-primario" href="${base}dia.html">Todas las actividades${hoy.n_juegos ? ` · ${hoy.n_juegos} juegos y ${hoy.n_fichas} fichas` : ''}</a>
+          <a class="btn" href="${base + hoy.juego}">Juego del día</a>
         </div>
       </div></article>`;
   } else { $('hoy').innerHTML = '<p class="vacio">Pronto habrá actividades.</p>'; }
@@ -193,10 +193,10 @@ Promise.all([
     const base = `actividades/${a.id}/`;
     return `<article class="jornada${f === hoyISO ? ' es-hoy' : ''}">${cab}
       <div class="img"><img class="picto" src="${a.portada}" alt=""></div>
-      <div class="info"><div class="juego">${a.titulo}</div><small>FICHA: ${a.ficha_tipo}</small>
+      <div class="info"><div class="juego">${a.titulo}</div><small>${a.n_juegos ? `${a.n_juegos} JUEGOS · ${a.n_fichas} FICHAS` : 'FICHA: ' + a.ficha_tipo}</small>
         ${a.taller ? `<span class="taller">TALLER: ${a.taller}</span>` : ''}</div>
-      <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base + a.juego}">Juego</a>
-        <a class="btn" data-f="ficha" href="${base + a.ficha}">Ficha</a></div></article>`;
+      <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base}dia.html#juegos">Juegos</a>
+        <a class="btn" data-f="ficha" href="${base}dia.html#fichas">Fichas</a></div></article>`;
   }).join('');
 
   const resto = visibles.filter(a => !semana.includes(a.fecha));
@@ -209,8 +209,8 @@ Promise.all([
         const base = `actividades/${a.id}/`;
         return `<div class="dia"><img class="picto" src="${a.portada}" alt="">
           <div><b>${a.titulo}</b><small>${fechaTxt(a.fecha)}</small></div>
-          <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base + a.juego}">Juego</a>
-          <a class="btn" data-f="ficha" href="${base + a.ficha}">Ficha</a></div></div>`;
+          <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base}dia.html#juegos">Juegos</a>
+          <a class="btn" data-f="ficha" href="${base}dia.html#fichas">Fichas</a></div></div>`;
       }).join('')}</div></div>`).join('');
   }
 
