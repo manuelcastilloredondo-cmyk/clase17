@@ -129,6 +129,12 @@ def main(ruta):
     todo = [a for a in previo if a["id"] not in nuevos and not a["fecha"].startswith(prog["mes"])] + catalogo
     todo.sort(key=lambda a: a["fecha"])
     ruta_cat.write_text(json.dumps(todo, ensure_ascii=False, indent=2), encoding="utf-8")
+    # todas las fichas del mes en un solo PDF, para imprimir de una vez
+    from pypdf import PdfWriter
+    w = PdfWriter()
+    for a in catalogo:
+        w.append(str(RAIZ / "actividades" / a["id"] / "ficha.pdf"))
+    w.write(str(RAIZ / "programacion" / f"{prog['mes']}-fichas.pdf"))
     print(f"{len(catalogo)} días creados")
 
 
