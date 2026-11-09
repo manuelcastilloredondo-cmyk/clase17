@@ -154,117 +154,127 @@
   "puntitos": {
     "puntos": [
       {
-        "x": 0.454,
-        "y": 0.0715,
+        "x": 0.215,
+        "y": 0.2116,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.315,
+        "y": 0.2116,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.065,
+        "y": 0.2982,
+        "c": "MORADO"
+      },
+      {
+        "x": 0.165,
+        "y": 0.2982,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.265,
+        "y": 0.2982,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.365,
+        "y": 0.2982,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.215,
+        "y": 0.3848,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.315,
+        "y": 0.3848,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.415,
+        "y": 0.3848,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.515,
+        "y": 0.3848,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.365,
+        "y": 0.4714,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.465,
+        "y": 0.4714,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.565,
+        "y": 0.4714,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.665,
+        "y": 0.4714,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.415,
+        "y": 0.558,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.515,
+        "y": 0.558,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.615,
+        "y": 0.558,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.715,
+        "y": 0.558,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.565,
+        "y": 0.6446,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.665,
+        "y": 0.6446,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.765,
+        "y": 0.6446,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.865,
+        "y": 0.6446,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.815,
+        "y": 0.7312,
         "c": "AZUL"
       },
       {
-        "x": 0.589,
-        "y": 0.0715,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.1884,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.5215,
-        "y": 0.1884,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.319,
-        "y": 0.3053,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.454,
-        "y": 0.3053,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.589,
-        "y": 0.3053,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.4222,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.5215,
-        "y": 0.4222,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.6565,
-        "y": 0.4222,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.319,
-        "y": 0.5391,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.454,
-        "y": 0.5391,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.589,
-        "y": 0.5391,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.656,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.5215,
-        "y": 0.656,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.6565,
-        "y": 0.656,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.319,
-        "y": 0.773,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.454,
-        "y": 0.773,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.589,
-        "y": 0.773,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.8899,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.5215,
-        "y": 0.8899,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.6565,
-        "y": 0.8899,
+        "x": 0.865,
+        "y": 0.8178,
         "c": "AZUL"
       }
     ],
-    "r": 0.054,
+    "r": 0.04,
     "colores": [
       {
         "nombre": "AZUL",
@@ -273,12 +283,16 @@
       {
         "nombre": "AMARILLO",
         "hex": "#fdd835"
+      },
+      {
+        "nombre": "MORADO",
+        "hex": "#8e24aa"
       }
     ],
-    "palabra": "CHAMPÚ",
-    "voz": "el champú",
-    "picto": "../../recursos/pictos/2699.png",
-    "bn": "../../recursos/pictos-bn/2699.png",
+    "palabra": "PASTA DE DIENTES",
+    "voz": "la pasta de dientes",
+    "picto": "../../recursos/pictos/2858.png",
+    "bn": "../../recursos/pictos-bn/2858.png",
     "hex": {
       "ROJO": "#e53935",
       "AZUL": "#1e88e5",
@@ -333,7 +347,7 @@
       "modo": "puntitos",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
-      "picto": "../../recursos/pictos/2699.png"
+      "picto": "../../recursos/pictos/2858.png"
     },
     {
       "modo": "tamano",
@@ -354,7 +368,7 @@
       "pdf": "puntitos.pdf",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Rotulador de punta redonda, gomets o dedo.",
-      "picto": "../../recursos/pictos-bn/2699.png"
+      "picto": "../../recursos/pictos-bn/2858.png"
     },
     {
       "pdf": "extra.pdf",

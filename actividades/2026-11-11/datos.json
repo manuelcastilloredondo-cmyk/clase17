@@ -154,131 +154,137 @@
   "puntitos": {
     "puntos": [
       {
-        "x": 0.454,
-        "y": 0.0715,
+        "x": 0.232,
+        "y": 0.2695,
         "c": "AZUL"
       },
       {
-        "x": 0.589,
-        "y": 0.0715,
+        "x": 0.362,
+        "y": 0.2695,
         "c": "AZUL"
       },
       {
-        "x": 0.3865,
-        "y": 0.1884,
+        "x": 0.492,
+        "y": 0.2695,
         "c": "AZUL"
       },
       {
-        "x": 0.5215,
-        "y": 0.1884,
+        "x": 0.167,
+        "y": 0.3821,
         "c": "AZUL"
       },
       {
-        "x": 0.319,
-        "y": 0.3053,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.454,
-        "y": 0.3053,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.589,
-        "y": 0.3053,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.4222,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.5215,
-        "y": 0.4222,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.6565,
-        "y": 0.4222,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.319,
-        "y": 0.5391,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.454,
-        "y": 0.5391,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.589,
-        "y": 0.5391,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.656,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.5215,
-        "y": 0.656,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.6565,
-        "y": 0.656,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.319,
-        "y": 0.773,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.454,
-        "y": 0.773,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.589,
-        "y": 0.773,
-        "c": "AMARILLO"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.8899,
+        "x": 0.297,
+        "y": 0.3821,
         "c": "AZUL"
       },
       {
-        "x": 0.5215,
-        "y": 0.8899,
+        "x": 0.427,
+        "y": 0.3821,
         "c": "AZUL"
       },
       {
-        "x": 0.6565,
-        "y": 0.8899,
+        "x": 0.557,
+        "y": 0.3821,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.687,
+        "y": 0.3821,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.817,
+        "y": 0.3821,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.102,
+        "y": 0.4947,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.232,
+        "y": 0.4947,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.362,
+        "y": 0.4947,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.492,
+        "y": 0.4947,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.622,
+        "y": 0.4947,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.752,
+        "y": 0.4947,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.882,
+        "y": 0.4947,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.167,
+        "y": 0.6072,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.297,
+        "y": 0.6072,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.427,
+        "y": 0.6072,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.557,
+        "y": 0.6072,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.687,
+        "y": 0.6072,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.817,
+        "y": 0.6072,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.622,
+        "y": 0.7198,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.752,
+        "y": 0.7198,
         "c": "AZUL"
       }
     ],
-    "r": 0.054,
+    "r": 0.052,
     "colores": [
       {
         "nombre": "AZUL",
         "hex": "#1e88e5"
-      },
-      {
-        "nombre": "AMARILLO",
-        "hex": "#fdd835"
       }
     ],
-    "palabra": "CHAMPÚ",
-    "voz": "el champú",
-    "picto": "../../recursos/pictos/2699.png",
-    "bn": "../../recursos/pictos-bn/2699.png",
+    "palabra": "ESPONJA",
+    "voz": "la esponja",
+    "picto": "../../recursos/pictos/2749.png",
+    "bn": "../../recursos/pictos-bn/2749.png",
     "hex": {
       "ROJO": "#e53935",
       "AZUL": "#1e88e5",
@@ -333,7 +339,7 @@
       "modo": "puntitos",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
-      "picto": "../../recursos/pictos/2699.png"
+      "picto": "../../recursos/pictos/2749.png"
     },
     {
       "modo": "diferente",
@@ -354,7 +360,7 @@
       "pdf": "puntitos.pdf",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Rotulador de punta redonda, gomets o dedo.",
-      "picto": "../../recursos/pictos-bn/2699.png"
+      "picto": "../../recursos/pictos-bn/2749.png"
     },
     {
       "pdf": "extra.pdf",

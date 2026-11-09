@@ -154,131 +154,126 @@
   "puntitos": {
     "puntos": [
       {
-        "x": 0.454,
-        "y": 0.0715,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.589,
-        "y": 0.0715,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.3865,
-        "y": 0.1884,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.5215,
-        "y": 0.1884,
-        "c": "AZUL"
-      },
-      {
-        "x": 0.319,
-        "y": 0.3053,
+        "x": 0.4635,
+        "y": 0.0635,
         "c": "AMARILLO"
       },
       {
-        "x": 0.454,
-        "y": 0.3053,
+        "x": 0.406,
+        "y": 0.1631,
         "c": "AMARILLO"
       },
       {
-        "x": 0.589,
-        "y": 0.3053,
+        "x": 0.521,
+        "y": 0.1631,
         "c": "AMARILLO"
       },
       {
-        "x": 0.3865,
-        "y": 0.4222,
+        "x": 0.636,
+        "y": 0.1631,
         "c": "AMARILLO"
       },
       {
-        "x": 0.5215,
-        "y": 0.4222,
+        "x": 0.3485,
+        "y": 0.2627,
         "c": "AMARILLO"
       },
       {
-        "x": 0.6565,
-        "y": 0.4222,
+        "x": 0.4635,
+        "y": 0.2627,
         "c": "AMARILLO"
       },
       {
-        "x": 0.319,
-        "y": 0.5391,
+        "x": 0.5785,
+        "y": 0.2627,
         "c": "AMARILLO"
       },
       {
-        "x": 0.454,
-        "y": 0.5391,
+        "x": 0.406,
+        "y": 0.3623,
         "c": "AMARILLO"
       },
       {
-        "x": 0.589,
-        "y": 0.5391,
+        "x": 0.521,
+        "y": 0.3623,
         "c": "AMARILLO"
       },
       {
-        "x": 0.3865,
-        "y": 0.656,
+        "x": 0.636,
+        "y": 0.3623,
         "c": "AMARILLO"
       },
       {
-        "x": 0.5215,
-        "y": 0.656,
+        "x": 0.3485,
+        "y": 0.4619,
         "c": "AMARILLO"
       },
       {
-        "x": 0.6565,
-        "y": 0.656,
+        "x": 0.4635,
+        "y": 0.4619,
+        "c": "ROSA"
+      },
+      {
+        "x": 0.5785,
+        "y": 0.4619,
+        "c": "ROSA"
+      },
+      {
+        "x": 0.406,
+        "y": 0.5615,
         "c": "AMARILLO"
       },
       {
-        "x": 0.319,
-        "y": 0.773,
+        "x": 0.521,
+        "y": 0.5615,
+        "c": "ROSA"
+      },
+      {
+        "x": 0.4635,
+        "y": 0.661,
         "c": "AMARILLO"
       },
       {
-        "x": 0.454,
-        "y": 0.773,
+        "x": 0.5785,
+        "y": 0.661,
         "c": "AMARILLO"
       },
       {
-        "x": 0.589,
-        "y": 0.773,
+        "x": 0.406,
+        "y": 0.7606,
         "c": "AMARILLO"
       },
       {
-        "x": 0.3865,
-        "y": 0.8899,
-        "c": "AZUL"
+        "x": 0.521,
+        "y": 0.7606,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.5215,
-        "y": 0.8899,
-        "c": "AZUL"
+        "x": 0.4635,
+        "y": 0.8602,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.6565,
-        "y": 0.8899,
-        "c": "AZUL"
+        "x": 0.5785,
+        "y": 0.8602,
+        "c": "AMARILLO"
       }
     ],
-    "r": 0.054,
+    "r": 0.046,
     "colores": [
-      {
-        "nombre": "AZUL",
-        "hex": "#1e88e5"
-      },
       {
         "nombre": "AMARILLO",
         "hex": "#fdd835"
+      },
+      {
+        "nombre": "ROSA",
+        "hex": "#ec407a"
       }
     ],
-    "palabra": "CHAMPÚ",
-    "voz": "el champú",
-    "picto": "../../recursos/pictos/2699.png",
-    "bn": "../../recursos/pictos-bn/2699.png",
+    "palabra": "ALBORNOZ",
+    "voz": "el albornoz",
+    "picto": "../../recursos/pictos/5369.png",
+    "bn": "../../recursos/pictos-bn/5369.png",
     "hex": {
       "ROJO": "#e53935",
       "AZUL": "#1e88e5",
@@ -333,7 +328,7 @@
       "modo": "puntitos",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
-      "picto": "../../recursos/pictos/2699.png"
+      "picto": "../../recursos/pictos/5369.png"
     },
     {
       "modo": "cuenta",
@@ -354,7 +349,7 @@
       "pdf": "puntitos.pdf",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Rotulador de punta redonda, gomets o dedo.",
-      "picto": "../../recursos/pictos-bn/2699.png"
+      "picto": "../../recursos/pictos-bn/5369.png"
     },
     {
       "pdf": "extra.pdf",

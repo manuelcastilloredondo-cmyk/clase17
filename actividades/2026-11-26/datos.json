@@ -155,119 +155,132 @@
   "puntitos": {
     "puntos": [
       {
-        "x": 0.1745,
-        "y": 0.3162,
+        "x": 0.0975,
+        "y": 0.08,
         "c": "AMARILLO"
       },
       {
-        "x": 0.4845,
-        "y": 0.3162,
-        "c": "NARANJA"
+        "x": 0.2475,
+        "y": 0.08,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.7945,
-        "y": 0.3162,
-        "c": "NARANJA"
+        "x": 0.3975,
+        "y": 0.08,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.097,
-        "y": 0.4505,
-        "c": "AZUL"
+        "x": 0.5475,
+        "y": 0.08,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.252,
-        "y": 0.4505,
-        "c": "AZUL"
+        "x": 0.1725,
+        "y": 0.2099,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.407,
-        "y": 0.4505,
-        "c": "MORADO"
+        "x": 0.3225,
+        "y": 0.2099,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.562,
-        "y": 0.4505,
-        "c": "MORADO"
+        "x": 0.4725,
+        "y": 0.2099,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.717,
-        "y": 0.4505,
-        "c": "MORADO"
+        "x": 0.2475,
+        "y": 0.3398,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.872,
-        "y": 0.4505,
-        "c": "MORADO"
+        "x": 0.3975,
+        "y": 0.3398,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.1745,
-        "y": 0.5847,
-        "c": "AZUL"
+        "x": 0.5475,
+        "y": 0.3398,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.4845,
-        "y": 0.5847,
-        "c": "MORADO"
+        "x": 0.3225,
+        "y": 0.4697,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.7945,
-        "y": 0.5847,
-        "c": "NARANJA"
+        "x": 0.4725,
+        "y": 0.4697,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.097,
-        "y": 0.7189,
-        "c": "AZUL"
+        "x": 0.6225,
+        "y": 0.4697,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.252,
-        "y": 0.7189,
-        "c": "AZUL"
+        "x": 0.2475,
+        "y": 0.5996,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.407,
-        "y": 0.7189,
-        "c": "MORADO"
+        "x": 0.3975,
+        "y": 0.5996,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.562,
-        "y": 0.7189,
-        "c": "MORADO"
+        "x": 0.5475,
+        "y": 0.5996,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.717,
-        "y": 0.7189,
-        "c": "MORADO"
+        "x": 0.6975,
+        "y": 0.5996,
+        "c": "AMARILLO"
       },
       {
-        "x": 0.872,
-        "y": 0.7189,
-        "c": "NARANJA"
+        "x": 0.3225,
+        "y": 0.7295,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.4725,
+        "y": 0.7295,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.6225,
+        "y": 0.7295,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.3975,
+        "y": 0.8594,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.6975,
+        "y": 0.8594,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.8475,
+        "y": 0.8594,
+        "c": "AMARILLO"
       }
     ],
-    "r": 0.062,
+    "r": 0.06,
     "colores": [
-      {
-        "nombre": "AZUL",
-        "hex": "#1e88e5"
-      },
       {
         "nombre": "AMARILLO",
         "hex": "#fdd835"
-      },
-      {
-        "nombre": "NARANJA",
-        "hex": "#fb8c00"
-      },
-      {
-        "nombre": "MORADO",
-        "hex": "#8e24aa"
       }
     ],
-    "palabra": "REYES MAGOS",
-    "voz": "los Reyes Magos",
-    "picto": "../../recursos/pictos/3124.png",
-    "bn": "../../recursos/pictos-bn/3124.png",
+    "palabra": "TURRÓN",
+    "voz": "el turrón",
+    "picto": "../../recursos/pictos/2784.png",
+    "bn": "../../recursos/pictos-bn/2784.png",
     "hex": {
       "ROJO": "#e53935",
       "AZUL": "#1e88e5",
@@ -322,7 +335,7 @@
       "modo": "puntitos",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
-      "picto": "../../recursos/pictos/3124.png"
+      "picto": "../../recursos/pictos/2784.png"
     },
     {
       "modo": "cuenta",
@@ -343,7 +356,7 @@
       "pdf": "puntitos.pdf",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Rotulador de punta redonda, gomets o dedo.",
-      "picto": "../../recursos/pictos-bn/3124.png"
+      "picto": "../../recursos/pictos-bn/2784.png"
     },
     {
       "pdf": "extra.pdf",

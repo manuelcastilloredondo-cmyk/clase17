@@ -161,137 +161,137 @@
   "puntitos": {
     "puntos": [
       {
-        "x": 0.4335,
-        "y": 0.1585,
-        "c": "VERDE"
+        "x": 0.4025,
+        "y": 0.0875,
+        "c": "AZUL"
       },
       {
-        "x": 0.5735,
-        "y": 0.1585,
-        "c": "VERDE"
+        "x": 0.5275,
+        "y": 0.0875,
+        "c": "AZUL"
       },
       {
-        "x": 0.2235,
-        "y": 0.2797,
-        "c": "VERDE"
+        "x": 0.6525,
+        "y": 0.0875,
+        "c": "AZUL"
       },
       {
-        "x": 0.3635,
-        "y": 0.2797,
-        "c": "VERDE"
+        "x": 0.34,
+        "y": 0.1957,
+        "c": "AZUL"
       },
       {
-        "x": 0.5035,
-        "y": 0.2797,
-        "c": "VERDE"
+        "x": 0.465,
+        "y": 0.1957,
+        "c": "AZUL"
       },
       {
-        "x": 0.6435,
-        "y": 0.2797,
-        "c": "VERDE"
+        "x": 0.59,
+        "y": 0.1957,
+        "c": "AZUL"
       },
       {
-        "x": 0.7835,
-        "y": 0.2797,
-        "c": "VERDE"
+        "x": 0.4025,
+        "y": 0.304,
+        "c": "AZUL"
       },
       {
-        "x": 0.1535,
-        "y": 0.401,
-        "c": "VERDE"
+        "x": 0.5275,
+        "y": 0.304,
+        "c": "AZUL"
       },
       {
-        "x": 0.2935,
-        "y": 0.401,
-        "c": "VERDE"
+        "x": 0.6525,
+        "y": 0.304,
+        "c": "AZUL"
       },
       {
-        "x": 0.4335,
-        "y": 0.401,
-        "c": "VERDE"
+        "x": 0.34,
+        "y": 0.4122,
+        "c": "AZUL"
       },
       {
-        "x": 0.5735,
-        "y": 0.401,
-        "c": "VERDE"
+        "x": 0.465,
+        "y": 0.4122,
+        "c": "AZUL"
       },
       {
-        "x": 0.7135,
-        "y": 0.401,
-        "c": "VERDE"
+        "x": 0.59,
+        "y": 0.4122,
+        "c": "AZUL"
       },
       {
-        "x": 0.8535,
-        "y": 0.401,
-        "c": "VERDE"
+        "x": 0.715,
+        "y": 0.4122,
+        "c": "AZUL"
       },
       {
-        "x": 0.3635,
-        "y": 0.5222,
-        "c": "VERDE"
+        "x": 0.4025,
+        "y": 0.5205,
+        "c": "AZUL"
       },
       {
-        "x": 0.5035,
-        "y": 0.5222,
-        "c": "VERDE"
+        "x": 0.6525,
+        "y": 0.5205,
+        "c": "AZUL"
       },
       {
-        "x": 0.6435,
-        "y": 0.5222,
-        "c": "VERDE"
+        "x": 0.34,
+        "y": 0.6288,
+        "c": "AZUL"
       },
       {
-        "x": 0.2935,
-        "y": 0.6435,
-        "c": "VERDE"
+        "x": 0.59,
+        "y": 0.6288,
+        "c": "AZUL"
       },
       {
-        "x": 0.4335,
-        "y": 0.6435,
-        "c": "VERDE"
+        "x": 0.715,
+        "y": 0.6288,
+        "c": "AZUL"
       },
       {
-        "x": 0.5735,
-        "y": 0.6435,
-        "c": "VERDE"
+        "x": 0.2775,
+        "y": 0.737,
+        "c": "AZUL"
       },
       {
-        "x": 0.7135,
-        "y": 0.6435,
-        "c": "VERDE"
+        "x": 0.4025,
+        "y": 0.737,
+        "c": "AZUL"
       },
       {
-        "x": 0.2235,
-        "y": 0.7647,
-        "c": "VERDE"
+        "x": 0.6525,
+        "y": 0.737,
+        "c": "AZUL"
       },
       {
-        "x": 0.3635,
-        "y": 0.7647,
-        "c": "VERDE"
+        "x": 0.34,
+        "y": 0.8452,
+        "c": "AZUL"
       },
       {
-        "x": 0.5035,
-        "y": 0.7647,
-        "c": "VERDE"
+        "x": 0.59,
+        "y": 0.8452,
+        "c": "AZUL"
       },
       {
-        "x": 0.6435,
-        "y": 0.7647,
-        "c": "VERDE"
+        "x": 0.715,
+        "y": 0.8452,
+        "c": "AZUL"
       }
     ],
-    "r": 0.056,
+    "r": 0.05,
     "colores": [
       {
-        "nombre": "VERDE",
-        "hex": "#43a047"
+        "nombre": "AZUL",
+        "hex": "#1e88e5"
       }
     ],
-    "palabra": "CAMISETA",
-    "voz": "la camiseta",
-    "picto": "../../recursos/pictos/2309.png",
-    "bn": "../../recursos/pictos-bn/2309.png",
+    "palabra": "PANTALÓN",
+    "voz": "el pantalón",
+    "picto": "../../recursos/pictos/2565.png",
+    "bn": "../../recursos/pictos-bn/2565.png",
     "hex": {
       "ROJO": "#e53935",
       "AZUL": "#1e88e5",
@@ -346,7 +346,7 @@
       "modo": "puntitos",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
-      "picto": "../../recursos/pictos/2309.png"
+      "picto": "../../recursos/pictos/2565.png"
     },
     {
       "modo": "tamano",
@@ -367,7 +367,7 @@
       "pdf": "puntitos.pdf",
       "titulo": "PINTA LOS PUNTITOS",
       "desc": "Rotulador de punta redonda, gomets o dedo.",
-      "picto": "../../recursos/pictos-bn/2309.png"
+      "picto": "../../recursos/pictos-bn/2565.png"
     },
     {
       "pdf": "extra.pdf",

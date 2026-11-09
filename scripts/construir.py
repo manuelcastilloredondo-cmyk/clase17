@@ -93,21 +93,21 @@ def item(e, rel="../../"):
            {"palabra": e["palabra"], "voz": e["voz"], "color": color, "bn": bn, "id": e.get("id", e.get("dibujo"))}
 
 
-def arte_puntitos(vocab):
-    """Elige el primer picto del día que da un buen dibujo de puntitos (círculos grandes)."""
-    mejor = None
+def arte_puntitos(vocab, evitar=()):
+    """Elige un picto del día que dé un buen dibujo de puntitos (círculos grandes), sin repetir los ya usados en la semana."""
+    candidatos = []
     for e in vocab:
         if "id" not in e:
             continue
         a = arte.puntitos(PICTOS / f"{e['id']}.png", max_puntos=24, max_colores=3)
-        if not a:
-            continue
-        if a["r"] >= 0.05 and len(a["puntos"]) >= 10:
-            mejor = (e, a)
-            break
-        if not mejor or a["r"] > mejor[1]["r"]:
-            mejor = (e, a)
-    return mejor
+        if a:
+            candidatos.append((e, a))
+    buenos = [c for c in candidatos if c[1]["r"] >= 0.05 and len(c[1]["puntos"]) >= 10]
+    for grupo in (buenos, candidatos):
+        libres = [c for c in grupo if c[0]["id"] not in evitar]
+        if libres:
+            return libres[0] if grupo is buenos else max(libres, key=lambda c: c[1]["r"])
+    return max(candidatos, key=lambda c: c[1]["r"])
 
 
 def rotar(lista, n):
@@ -122,6 +122,7 @@ def main(ruta):
     plantilla = RAIZ / "plantillas/juego.html"
     for s_idx, sem in enumerate(prog["semanas"]):
         lunes_vistos = 0
+        usados_puntitos = []
         for d_idx, fecha in enumerate(sem["dias"]):
             f = date.fromisoformat(fecha)
             dia = DIAS_SEMANA[f.weekday()]
@@ -148,7 +149,8 @@ def main(ruta):
                                   **{k: {"nombre": cl[k]["nombre"], "picto": f"../../recursos/pictos/{cl[k]['id']}.png"} for k in ("a", "b")}}
             # actividades complementarias
             extra = rut.get("extra", "igual")
-            e_pt, a_pt = arte_puntitos(vocab)
+            e_pt, a_pt = arte_puntitos(vocab, usados_puntitos)
+            usados_puntitos.append(e_pt["id"])
             datos["puntitos"] = {**a_pt, "palabra": e_pt["palabra"], "voz": e_pt["voz"],
                                  "picto": f"../../recursos/pictos/{e_pt['id']}.png", "bn": f"../../recursos/pictos-bn/{e_pt['id']}.png",
                                  "hex": arte.HEX}
