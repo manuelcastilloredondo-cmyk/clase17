@@ -58,7 +58,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (max-width: 640px) {
   .menu-dentro { gap: 8px; }
   .marca img { height: 48px; }
-  .menu ul { margin-left: 0; width: 100%; display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 2px; }
+  .menu ul { margin-left: 0; width: 100%; display: grid; grid-template-columns: repeat(5, auto); justify-content: space-between; gap: 2px; }
   .menu a.opcion { justify-content: center; padding: 4px 8px; font-size: 12.5px; letter-spacing: .02em; }
 }
 
