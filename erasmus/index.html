@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Erasmus · Clase 17</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="author" content="Manuel Castillo Redondo">
+<meta name="description" content="Juegos para la visita Erasmus+ del Agrupamento de Escolas D. Maria II (Braga) a la Clase 17. Jogos para a visita Erasmus+.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap">
+<link rel="icon" href="../recursos/logo/icono-17.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../recursos/comun.css">
+<style>
+  /* Apartado Erasmus: misma banda salvia que la portada y dos tarjetas grandes, una por juego. Español arriba, portugués debajo. */
+  .banda { background: var(--salvia); border-bottom: 3px solid var(--bosque); }
+  .banda-dentro { max-width: 1180px; margin: 0 auto; padding-block: 30px 26px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: center; }
+  .banda img { width: 104px; height: 104px; border-radius: 16px; border: var(--borde); }
+  .banda h1 { font-family: var(--f-titulo); font-weight: 900; letter-spacing: .02em; line-height: .95; font-size: clamp(40px, 7vw, 80px); margin: 0; color: var(--crema); }
+  .banda .antetitulo { font-family: var(--f-titulo); font-weight: 800; font-size: 16px; letter-spacing: .2em; color: var(--bosque); margin: 0 0 6px; }
+  .banda p { margin: 8px 0 0; max-width: 62ch; font-weight: 700; color: var(--bosque); font-size: 17px; }
+  .pt { display: block; text-transform: none; font-style: italic; font-weight: 600; color: var(--pino); letter-spacing: .01em; }
+  @media (max-width: 560px) { .banda-dentro { grid-template-columns: 1fr; } .banda img { width: 72px; height: 72px; } }
+  .contenido { max-width: 1180px; margin: 0 auto; padding-block: 28px 8px; display: grid; gap: 22px; }
+  .juegos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .juego { background: var(--papel); border: var(--borde); border-radius: var(--radio); overflow: hidden; display: grid; grid-template-rows: auto 1fr; text-decoration: none; color: var(--bosque); }
+  .juego:hover { box-shadow: 0 0 0 4px var(--salvia); }
+  .juego .imagen { aspect-ratio: 5 / 3; max-width: 100%; display: grid; place-items: center; border-bottom: var(--borde); background: #fff; overflow: hidden; }
+  .juego .imagen img { width: 100%; height: 100%; object-fit: cover; }
+  .juego .imagen.picto-fondo { background: #0a3d91; }
+  .juego .imagen.picto-fondo img { width: auto; height: 78%; object-fit: contain; border-radius: 14px; background: #fff; }
+  .juego .texto { padding: 18px 20px 20px; display: grid; gap: 8px; align-content: start; }
+  .juego h2 { font-family: var(--f-titulo); font-weight: 900; font-size: clamp(26px, 3vw, 34px); letter-spacing: .03em; line-height: 1; margin: 0; }
+  .juego h2 .pt { font-family: var(--f-texto); font-size: 17px; margin-top: 4px; }
+  .juego p { margin: 0; font-size: 15px; color: var(--suave); }
+  .juego p .pt { font-size: 15px; }
+  .juego .btn { justify-self: start; margin-top: 6px; }
+</style>
+</head>
+<body>
+  <nav class="menu" aria-label="Menú principal"><div class="menu-dentro">
+    <a class="marca" href="../#inicio"><img src="../recursos/logo/logo-horizontal.svg" alt="CLASE 17 · LA CLASE DE LOS CHICOS"></a>
+    <ul>
+      <li><a class="opcion" href="../#inicio">INICIO</a></li>
+      <li><a class="opcion" href="../#programacion">PROGRAMACIÓN</a></li>
+      <li><a class="opcion" href="../#juegos">JUEGOS</a></li>
+      <li><a class="opcion" href="../#fichas">FICHAS</a></li>
+      <li><a class="opcion" href="./" aria-current="page">ERASMUS</a></li>
+    </ul>
+  </div></nav>
+
+  <header class="banda gutter">
+    <div class="banda-dentro">
+      <img class="picto" src="img/bienvenido.png" alt="">
+      <div>
+        <p class="antetitulo">Erasmus+ · Braga — Lanzarote</p>
+        <h1>Erasmus</h1>
+        <p>Juegos para la visita del Agrupamento de Escolas D. Maria II (Braga, Portugal). Con pictogramas, en español y en portugués.<span class="pt">Jogos para a visita do Agrupamento de Escolas D. Maria II. Com pictogramas, em espanhol e em português.</span></p>
+      </div>
+    </div>
+  </header>
+
+  <main class="contenido gutter">
+    <div class="juegos">
+      <a class="juego" href="dragao.html">
+        <div class="imagen picto-fondo"><img src="img/futbolista.png" alt=""></div>
+        <div class="texto">
+          <h2>Juegos del Dragão<span class="pt">Jogos do Dragão</span></h2>
+          <p>FC Porto y Liga Portugal: quiz, dorsales, posiciones y países.<span class="pt">Quiz, números, posições e países.</span></p>
+          <span class="btn btn-primario">Jugar · Jogar</span>
+        </div>
+      </a>
+      <a class="juego" href="lanzarote.html">
+        <div class="imagen"><img src="img/lanzarote.jpg" alt="Timanfaya"></div>
+        <div class="texto">
+          <h2>Bem-vindos a Lanzarote<span class="pt">Bienvenidos a Lanzarote</span></h2>
+          <p>Doce lugares de la isla y un camello que la recorre.<span class="pt">Doze lugares da ilha e um camelo que a percorre.</span></p>
+          <span class="btn btn-primario">Jugar · Jogar</span>
+        </div>
+      </a>
+    </div>
+
+    <footer class="creditos">
+      Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.<br>
+      Web educativa sin ánimo de lucro. No recoge datos personales.
+    </footer>
+  </main>
+</body>
+</html>
