@@ -6,11 +6,11 @@
 <title>Actividades del día · Clase 17</title>
 <meta name="author" content="Manuel Castillo Redondo">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;500;700&display=swap">
 <link rel="icon" href="../../recursos/logo/icono-17.svg" type="image/svg+xml">
 <link rel="manifest" href="../../manifest.webmanifest">
 <link rel="apple-touch-icon" href="../../recursos/logo/apple-touch-icon.png">
-<meta name="theme-color" content="#1c3d1f">
+<meta name="theme-color" content="#ffffff">
 <meta name="apple-mobile-web-app-title" content="Clase 17">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,7 +20,7 @@
   main { max-width: 1180px; margin: 0 auto; }
   .fecha-dia { font-size: 14px; letter-spacing: .14em; color: var(--suave); font-weight: 700; }
   .cabeza { display: flex; align-items: baseline; gap: 14px; border-bottom: 3px solid var(--bosque); padding-bottom: 8px; margin: 26px 0 14px; }
-  .cabeza h2 { font-family: var(--f-titulo); font-weight: 900; font-size: 26px; letter-spacing: .05em; margin: 0; flex: 1; }
+  .cabeza h2 { font-family: var(--f-titulo); font-weight: 800; font-style: italic; font-size: 26px; letter-spacing: .05em; margin: 0; flex: 1; }
   .cabeza span { color: var(--suave); font-size: 13px; font-weight: 700; }
   .rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; }
   .act { background: var(--papel); border: var(--borde); border-radius: var(--radio); text-decoration: none; color: var(--bosque);
@@ -30,19 +30,20 @@
   .act .img img { height: 100%; width: auto; max-height: 130px; }
   .act .img svg { height: 100%; max-height: 130px; width: auto; }
   .act .txt { padding: 12px 14px 14px; display: grid; gap: 4px; align-content: start; }
-  .act b { font-family: var(--f-titulo); font-weight: 900; font-size: 19px; letter-spacing: .04em; line-height: 1.1; }
+  .act b { font-family: var(--f-titulo); font-weight: 800; font-size: 19px; letter-spacing: .04em; line-height: 1.1; }
   .act small { color: var(--suave); font-size: 12.5px; line-height: 1.35; }
-  .act .etq { justify-self: start; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--menta); }
+  .act .etq { justify-self: start; font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: var(--coral); color: var(--sobre-coral); }
   .act .sombra img { filter: brightness(0) opacity(.72); background: transparent; }
-  .act.principal { border-color: var(--pino); box-shadow: 0 0 0 4px var(--salvia); }
+  .act.principal { border-color: var(--coral); box-shadow: 0 0 0 4px var(--coral-tinte); }
   .taller { background: var(--menta); border-radius: var(--radio); padding: 12px 16px; font-weight: 700; margin-top: 10px; }
   .vacio { padding: 24px; border: 2px dashed var(--salvia); border-radius: var(--radio); color: var(--suave); }
 </style>
 </head>
 <body>
   <nav class="menu" aria-label="Menú principal"><div class="menu-dentro">
-    <a class="marca" href="../../"><img src="../../recursos/logo/logo-horizontal.svg" alt="CLASE 17 · LA CLASE DE LOS CHICOS"></a>
+    <a class="marca" href="../../"><img src="../../recursos/logo/logo-horizontal.svg" alt="MANU EN CLASE · CLASE 17 · LA CLASE DE LOS CHICOS"></a>
     <ul><li><a class="opcion" href="../../">INICIO</a></li><li><a class="opcion" href="../../#programacion">PROGRAMACIÓN</a></li><li><a class="opcion" href="../../#juegos">JUEGOS</a></li><li><a class="opcion" href="../../#fichas">FICHAS</a></li><li><a class="opcion" href="../../erasmus/">ERASMUS</a></li></ul>
+    <a class="ig" href="https://www.instagram.com/manuenclase/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg><b>@manuenclase</b></a>
   </div></nav>
 
   <main class="gutter">
@@ -64,7 +65,8 @@
       <div class="rejilla" id="papel"></div>
     </section>
 
-    <footer class="creditos">Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.</footer>
+    <div class="pie-ig"><a class="ig" href="https://www.instagram.com/manuenclase/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>Sígueme en Instagram · <b>@manuenclase</b></a></div>
+    <footer class="creditos">Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase (<a href="https://www.instagram.com/manuenclase/" target="_blank" rel="noopener">@manuenclase</a>).<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.</footer>
   </main>
 
 <script>

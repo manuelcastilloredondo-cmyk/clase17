@@ -1,23 +1,25 @@
-/* CLASE 17 · estilos comunes.
-   Concepto: plano y minimalista. Menú fijo verde bosque arriba, fondo crema,
-   bloques salvia, todo en mayúsculas. Un solo aspecto (claro) a propósito: es la identidad de la clase. */
+/* CLASE 17 · estilos comunes, dentro de la marca MANU EN CLASE (@manuenclase).
+   Plano y claro: menú blanco, fondo nube, superficies celestes, coral como único acento. Todo en mayúsculas. */
 :root {
-  --bosque: #1c3d1f;   /* menú, texto principal, contornos */
-  --pino: #2f5d31;     /* botones, acentos */
-  --salvia: #6b9a67;   /* bandas y bloques */
-  --menta: #bedab4;    /* detalles suaves */
-  --crema: #f3efd8;    /* fondo */
-  --papel: #fbf9ee;    /* tarjetas */
+  /* Marca Manu en clase. Se conservan los nombres antiguos de variable para no tocar todas las páginas. */
+  --celeste: #a1d6e2; --azul: #4497b0; --azul-hondo: #2a6f87; --coral: #fa6876; --coral-tinte: #ffdadd;
+  --sobre-coral: #12343d; --nube: #eef7fa; --blanco: #ffffff; --linea: #c9dadc; --pie-texto: #d4ecf2;
+  --bosque: #1e4f5c;   /* tinta: texto, contornos */
+  --pino: #2a6f87;     /* azul hondo: acentos de texto */
+  --salvia: #4497b0;   /* azul: detalles */
+  --menta: #a1d6e2;    /* celeste: superficies suaves */
+  --crema: #eef7fa;    /* nube: fondo */
+  --papel: #ffffff;    /* tarjetas */
   --tinta: var(--bosque);
-  --suave: #4f6b4c;
+  --suave: #4f6f75;
   --bien: #2e7d32;
   --bien-fondo: #dcefd4;
   --error: #b4541a;
-  --naranja: #f08a24; --amarillo: #f5c518; --verde: #3a9e4f; --azul: #2f7fd1; /* clave Fitzgerald (SAAC) */
+  --naranja: #f08a24; --amarillo: #f5c518; --verde: #3a9e4f; --azul-saac: #2f7fd1; /* clave Fitzgerald (SAAC) */
   --borde: 3px solid var(--bosque);
-  --radio: 14px;
-  --f-titulo: "League Spartan", "Arial Black", system-ui, sans-serif;
-  --f-texto: "Quicksand", "Arial", system-ui, sans-serif;
+  --radio: 8px;
+  --f-titulo: "Barlow Condensed", "Arial Narrow", system-ui, sans-serif;
+  --f-texto: "Barlow", "Arial", system-ui, sans-serif;
   --gutter-l: max(16px, env(safe-area-inset-left, 0px));
   --gutter-r: max(16px, env(safe-area-inset-right, 0px));
   color-scheme: light;
@@ -27,7 +29,7 @@
 html, body { min-height: 100%; }
 body {
   margin: 0; background: var(--crema); color: var(--tinta);
-  font-family: var(--f-texto); font-weight: 600; font-size: 17px; line-height: 1.55;
+  font-family: var(--f-texto); font-weight: 500; font-size: 17px; line-height: 1.55;
   text-transform: uppercase; letter-spacing: .03em;
 }
 img { max-width: 100%; }
@@ -37,8 +39,8 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--salvia); outlin
 .picto { background: #fff; border-radius: 10px; }
 
 /* ── Menú destacado ── */
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--bosque); }
-.menu { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bosque); border-bottom: 6px solid var(--salvia); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: #fff; }
+.menu { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: #fff; border-bottom: 4px solid var(--celeste); }
 .menu-dentro {
   max-width: 1180px; margin: 0 auto; min-height: 76px;
   display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
@@ -50,11 +52,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .menu ul { list-style: none; margin: 0 0 0 auto; padding: 0; display: flex; gap: 6px; flex-wrap: wrap; }
 .menu a.opcion {
   display: inline-flex; align-items: center; min-height: 44px; padding: 4px 16px;
-  font-family: var(--f-titulo); font-weight: 700; font-size: 17px; letter-spacing: .08em;
-  color: var(--crema); text-decoration: none; border-radius: 999px; border: 2px solid transparent;
+  font-family: var(--f-titulo); font-weight: 800; font-size: 18px; letter-spacing: .06em;
+  color: var(--tinta); text-decoration: none; border-radius: 4px; border: 2px solid transparent;
 }
-.menu a.opcion:hover { border-color: var(--menta); }
-.menu a.opcion[aria-current="page"] { background: var(--crema); color: var(--bosque); }
+.menu a.opcion:hover { border-color: var(--celeste); }
+.menu a.opcion[aria-current="page"] { background: var(--celeste); color: var(--tinta); }
 @media (max-width: 640px) {
   .menu-dentro { gap: 8px; }
   .marca img { height: 48px; }
@@ -64,16 +66,26 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ── Piezas comunes ── */
 .barra { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding-block: 16px; }
-.barra h1 { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(24px, 3vw, 36px); letter-spacing: .04em; margin: 0; flex: 1; min-width: 0; text-wrap: balance; }
+.barra h1 { font-family: var(--f-titulo); font-weight: 800; font-style: italic; font-size: clamp(24px, 3vw, 36px); letter-spacing: .04em; margin: 0; flex: 1; min-width: 0; text-wrap: balance; }
 .btn {
-  border: var(--borde); background: var(--papel); border-radius: 999px;
-  padding: 6px 18px; font-family: var(--f-titulo); font-weight: 700; letter-spacing: .06em;
+  border: 2px solid var(--tinta); background: var(--papel); border-radius: 4px;
+  padding: 6px 18px; font-family: var(--f-titulo); font-weight: 800; font-size: 18px; letter-spacing: .05em;
   text-decoration: none; color: var(--bosque);
   display: inline-flex; align-items: center; gap: 8px; min-height: 48px;
 }
-.btn-primario { background: var(--pino); color: var(--crema); border-color: var(--pino); }
+.btn-primario { background: var(--coral); color: var(--sobre-coral); border-color: var(--coral); }
 .creditos { font-size: 12px; color: var(--suave); padding-block: 20px; text-align: center; text-transform: none; letter-spacing: 0; }
 .creditos a { color: inherit; }
+/* Instagram: cápsula «Sígueme en Instagram · @manuenclase» */
+.ig { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 16px; border-radius: 999px;
+  background: var(--celeste); color: var(--tinta); text-decoration: none; text-transform: uppercase;
+  font-family: var(--f-titulo); font-weight: 800; font-size: 16px; letter-spacing: .05em; white-space: nowrap; }
+.ig:hover { background: var(--coral-tinte); }
+.ig svg { width: 20px; height: 20px; flex: none; }
+.ig b { color: var(--azul-hondo); font-weight: 800; }
+.menu .ig { margin-left: 4px; }
+.pie-ig { display: flex; justify-content: center; padding-top: 24px; }
+@media (max-width: 640px) { .menu .ig { display: none; } }
 @keyframes sacudir { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-10px)} 75%{transform:translateX(10px)} }
 @keyframes saltar { 0%{transform:scale(1)} 50%{transform:scale(1.08)} 100%{transform:scale(1)} }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

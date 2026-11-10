@@ -13,14 +13,18 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfgen import canvas
 
 RAIZ = Path(__file__).resolve().parent.parent
-pdfmetrics.registerFont(TTFont("Titulo", str(RAIZ / "recursos/fuentes/LeagueSpartan-ExtraBold.ttf")))
-pdfmetrics.registerFont(TTFont("Texto", str(RAIZ / "recursos/fuentes/Quicksand-SemiBold.ttf")))
+pdfmetrics.registerFont(TTFont("Titulo", str(RAIZ / "recursos/fuentes/BarlowCondensed-ExtraBold.ttf")))
+pdfmetrics.registerFont(TTFont("TituloI", str(RAIZ / "recursos/fuentes/BarlowCondensed-ExtraBoldItalic.ttf")))
+pdfmetrics.registerFont(TTFont("Texto", str(RAIZ / "recursos/fuentes/Barlow-Medium.ttf")))
 
 ANCHO, ALTO = A4
 M = 36
-BOSQUE, PINO, SALVIA, MENTA, CREMA = (HexColor(c) for c in ("#1c3d1f", "#2f5d31", "#6b9a67", "#bedab4", "#f3efd8"))
+# Marca Manu en clase (nombres antiguos conservados): tinta, azul hondo, azul, celeste, nube; coral de acento
+BOSQUE, PINO, SALVIA, MENTA, CREMA = (HexColor(c) for c in ("#1e4f5c", "#2a6f87", "#4497b0", "#a1d6e2", "#eef7fa"))
+CORAL = HexColor("#fa6876")
 GRIS = HexColor("#9aa59a")
-AUTORIA = "FICHA ELABORADA POR MANUEL CASTILLO REDONDO · MANU EN CLASE · CLASE 17"
+AUTORIA = "FICHA DE MANUEL CASTILLO REDONDO · MANU EN CLASE · CLASE 17"
+SIGUEME = "SÍGUEME EN INSTAGRAM @MANUENCLASE"
 CREDITO = "PICTOGRAMAS: SERGIO PALAO. ORIGEN: ARASAAC (ARASAAC.ORG). LICENCIA CC BY-NC-SA. PROPIEDAD: GOBIERNO DE ARAGÓN."
 LOGO = RAIZ / "recursos/logo/logo-horizontal-claro.png"
 
@@ -62,14 +66,14 @@ FIGURAS = {
 def cabecera(c, titulo_ficha, consigna, tema, fecha_txt):
     c.setFillColor(CREMA)
     c.rect(0, ALTO - 118, ANCHO, 118, stroke=0, fill=1)
-    c.setFillColor(SALVIA)
+    c.setFillColor(MENTA)
     c.rect(0, ALTO - 124, ANCHO, 6, stroke=0, fill=1)
-    c.drawImage(str(LOGO), M, ALTO - 66, height=40, width=40 * 1300 / 300, preserveAspectRatio=True, anchor="w", mask="auto")
+    c.drawImage(str(LOGO), M, ALTO - 66, height=40, width=40 * 504 / 112, preserveAspectRatio=True, anchor="w", mask="auto")
     c.setFillColor(BOSQUE)
     c.setFont("Texto", 10)
     c.drawRightString(ANCHO - M, ALTO - 38, f"{fecha_txt} · {tema}")
     c.drawRightString(ANCHO - M, ALTO - 58, "NOMBRE: ______________________________")
-    c.setFont("Titulo", 26)
+    c.setFont("TituloI", 28)
     c.drawString(M, ALTO - 98, titulo_ficha)
     c.setFillColor(PINO)
     c.setFont("Texto", 11.5)
@@ -80,7 +84,15 @@ def cabecera(c, titulo_ficha, consigna, tema, fecha_txt):
 def pie(c):
     c.setFont("Texto", 6.5)
     c.setFillColor(GRIS)
-    c.drawCentredString(ANCHO / 2, 27, AUTORIA)
+    a = AUTORIA + " · "
+    wa, ws = c.stringWidth(a, "Texto", 6.5), c.stringWidth(SIGUEME, "Titulo", 7.5)
+    x0 = (ANCHO - wa - ws) / 2
+    c.drawString(x0, 27, a)
+    c.setFillColor(PINO)
+    c.setFont("Titulo", 7.5)
+    c.drawString(x0 + wa, 27, SIGUEME)
+    c.setFillColor(GRIS)
+    c.setFont("Texto", 6.5)
     c.drawCentredString(ANCHO / 2, 17, CREDITO)
     c.setFillColor(BOSQUE)
 

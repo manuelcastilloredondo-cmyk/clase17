@@ -1,5 +1,5 @@
 {
-  "name": "Clase 17 · La clase de los chicos",
+  "name": "Clase 17 · Manu en clase",
   "short_name": "Clase 17",
   "description": "Programación diaria, juegos y fichas con pictogramas de la Clase 17. Materiales de Manuel Castillo Redondo · Manu en clase.",
   "lang": "es",
@@ -7,8 +7,8 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#f3efd8",
-  "theme_color": "#1c3d1f",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     { "src": "recursos/logo/app-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "recursos/logo/app-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },

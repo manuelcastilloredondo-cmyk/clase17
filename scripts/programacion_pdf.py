@@ -32,7 +32,7 @@ TINTA = colors.HexColor("#1a1a1a")
 GRIS = colors.HexColor("#5c5c5c")
 FILETE = colors.HexColor("#9a9a9a")
 FONDO = colors.HexColor("#eeeeea")
-VERDE = colors.HexColor("#1c3d1f")
+VERDE = colors.HexColor("#1e4f5c")  # tinta de la marca Manu en clase
 
 CENTRO = "CEE Nuestra Señora de los Volcanes · Teguise (Lanzarote)"
 GRUPO = "Clase 17 · Tránsito a la Vida Adulta"

@@ -8,17 +8,17 @@
 <meta name="author" content="Manuel Castillo Redondo">
 <meta name="description" content="Juegos para la visita Erasmus+ del Agrupamento de Escolas D. Maria II (Braga) a la Clase 17. Jogos para a visita Erasmus+.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800;900&family=Quicksand:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;1,800&family=Barlow:wght@400;500;700&display=swap">
 <link rel="icon" href="../recursos/logo/icono-17.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../recursos/comun.css">
 <style>
   /* Apartado Erasmus: misma banda salvia que la portada y dos tarjetas grandes, una por juego. Español arriba, portugués debajo. */
-  .banda { background: var(--salvia); border-bottom: 3px solid var(--bosque); }
+  .banda { background: var(--celeste); border-bottom: 0; }
   .banda-dentro { max-width: 1180px; margin: 0 auto; padding-block: 30px 26px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 20px; align-items: center; }
   .banda img { width: 104px; height: 104px; border-radius: 16px; border: var(--borde); }
-  .banda h1 { font-family: var(--f-titulo); font-weight: 900; letter-spacing: .02em; line-height: .95; font-size: clamp(40px, 7vw, 80px); margin: 0; color: var(--crema); }
-  .banda .antetitulo { font-family: var(--f-titulo); font-weight: 800; font-size: 16px; letter-spacing: .2em; color: var(--bosque); margin: 0 0 6px; }
-  .banda p { margin: 8px 0 0; max-width: 62ch; font-weight: 700; color: var(--bosque); font-size: 17px; }
+  .banda h1 { font-family: var(--f-titulo); font-weight: 800; font-style: italic; letter-spacing: .01em; line-height: .92; font-size: clamp(40px, 7vw, 80px); margin: 0; color: var(--tinta); }
+  .banda .antetitulo { font-family: var(--f-titulo); font-weight: 600; font-size: 16px; letter-spacing: .2em; color: var(--azul-hondo); margin: 0 0 6px; }
+  .banda p { margin: 8px 0 0; max-width: 62ch; font-weight: 500; color: var(--tinta); font-size: 17px; }
   .pt { display: block; text-transform: none; font-style: italic; font-weight: 600; color: var(--pino); letter-spacing: .01em; }
   @media (max-width: 560px) { .banda-dentro { grid-template-columns: 1fr; } .banda img { width: 72px; height: 72px; } }
   .contenido { max-width: 1180px; margin: 0 auto; padding-block: 28px 8px; display: grid; gap: 22px; }
@@ -30,7 +30,7 @@
   .juego .imagen.picto-fondo { background: #0a3d91; }
   .juego .imagen.picto-fondo img { width: auto; height: 78%; object-fit: contain; border-radius: 14px; background: #fff; }
   .juego .texto { padding: 18px 20px 20px; display: grid; gap: 8px; align-content: start; }
-  .juego h2 { font-family: var(--f-titulo); font-weight: 900; font-size: clamp(26px, 3vw, 34px); letter-spacing: .03em; line-height: 1; margin: 0; }
+  .juego h2 { font-family: var(--f-titulo); font-weight: 800; font-size: clamp(26px, 3vw, 34px); letter-spacing: .03em; line-height: 1; margin: 0; }
   .juego h2 .pt { font-family: var(--f-texto); font-size: 17px; margin-top: 4px; }
   .juego p { margin: 0; font-size: 15px; color: var(--suave); }
   .juego p .pt { font-size: 15px; }
@@ -39,7 +39,7 @@
 </head>
 <body>
   <nav class="menu" aria-label="Menú principal"><div class="menu-dentro">
-    <a class="marca" href="../#inicio"><img src="../recursos/logo/logo-horizontal.svg" alt="CLASE 17 · LA CLASE DE LOS CHICOS"></a>
+    <a class="marca" href="../#inicio"><img src="../recursos/logo/logo-horizontal.svg" alt="MANU EN CLASE · CLASE 17 · LA CLASE DE LOS CHICOS"></a>
     <ul>
       <li><a class="opcion" href="../#inicio">INICIO</a></li>
       <li><a class="opcion" href="../#programacion">PROGRAMACIÓN</a></li>
@@ -47,6 +47,7 @@
       <li><a class="opcion" href="../#fichas">FICHAS</a></li>
       <li><a class="opcion" href="./" aria-current="page">ERASMUS</a></li>
     </ul>
+    <a class="ig" href="https://www.instagram.com/manuenclase/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg><b>@manuenclase</b></a>
   </div></nav>
 
   <header class="banda gutter">
@@ -80,8 +81,9 @@
       </a>
     </div>
 
+    <div class="pie-ig"><a class="ig" href="https://www.instagram.com/manuenclase/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/></svg>Sígueme en Instagram · <b>@manuenclase</b></a></div>
     <footer class="creditos">
-      Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase.<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.<br>
+      Materiales elaborados por <strong>Manuel Castillo Redondo</strong> · Manu en clase (<a href="https://www.instagram.com/manuenclase/" target="_blank" rel="noopener">@manuenclase</a>).<br>Pictogramas: Sergio Palao. Origen: <a href="https://arasaac.org" target="_blank" rel="noopener">ARASAAC</a>. Licencia CC BY-NC-SA. Propiedad: Gobierno de Aragón.<br>
       Web educativa sin ánimo de lucro. No recoge datos personales.
     </footer>
   </main>

@@ -14,10 +14,15 @@ Autor de todos los materiales: **Manuel Castillo Redondo · Manu en clase**. Tod
    que el docente revisa y aprueba. Solo se fusiona cuando él lo pide.
 4. Sin librerías externas ni rastreadores, salvo Google Fonts y pdf.js (cdnjs) en `ficha.html`.
 
-## Identidad visual
-Mayúsculas en la web (las pone `comun.css`). Paleta: bosque `#1c3d1f`, pino `#2f5d31`, salvia `#6b9a67`, menta `#bedab4`, crema `#f3efd8`.
-Fuentes: League Spartan y Quicksand (web y fichas); Source Serif 4 (PDF de programación, formal).
-Logos en `recursos/logo/` (se regeneran con `scripts/logo.py`).
+## Identidad visual: marca «Manu en clase» (@manuenclase)
+Clase 17 vive dentro de la marca Manu en clase. Mayúsculas en la web (las pone `comun.css`).
+Paleta: celeste `#a1d6e2` (superficies grandes), azul `#4497b0`, azul hondo `#2a6f87` (texto de acento), coral `#fa6876`
+(único acento: botón principal y «17»; texto encima `#12343d`), tinta `#1e4f5c` (texto), nube `#eef7fa` (fondo), blanco.
+Nada de fondos oscuros grandes. Fuentes: Barlow Condensed 800 cursiva (titulares), 800 (botones), 600 espaciada (antetítulos);
+Barlow 400/500/700 (texto). Source Serif 4 solo en el PDF de programación (formal, títulos en tinta).
+**«Sígueme en Instagram · @manuenclase»** (https://www.instagram.com/manuenclase/) va en el menú, la portada y el pie de
+todas las páginas (clase `.ig`) y en el pie de todas las fichas PDF. **No** va en el PDF de programación para inspección
+(allí solo la autoría). Logos e iconos en `recursos/logo/` (se regeneran con `scripts/logo_manu.py <icon-512.png de la marca>`).
 
 ## Estructura
 ```
