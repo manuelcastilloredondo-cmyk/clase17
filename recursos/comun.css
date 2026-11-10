@@ -89,3 +89,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @keyframes sacudir { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-10px)} 75%{transform:translateX(10px)} }
 @keyframes saltar { 0%{transform:scale(1)} 50%{transform:scale(1.08)} 100%{transform:scale(1)} }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* Botón «Volver» bajo el menú, en todas las páginas */
+.volver-barra { max-width: 1180px; margin: 0 auto; padding-top: 14px; text-align: left; }
+.volver { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 6px 18px 6px 14px; border-radius: 4px;
+  background: #fff; border: 2px solid var(--tinta); color: var(--tinta); text-decoration: none;
+  font-family: var(--f-titulo); font-weight: 800; font-size: 18px; letter-spacing: .05em; }
+.volver:hover { background: var(--celeste); }
