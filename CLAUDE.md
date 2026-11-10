@@ -22,7 +22,7 @@ Nada de fondos oscuros grandes. Fuentes: Barlow Condensed 800 cursiva (titulares
 Barlow 400/500/700 (texto). Source Serif 4 solo en el PDF de programación (formal, títulos en tinta).
 **«Sígueme en Instagram · @manuenclase»** (https://www.instagram.com/manuenclase/) va en el menú, la portada y el pie de
 todas las páginas (clase `.ig`) y en el pie de todas las fichas PDF. **No** va en el PDF de programación para inspección
-(allí solo la autoría). Logos e iconos en `recursos/logo/` (se regeneran con `scripts/logo_manu.py <icon-512.png de la marca>`).
+(allí solo la autoría). Si cambias `recursos/comun.css`, sube su versión (`comun.css?v=N`) en todas las páginas y plantillas: si no, los navegadores siguen usando la copia vieja. Logos e iconos en `recursos/logo/` (se regeneran con `scripts/logo_manu.py <icon-512.png de la marca>`).
 
 ## Estructura
 ```
