@@ -10,8 +10,9 @@
     { "desde": "2026-12-23", "hasta": "2027-01-08", "motivo": "Vacaciones de Navidad" },
     { "desde": "2027-03-22", "hasta": "2027-03-26", "motivo": "Semana Santa" }
   ],
-  "por_confirmar": [
-    { "fecha": "2026-12-22", "motivo": "Algunas fuentes sitúan el inicio de las vacaciones de Navidad el 22 de diciembre" }
+  "por_confirmar": [],
+  "confirmados": [
+    { "fecha": "2026-12-22", "motivo": "Lectivo, confirmado por el docente: actuación de Navidad del centro" }
   ],
   "dias_del_centro": [],
   "nota_dias_del_centro": "Añadir aquí los días de libre disposición del centro, el Carnaval y los festivos locales de Teguise, con el mismo formato que no_lectivos."
