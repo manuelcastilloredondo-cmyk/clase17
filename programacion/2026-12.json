@@ -1,0 +1,583 @@
+{
+  "mes": "2026-12",
+  "centro_interes": "La Navidad con la familia",
+  "rutina": {
+    "lunes": {
+      "juego": "toca",
+      "ficha": "colorear",
+      "extra": "igual"
+    },
+    "martes": {
+      "juego": "une",
+      "ficha": "lineas",
+      "extra": "sombras"
+    },
+    "miercoles": {
+      "juego": "memoria",
+      "ficha": "recortar",
+      "extra": "diferente"
+    },
+    "jueves": {
+      "juego": "ordena",
+      "ficha": "secuencia",
+      "extra": "cuenta"
+    },
+    "viernes": {
+      "juego": "clasifica",
+      "ficha": "puntos",
+      "extra": "tamano"
+    }
+  },
+  "semanas": [
+    {
+      "id": "s1",
+      "tema": "Mi familia",
+      "dias": [
+        "2026-12-01",
+        "2026-12-02",
+        "2026-12-03",
+        "2026-12-04"
+      ],
+      "objetivo": "Nombrar a los miembros de la familia y colaborar en una tarea familiar: poner la mesa.",
+      "taller": {
+        "tipo": "Hogar",
+        "titulo": "Ponemos la mesa para comer en familia",
+        "dia": "2026-12-02"
+      },
+      "casa": [
+        "Mirar juntos fotos de la familia y nombrar a cada persona.",
+        "Ayudar a poner la mesa en una comida: mantel, platos, vasos y cubiertos.",
+        "Llamar o saludar a los abuelos y decir quiénes son."
+      ],
+      "vocabulario": [
+        {
+          "palabra": "FAMILIA",
+          "voz": "la familia",
+          "id": 2392
+        },
+        {
+          "palabra": "MAMÁ",
+          "voz": "la mamá",
+          "id": 31148
+        },
+        {
+          "palabra": "PAPÁ",
+          "voz": "el papá",
+          "id": 2497
+        },
+        {
+          "palabra": "HERMANO",
+          "voz": "el hermano",
+          "id": 2423
+        },
+        {
+          "palabra": "HERMANA",
+          "voz": "la hermana",
+          "id": 2422
+        },
+        {
+          "palabra": "ABUELO",
+          "voz": "el abuelo",
+          "id": 23718
+        },
+        {
+          "palabra": "ABUELA",
+          "voz": "la abuela",
+          "id": 23710
+        },
+        {
+          "palabra": "BEBÉ",
+          "voz": "el bebé",
+          "id": 6060
+        }
+      ],
+      "pasos": {
+        "titulo": "Poner la mesa",
+        "lista": [
+          {
+            "palabra": "PONER EL MANTEL",
+            "voz": "poner el mantel",
+            "id": 2460
+          },
+          {
+            "palabra": "PONER LOS PLATOS",
+            "voz": "poner los platos",
+            "id": 2532
+          },
+          {
+            "palabra": "PONER LOS VASOS",
+            "voz": "poner los vasos",
+            "id": 2610
+          },
+          {
+            "palabra": "PONER LOS CUBIERTOS",
+            "voz": "poner los cubiertos",
+            "id": 2588
+          },
+          {
+            "palabra": "PONER LAS SERVILLETAS",
+            "voz": "poner las servilletas",
+            "id": 2569
+          }
+        ]
+      },
+      "clasifica": {
+        "pregunta": "¿Es una persona mayor o un niño?",
+        "a": {
+          "nombre": "MAYORES",
+          "id": 6886
+        },
+        "b": {
+          "nombre": "NIÑOS",
+          "id": 6975
+        },
+        "elementos": [
+          {
+            "palabra": "ABUELO",
+            "voz": "el abuelo",
+            "id": 23718,
+            "grupo": "a"
+          },
+          {
+            "palabra": "ABUELA",
+            "voz": "la abuela",
+            "id": 23710,
+            "grupo": "a"
+          },
+          {
+            "palabra": "HOMBRE",
+            "voz": "el hombre",
+            "id": 39005,
+            "grupo": "a"
+          },
+          {
+            "palabra": "MUJER",
+            "voz": "la mujer",
+            "id": 4703,
+            "grupo": "a"
+          },
+          {
+            "palabra": "BEBÉ",
+            "voz": "el bebé",
+            "id": 6060,
+            "grupo": "b"
+          },
+          {
+            "palabra": "NIÑO",
+            "voz": "el niño",
+            "id": 2485,
+            "grupo": "b"
+          },
+          {
+            "palabra": "NIÑA",
+            "voz": "la niña",
+            "id": 2484,
+            "grupo": "b"
+          }
+        ]
+      },
+      "puntos": "casa",
+      "aula": [
+        "Presentación del vocabulario con un árbol familiar de pictos (sin fotos del alumnado).",
+        "Taller de hogar: ponemos la mesa del aula para comer juntos, paso a paso.",
+        "Práctica de poner la mesa antes del comedor siguiendo la secuencia visual.",
+        "Juego de roles: la familia en la mesa; repaso del vocabulario."
+      ]
+    },
+    {
+      "id": "s2",
+      "tema": "Hacemos galletas de Navidad",
+      "dias": [
+        "2026-12-09",
+        "2026-12-10",
+        "2026-12-11"
+      ],
+      "objetivo": "Reconocer ingredientes y utensilios de cocina y seguir los pasos de una receta sencilla.",
+      "taller": {
+        "tipo": "Cocina",
+        "titulo": "Hacemos galletas de Navidad",
+        "dia": "2026-12-09"
+      },
+      "casa": [
+        "Lavarse las manos antes de cocinar o de comer.",
+        "Buscar en la cocina la harina, el azúcar y los huevos.",
+        "Ayudar a preparar una merienda sencilla y recoger después."
+      ],
+      "vocabulario": [
+        {
+          "palabra": "GALLETA",
+          "voz": "la galleta",
+          "id": 8312
+        },
+        {
+          "palabra": "HARINA",
+          "voz": "la harina",
+          "id": 8600
+        },
+        {
+          "palabra": "HUEVO",
+          "voz": "el huevo",
+          "id": 2427
+        },
+        {
+          "palabra": "AZÚCAR",
+          "voz": "el azúcar",
+          "id": 25560
+        },
+        {
+          "palabra": "MANTEQUILLA",
+          "voz": "la mantequilla",
+          "id": 2461
+        },
+        {
+          "palabra": "BOL",
+          "voz": "el bol",
+          "id": 3257
+        },
+        {
+          "palabra": "RODILLO",
+          "voz": "el rodillo",
+          "id": 8211
+        },
+        {
+          "palabra": "HORNO",
+          "voz": "el horno",
+          "id": 2426
+        }
+      ],
+      "pasos": {
+        "titulo": "Hacer galletas",
+        "lista": [
+          {
+            "palabra": "LAVAR LAS MANOS",
+            "voz": "lavar las manos",
+            "id": 8975
+          },
+          {
+            "palabra": "MEZCLAR",
+            "voz": "mezclar los ingredientes",
+            "id": 5515
+          },
+          {
+            "palabra": "ESTIRAR LA MASA",
+            "voz": "estirar la masa con el rodillo",
+            "id": 8015
+          },
+          {
+            "palabra": "CORTAR CON EL MOLDE",
+            "voz": "cortar con el molde",
+            "id": 39969
+          },
+          {
+            "palabra": "HORNEAR",
+            "voz": "hornear las galletas",
+            "id": 5487
+          }
+        ]
+      },
+      "clasifica": {
+        "pregunta": "¿Se come o no se come?",
+        "a": {
+          "nombre": "SE COME",
+          "id": 2349
+        },
+        "b": {
+          "nombre": "NO SE COME",
+          "id": 5526
+        },
+        "elementos": [
+          {
+            "palabra": "GALLETA",
+            "voz": "la galleta",
+            "id": 8312,
+            "grupo": "a"
+          },
+          {
+            "palabra": "HUEVO",
+            "voz": "el huevo",
+            "id": 2427,
+            "grupo": "a"
+          },
+          {
+            "palabra": "TURRÓN",
+            "voz": "el turrón",
+            "id": 2784,
+            "grupo": "a"
+          },
+          {
+            "palabra": "AZÚCAR",
+            "voz": "el azúcar",
+            "id": 25560,
+            "grupo": "a"
+          },
+          {
+            "palabra": "BOL",
+            "voz": "el bol",
+            "id": 3257,
+            "grupo": "b"
+          },
+          {
+            "palabra": "RODILLO",
+            "voz": "el rodillo",
+            "id": 8211,
+            "grupo": "b"
+          },
+          {
+            "palabra": "CUCHARA",
+            "voz": "la cuchara",
+            "id": 2362,
+            "grupo": "b"
+          },
+          {
+            "palabra": "MOLDES",
+            "voz": "los moldes",
+            "id": 39969,
+            "grupo": "b"
+          }
+        ]
+      },
+      "puntos": "arbol",
+      "aula": [
+        "Taller de cocina: elaboración de galletas de Navidad siguiendo la receta en pictos.",
+        "Degustación de las galletas: pedir, compartir y dar las gracias.",
+        "Recogida y limpieza de los utensilios; repaso de ingredientes."
+      ]
+    },
+    {
+      "id": "s3",
+      "tema": "Felicitamos la Navidad",
+      "dias": [
+        "2026-12-14",
+        "2026-12-15",
+        "2026-12-16",
+        "2026-12-17",
+        "2026-12-18",
+        "2026-12-21",
+        "2026-12-22"
+      ],
+      "objetivo": "Conocer las tradiciones navideñas, elaborar una tarjeta de felicitación y participar en la fiesta del centro.",
+      "taller": {
+        "tipo": "Manualidades",
+        "titulo": "Hacemos una tarjeta de Navidad",
+        "dia": "2026-12-16"
+      },
+      "casa": [
+        "Entregar la tarjeta de Navidad a la familia y decir «¡Feliz Navidad!».",
+        "Cantar juntos un villancico.",
+        "Montar o mirar el belén y nombrar las figuras."
+      ],
+      "vocabulario": [
+        {
+          "palabra": "BELÉN",
+          "voz": "el belén",
+          "id": 5089
+        },
+        {
+          "palabra": "CAMPANA",
+          "voz": "la campana",
+          "id": 5938
+        },
+        {
+          "palabra": "VELA",
+          "voz": "la vela",
+          "id": 6242
+        },
+        {
+          "palabra": "TARJETA DE NAVIDAD",
+          "voz": "la tarjeta de Navidad",
+          "id": 7269
+        },
+        {
+          "palabra": "VILLANCICO",
+          "voz": "el villancico",
+          "id": 2778
+        },
+        {
+          "palabra": "REGALO",
+          "voz": "el regalo",
+          "id": 25381
+        },
+        {
+          "palabra": "FIESTA",
+          "voz": "la fiesta",
+          "id": 7099
+        },
+        {
+          "palabra": "BOLAS DE NAVIDAD",
+          "voz": "las bolas de Navidad",
+          "id": 3067
+        }
+      ],
+      "pasos": {
+        "titulo": "Hacer una tarjeta de Navidad",
+        "lista": [
+          {
+            "palabra": "DOBLAR EL PAPEL",
+            "voz": "doblar el papel",
+            "id": 5544
+          },
+          {
+            "palabra": "DIBUJAR",
+            "voz": "dibujar",
+            "id": 8088
+          },
+          {
+            "palabra": "PINTAR",
+            "voz": "pintar",
+            "id": 2348
+          },
+          {
+            "palabra": "PEGAR",
+            "voz": "pegar",
+            "id": 2511
+          },
+          {
+            "palabra": "ESCRIBIR EL NOMBRE",
+            "voz": "escribir el nombre",
+            "id": 37407
+          }
+        ]
+      },
+      "clasifica": {
+        "pregunta": "¿Va en el árbol o en el belén?",
+        "a": {
+          "nombre": "EN EL ÁRBOL",
+          "id": 24859
+        },
+        "b": {
+          "nombre": "EN EL BELÉN",
+          "id": 5089
+        },
+        "elementos": [
+          {
+            "palabra": "BOLA",
+            "voz": "la bola",
+            "id": 8296,
+            "grupo": "a"
+          },
+          {
+            "palabra": "ESTRELLA",
+            "voz": "la estrella",
+            "id": 3100,
+            "grupo": "a"
+          },
+          {
+            "palabra": "LUCES",
+            "voz": "las luces",
+            "id": 5083,
+            "grupo": "a"
+          },
+          {
+            "palabra": "NIÑO JESÚS",
+            "voz": "el Niño Jesús",
+            "id": 7177,
+            "grupo": "b"
+          },
+          {
+            "palabra": "PASTOR",
+            "voz": "el pastor",
+            "id": 7788,
+            "grupo": "b"
+          },
+          {
+            "palabra": "OVEJA",
+            "voz": "la oveja",
+            "id": 2489,
+            "grupo": "b"
+          },
+          {
+            "palabra": "BURRO",
+            "voz": "el burro",
+            "id": 2291,
+            "grupo": "b"
+          }
+        ]
+      },
+      "puntos": "campana",
+      "aula": [
+        "Presentación del vocabulario con objetos reales: campana, vela, bolas y tarjetas.",
+        "Visita al belén del centro: nombrar y señalar las figuras.",
+        "Taller de manualidades: elaboración de una tarjeta de Navidad para la familia.",
+        "Ensayo de un villancico con apoyo de pictos.",
+        "Envolvemos un regalo pequeño para el amigo invisible del aula.",
+        "Repaso del mes: familia, cocina y Navidad.",
+        "Fiesta de Navidad del aula y entrega de las tarjetas (día por confirmar)."
+      ]
+    }
+  ],
+  "contexto": "El centro de interés del mes, «La Navidad con la familia», se trabaja desde situaciones funcionales y significativas: reconocer a los miembros de la familia, colaborar en tareas del hogar (poner la mesa), seguir una receta sencilla en el taller de cocina y participar en las tradiciones navideñas del centro y del entorno. El mes es corto (14 días lectivos) y termina con la fiesta de Navidad. Todo el trabajo se apoya en Sistemas Aumentativos y Alternativos de Comunicación (pictogramas ARASAAC) y en una estructura diaria estable y predecible.",
+  "analisis_tareas": "Las tareas de poner la mesa, hacer galletas y elaborar una tarjeta de Navidad se descomponen en 4–5 pasos que se trabajan en la aplicación, en la ficha y en la situación real.",
+  "objetivos": {
+    "AP": [
+      "Identificar y denominar, por vía oral, gestual o pictográfica, a los miembros de la familia.",
+      "Lavarse las manos antes de manipular alimentos y seguir normas básicas de higiene en la cocina.",
+      "Poner la mesa siguiendo una secuencia visual, con el grado de apoyo que precise cada alumno.",
+      "Reconocer qué se come y qué no se come entre los ingredientes y utensilios de cocina."
+    ],
+    "AS": [
+      "Comprender y seguir consignas orales sencillas apoyadas en pictogramas.",
+      "Asociar pictograma y palabra escrita del vocabulario del centro de interés (lectura global).",
+      "Conocer y participar en las tradiciones navideñas de su entorno: belén, árbol, villancicos y felicitaciones.",
+      "Compartir, pedir y dar las gracias en las actividades de grupo y en la fiesta del aula."
+    ],
+    "AL": [
+      "Mantener la atención en una tarea estructurada hasta su finalización.",
+      "Desarrollar destrezas manipulativas y de motricidad fina: colorear, repasar trazos, recortar, doblar y pegar.",
+      "Seguir los pasos de una receta y de una manualidad para obtener un producto final.",
+      "Recoger y limpiar el puesto de trabajo y los utensilios al terminar."
+    ]
+  },
+  "criterios": [
+    [
+      "AP",
+      "Identifica y denomina a los miembros de la familia trabajados."
+    ],
+    [
+      "AP",
+      "Se lava las manos antes de cocinar o comer con el apoyo indicado en su ACUS."
+    ],
+    [
+      "AP",
+      "Pone la mesa siguiendo el orden de la secuencia visual."
+    ],
+    [
+      "AP",
+      "Distingue lo que se come de lo que no se come."
+    ],
+    [
+      "AS",
+      "Comprende y sigue consignas orales apoyadas en pictogramas."
+    ],
+    [
+      "AS",
+      "Asocia pictograma y palabra escrita del vocabulario del mes."
+    ],
+    [
+      "AS",
+      "Reconoce elementos y tradiciones de la Navidad."
+    ],
+    [
+      "AS",
+      "Comparte, pide y da las gracias en situaciones de grupo."
+    ],
+    [
+      "AL",
+      "Mantiene la atención hasta finalizar la tarea."
+    ],
+    [
+      "AL",
+      "Realiza las tareas de motricidad fina (colorear, repasar, recortar, doblar, pegar)."
+    ],
+    [
+      "AL",
+      "Sigue los pasos de la receta y de la manualidad."
+    ],
+    [
+      "AL",
+      "Recoge y limpia su puesto al terminar."
+    ]
+  ],
+  "recursos": [
+    "Mantel, platos, vasos, cubiertos y servilletas para el taller de hogar; ingredientes, bol, rodillo, moldes y horno para el taller de cocina; cartulinas, pinturas y pegamento para la tarjeta; belén y adornos de Navidad del centro."
+  ]
+}

@@ -1,0 +1,380 @@
+{
+  "fecha": "2026-12-11",
+  "tema": "HACEMOS GALLETAS DE NAVIDAD",
+  "juego": "clasifica",
+  "titulo": "CLASIFICA: HACEMOS GALLETAS DE NAVIDAD",
+  "ficha_titulo": "UNE LOS PUNTOS: HACEMOS GALLETAS DE NAVIDAD",
+  "elementos": [
+    {
+      "palabra": "MANTEQUILLA",
+      "voz": "la mantequilla",
+      "picto": "../../recursos/pictos/2461.png",
+      "bn": "../../recursos/pictos-bn/2461.png"
+    },
+    {
+      "palabra": "BOL",
+      "voz": "el bol",
+      "picto": "../../recursos/pictos/3257.png",
+      "bn": "../../recursos/pictos-bn/3257.png"
+    },
+    {
+      "palabra": "RODILLO",
+      "voz": "el rodillo",
+      "picto": "../../recursos/pictos/8211.png",
+      "bn": "../../recursos/pictos-bn/8211.png"
+    },
+    {
+      "palabra": "HORNO",
+      "voz": "el horno",
+      "picto": "../../recursos/pictos/2426.png",
+      "bn": "../../recursos/pictos-bn/2426.png"
+    },
+    {
+      "palabra": "GALLETA",
+      "voz": "la galleta",
+      "picto": "../../recursos/pictos/8312.png",
+      "bn": "../../recursos/pictos-bn/8312.png"
+    },
+    {
+      "palabra": "HARINA",
+      "voz": "la harina",
+      "picto": "../../recursos/pictos/8600.png",
+      "bn": "../../recursos/pictos-bn/8600.png"
+    },
+    {
+      "palabra": "HUEVO",
+      "voz": "el huevo",
+      "picto": "../../recursos/pictos/2427.png",
+      "bn": "../../recursos/pictos-bn/2427.png"
+    },
+    {
+      "palabra": "AZÚCAR",
+      "voz": "el azúcar",
+      "picto": "../../recursos/pictos/25560.png",
+      "bn": "../../recursos/pictos-bn/25560.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Hacer galletas",
+    "lista": [
+      {
+        "palabra": "LAVAR LAS MANOS",
+        "voz": "lavar las manos",
+        "picto": "../../recursos/pictos/8975.png",
+        "bn": "../../recursos/pictos-bn/8975.png"
+      },
+      {
+        "palabra": "MEZCLAR",
+        "voz": "mezclar los ingredientes",
+        "picto": "../../recursos/pictos/5515.png",
+        "bn": "../../recursos/pictos-bn/5515.png"
+      },
+      {
+        "palabra": "ESTIRAR LA MASA",
+        "voz": "estirar la masa con el rodillo",
+        "picto": "../../recursos/pictos/8015.png",
+        "bn": "../../recursos/pictos-bn/8015.png"
+      },
+      {
+        "palabra": "CORTAR CON EL MOLDE",
+        "voz": "cortar con el molde",
+        "picto": "../../recursos/pictos/39969.png",
+        "bn": "../../recursos/pictos-bn/39969.png"
+      },
+      {
+        "palabra": "HORNEAR",
+        "voz": "hornear las galletas",
+        "picto": "../../recursos/pictos/5487.png",
+        "bn": "../../recursos/pictos-bn/5487.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Se come o no se come?",
+    "elementos": [
+      {
+        "palabra": "GALLETA",
+        "voz": "la galleta",
+        "picto": "../../recursos/pictos/8312.png",
+        "bn": "../../recursos/pictos-bn/8312.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "HUEVO",
+        "voz": "el huevo",
+        "picto": "../../recursos/pictos/2427.png",
+        "bn": "../../recursos/pictos-bn/2427.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "TURRÓN",
+        "voz": "el turrón",
+        "picto": "../../recursos/pictos/2784.png",
+        "bn": "../../recursos/pictos-bn/2784.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "AZÚCAR",
+        "voz": "el azúcar",
+        "picto": "../../recursos/pictos/25560.png",
+        "bn": "../../recursos/pictos-bn/25560.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "BOL",
+        "voz": "el bol",
+        "picto": "../../recursos/pictos/3257.png",
+        "bn": "../../recursos/pictos-bn/3257.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "RODILLO",
+        "voz": "el rodillo",
+        "picto": "../../recursos/pictos/8211.png",
+        "bn": "../../recursos/pictos-bn/8211.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "CUCHARA",
+        "voz": "la cuchara",
+        "picto": "../../recursos/pictos/2362.png",
+        "bn": "../../recursos/pictos-bn/2362.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "MOLDES",
+        "voz": "los moldes",
+        "picto": "../../recursos/pictos/39969.png",
+        "bn": "../../recursos/pictos-bn/39969.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "SE COME",
+      "picto": "../../recursos/pictos/2349.png"
+    },
+    "b": {
+      "nombre": "NO SE COME",
+      "picto": "../../recursos/pictos/5526.png"
+    }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.2435,
+        "y": 0.241,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.3835,
+        "y": 0.241,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.5235,
+        "y": 0.241,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.6635,
+        "y": 0.241,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.1735,
+        "y": 0.3622,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.3135,
+        "y": 0.3622,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.4535,
+        "y": 0.3622,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.5935,
+        "y": 0.3622,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.7335,
+        "y": 0.3622,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.8735,
+        "y": 0.3622,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.1035,
+        "y": 0.4835,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.2435,
+        "y": 0.4835,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.3835,
+        "y": 0.4835,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.5235,
+        "y": 0.4835,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.6635,
+        "y": 0.4835,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.8035,
+        "y": 0.4835,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.1735,
+        "y": 0.6047,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.3135,
+        "y": 0.6047,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.4535,
+        "y": 0.6047,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.5935,
+        "y": 0.6047,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.7335,
+        "y": 0.6047,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.3835,
+        "y": 0.726,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.5235,
+        "y": 0.726,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.6635,
+        "y": 0.726,
+        "c": "AZUL"
+      }
+    ],
+    "r": 0.056,
+    "colores": [
+      {
+        "nombre": "AZUL",
+        "hex": "#1e88e5"
+      }
+    ],
+    "palabra": "BOL",
+    "voz": "el bol",
+    "picto": "../../recursos/pictos/3257.png",
+    "bn": "../../recursos/pictos-bn/3257.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "MANTEQUILLA",
+      "voz": "la mantequilla",
+      "picto": "../../recursos/pictos/2461.png",
+      "bn": "../../recursos/pictos-bn/2461.png"
+    },
+    {
+      "palabra": "BOL",
+      "voz": "el bol",
+      "picto": "../../recursos/pictos/3257.png",
+      "bn": "../../recursos/pictos-bn/3257.png"
+    },
+    {
+      "palabra": "RODILLO",
+      "voz": "el rodillo",
+      "picto": "../../recursos/pictos/8211.png",
+      "bn": "../../recursos/pictos-bn/8211.png"
+    },
+    {
+      "palabra": "HORNO",
+      "voz": "el horno",
+      "picto": "../../recursos/pictos/2426.png",
+      "bn": "../../recursos/pictos-bn/2426.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "clasifica",
+      "titulo": "CLASIFICA",
+      "desc": "Lleva cada dibujo a su caja.",
+      "picto": "../../recursos/pictos/2461.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/3257.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/3257.png"
+    },
+    {
+      "modo": "tamano",
+      "titulo": "GRANDE Y PEQUEÑO",
+      "desc": "Escucha y toca el grande o el pequeño.",
+      "picto": "../../recursos/pictos/2426.png",
+      "sombra": false
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "UNE LOS PUNTOS",
+      "desc": "Une los puntos y colorea.",
+      "picto": "../../recursos/pictos-bn/3257.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/3257.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "GRANDE Y PEQUEÑO",
+      "desc": "Rodea el grande y tacha el pequeño.",
+      "picto": "../../recursos/pictos/8211.png"
+    }
+  ],
+  "taller": null
+}
