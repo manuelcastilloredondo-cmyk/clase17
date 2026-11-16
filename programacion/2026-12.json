@@ -361,6 +361,9 @@
         "titulo": "Hacemos una tarjeta de Navidad",
         "dia": "2026-12-16"
       },
+      "eventos": [
+        { "dia": "2026-12-22", "titulo": "Actuación de Navidad" }
+      ],
       "casa": [
         "Entregar la tarjeta de Navidad a la familia y decir «¡Feliz Navidad!».",
         "Cantar juntos un villancico.",
@@ -501,11 +504,11 @@
         "Ensayo de un villancico con apoyo de pictos.",
         "Envolvemos un regalo pequeño para el amigo invisible del aula.",
         "Repaso del mes: familia, cocina y Navidad.",
-        "Fiesta de Navidad del aula y entrega de las tarjetas (día por confirmar)."
+        "Actuación de Navidad del centro: cantamos el villancico ensayado y entregamos las tarjetas a la familia."
       ]
     }
   ],
-  "contexto": "El centro de interés del mes, «La Navidad con la familia», se trabaja desde situaciones funcionales y significativas: reconocer a los miembros de la familia, colaborar en tareas del hogar (poner la mesa), seguir una receta sencilla en el taller de cocina y participar en las tradiciones navideñas del centro y del entorno. El mes es corto (14 días lectivos) y termina con la fiesta de Navidad. Todo el trabajo se apoya en Sistemas Aumentativos y Alternativos de Comunicación (pictogramas ARASAAC) y en una estructura diaria estable y predecible.",
+  "contexto": "El centro de interés del mes, «La Navidad con la familia», se trabaja desde situaciones funcionales y significativas: reconocer a los miembros de la familia, colaborar en tareas del hogar (poner la mesa), seguir una receta sencilla en el taller de cocina y participar en las tradiciones navideñas del centro y del entorno. El mes es corto (14 días lectivos) y termina con la actuación de Navidad del centro el 22 de diciembre. Todo el trabajo se apoya en Sistemas Aumentativos y Alternativos de Comunicación (pictogramas ARASAAC) y en una estructura diaria estable y predecible.",
   "analisis_tareas": "Las tareas de poner la mesa, hacer galletas y elaborar una tarjeta de Navidad se descomponen en 4–5 pasos que se trabajan en la aplicación, en la ficha y en la situación real.",
   "objetivos": {
     "AP": [

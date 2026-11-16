@@ -37,6 +37,7 @@
   .act .sombra img { filter: brightness(0) opacity(.72); background: transparent; }
   .act.principal { border-color: var(--coral); box-shadow: 0 0 0 4px var(--coral-tinte); }
   .taller { background: var(--menta); border-radius: var(--radio); padding: 12px 16px; font-weight: 700; margin-top: 10px; }
+  .evento { background: var(--coral-tinte); border: 2px solid var(--coral); color: var(--tinta); }
   .vacio { padding: 24px; border: 2px dashed var(--salvia); border-radius: var(--radio); color: var(--suave); }
 </style>
 </head>
@@ -79,7 +80,7 @@ fetch('datos.json').then(r => r.json()).then(d => {
   const [a, m, dd] = d.fecha.split('-').map(Number);
   $('fecha').textContent = `${DIAS[new Date(a, m - 1, dd).getDay()]} ${dd} DE ${MESES[m - 1]} · ${d.tema}`;
   $('titulo').textContent = 'Actividades del día'; document.title = `${DIAS[new Date(a, m - 1, dd).getDay()]} ${dd} · Clase 17`;
-  if (d.taller) $('taller').innerHTML = `<div class="taller">TALLER DE HOY: ${d.taller}</div>`;
+  $('taller').innerHTML = (d.evento ? `<div class="taller evento">HOY EN EL CENTRO: ${d.evento}</div>` : '') + (d.taller ? `<div class="taller">TALLER DE HOY: ${d.taller}</div>` : '');
   const imgDe = x => x.picto ? `<img class="picto" src="${x.picto}" alt="">` : '';
   $('digital').innerHTML = d.actividades.map((x, i) => `
     <a class="act${i === 0 ? ' principal' : ''}" href="juego.html${x.modo === d.juego ? '' : '?modo=' + x.modo}">

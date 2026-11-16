@@ -163,6 +163,9 @@ def main(ruta):
                                {"pdf": "puntitos.pdf", "titulo": fichas_dia.NOMBRES["puntitos"][0], "desc": DESC_FICHA["puntitos"], "picto": datos["puntitos"]["bn"]},
                                {"pdf": "extra.pdf", "titulo": fichas_dia.NOMBRES[extra][0], "desc": DESC_FICHA[extra], "picto": web_el[2]["picto"]}]
             datos["taller"] = sem["taller"]["titulo"] if sem["taller"]["dia"] == fecha else None
+            # evento del centro ese día (actuación, salida, fiesta…): opcional, en semanas[].eventos
+            evento = next((e["titulo"] for e in sem.get("eventos", []) if e["dia"] == fecha), None)
+            datos["evento"] = evento
             carpeta = RAIZ / "actividades" / fecha
             carpeta.mkdir(parents=True, exist_ok=True)
             (carpeta / "datos.json").write_text(json.dumps(datos, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -182,6 +185,7 @@ def main(ruta):
                 "portada": f"recursos/pictos/{vocab[0]['id']}.png", "juego": "juego.html", "ficha": "ficha.html", "pdf": "ficha.pdf", "dia": "dia.html",
                 "n_juegos": len(datos["actividades"]), "n_fichas": len(datos["fichas"]),
                 "taller": sem["taller"]["titulo"] if sem["taller"]["dia"] == fecha else None,
+                "evento": evento,
             })
             print(f"{fecha} {dia:9} {rut['juego']:9} {rut['ficha']:9} {tema}")
     ruta_cat = RAIZ / "actividades/catalogo.json"

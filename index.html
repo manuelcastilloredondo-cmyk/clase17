@@ -89,6 +89,10 @@
   .bloque p { margin: 0; font-size: 14px; color: var(--suave); }
   .bloque ul { margin: 0; padding-left: 18px; font-size: 14px; }
   .bloque .casa { font-size: 12px; letter-spacing: .12em; font-weight: 700; color: var(--pino); }
+  .evento { background: var(--coral-tinte); color: var(--tinta); border: 2px solid var(--coral); border-radius: 999px; font-weight: 700; }
+  .hoy .evento { padding: 3px 14px; font-size: 14px; justify-self: start; }
+  .jornada .info .evento { font-size: 11px; padding: 1px 8px; justify-self: start; }
+  .dia .evento { display: inline-block; font-size: 11px; padding: 1px 8px; margin-top: 4px; }
   .vacio { padding: 24px; border: 2px dashed var(--salvia); border-radius: var(--radio); color: var(--suave); }
 </style>
 </head>
@@ -181,6 +185,7 @@ Promise.all([
         <div class="fecha">${hoy.fecha === hoyISO ? 'HOY · ' : ''}${fechaTxt(hoy.fecha)}</div>
         <h3>${hoy.titulo}</h3>
         <div class="tema">${hoy.tema} · FICHA: ${hoy.ficha_tipo}</div>
+        ${hoy.evento ? `<span class="evento">${hoy.evento}</span>` : ''}
         ${hoy.taller ? `<span class="taller">TALLER: ${hoy.taller}</span>` : ''}
         <div class="botones">
           <a class="btn btn-primario" href="${base}dia.html">Todas las actividades${hoy.n_juegos ? ` · ${hoy.n_juegos} juegos y ${hoy.n_fichas} fichas` : ''}</a>
@@ -206,6 +211,7 @@ Promise.all([
     return `<article class="jornada${f === hoyISO ? ' es-hoy' : ''}">${cab}
       <div class="img"><img class="picto" src="${a.portada}" alt=""></div>
       <div class="info"><div class="juego">${a.titulo}</div><small>${a.n_juegos ? `${a.n_juegos} JUEGOS · ${a.n_fichas} FICHAS` : 'FICHA: ' + a.ficha_tipo}</small>
+        ${a.evento ? `<span class="evento">${a.evento}</span>` : ''}
         ${a.taller ? `<span class="taller">TALLER: ${a.taller}</span>` : ''}</div>
       <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base}dia.html#juegos">Juegos</a>
         <a class="btn" data-f="ficha" href="${base}dia.html#fichas">Fichas</a></div></article>`;
@@ -220,7 +226,7 @@ Promise.all([
       <div class="semana"><h3>${tema}</h3><div class="dias">${dias.map(a => {
         const base = `actividades/${a.id}/`;
         return `<div class="dia"><img class="picto" src="${a.portada}" alt="">
-          <div><b>${a.titulo}</b><small>${fechaTxt(a.fecha)}</small></div>
+          <div><b>${a.titulo}</b><small>${fechaTxt(a.fecha)}</small>${a.evento ? `<span class="evento">${a.evento}</span>` : ''}</div>
           <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base}dia.html#juegos">Juegos</a>
           <a class="btn" data-f="ficha" href="${base}dia.html#fichas">Fichas</a></div></div>`;
       }).join('')}</div></div>`).join('');
