@@ -220,7 +220,7 @@ def construir(prog_path, salida):
         "<b>Enseñanza estructurada y rutina estable.</b> Cada día de la semana mantiene el mismo tipo de actividad digital y de ficha, de modo que el alumnado domina la mecánica y centra el esfuerzo en el contenido.",
         "<b>Apoyo visual (SAAC).</b> Todo el vocabulario, las consignas y las secuencias se presentan con pictogramas ARASAAC y palabra escrita en mayúsculas, con locución sintetizada de la consigna.",
         "<b>Aprendizaje sin error y refuerzo positivo.</b> Las actividades digitales no penalizan el error: señalan la respuesta incorrecta, invitan a reintentar y refuerzan verbalmente cada acierto.",
-        "<b>Análisis de tareas.</b> Las rutinas de higiene y vestido se descomponen en 4–5 pasos que se trabajan en la aplicación, en la ficha y en la situación real.",
+        "<b>Análisis de tareas.</b> " + prog.get("analisis_tareas", "Las rutinas de higiene y vestido se descomponen en 4–5 pasos que se trabajan en la aplicación, en la ficha y en la situación real."),
         "<b>Funcionalidad y generalización.</b> Lo trabajado en pantalla y en papel se traslada el mismo día a una situación real del aula, del baño o del taller.",
         "<b>Graduación de la dificultad.</b> Las aplicaciones permiten variar el número de opciones (2, 4 o 6 pictogramas; 4 o 6 parejas) para ajustar la demanda a cada alumno.",
         "<b>Actividades complementarias de nivel inicial.</b> Cada día se añaden tres actividades digitales (colorear con el dedo, pintar puntitos y un juego de percepción o de conceptos básicos: igual, sombras, diferente, cuenta, grande y pequeño) y dos fichas imprimibles equivalentes, para trabajar atención, discriminación visual, conteo y motricidad fina con distintos niveles de exigencia.",
