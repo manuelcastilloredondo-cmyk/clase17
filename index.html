@@ -42,6 +42,17 @@
   .hoy .taller { background: var(--menta); color: var(--bosque); border-radius: 999px; padding: 4px 14px; font-weight: 700; font-size: 14px; justify-self: start; }
   .botones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
   .botones .btn { font-size: 17px; min-height: 52px; padding: 8px 22px; }
+  /* semanas anteriores, por meses */
+  .mes-bloque + .mes-bloque { margin-top: 14px; }
+  .mes-bloque > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 12px; background: var(--papel); border: var(--borde); border-radius: var(--radio); padding: 10px 16px; min-height: 52px; }
+  .mes-bloque > summary::-webkit-details-marker { display: none; }
+  .mes-bloque > summary::before { content: ""; flex: none; width: 10px; height: 10px; border-right: 3px solid var(--azul-hondo); border-bottom: 3px solid var(--azul-hondo); transform: rotate(-45deg); transition: transform .15s; }
+  .mes-bloque[open] > summary::before { transform: rotate(45deg); }
+  .mes-bloque > summary:focus-visible { outline: 3px solid var(--azul); outline-offset: 2px; }
+  .mes-bloque > summary b { font-family: var(--f-titulo); font-weight: 800; font-style: italic; font-size: 22px; letter-spacing: .05em; flex: 1; color: var(--tinta); }
+  .mes-bloque > summary span { color: var(--suave); font-size: 13px; font-weight: 700; }
+  .mes-bloque[open] > summary { background: var(--menta); }
+  .mes-dentro { padding: 18px 0 8px; }
   /* semanas */
   .semana + .semana { margin-top: 26px; }
   .semana h3 { font-family: var(--f-titulo); font-weight: 800; font-size: 18px; letter-spacing: .08em; margin: 0 0 10px; color: var(--pino); }
@@ -162,6 +173,8 @@ function seccion() {
   $('t-lista').textContent = filtro === 'juegos' ? 'Todos los juegos' : filtro === 'fichas' ? 'Todas las fichas' : (VISTA_PREVIA ? 'Resto del mes' : 'Semanas anteriores');
   $('ver-todo').hidden = !filtro;
   document.querySelectorAll('.menu a.opcion').forEach(a => a.dataset.sec === (s || 'inicio') ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+  // con filtro (#juegos, #fichas) se despliegan todos los meses; sin filtro, solo el mes actual
+  document.querySelectorAll('#lista details.mes-bloque').forEach(d => { d.open = !!filtro || d.dataset.mes === hoyISO.slice(0, 7); });
   if (filtro) $('t-lista').scrollIntoView({ block: 'start' });
 }
 addEventListener('hashchange', seccion);
@@ -214,16 +227,23 @@ Promise.all([
   const resto = visibles.filter(a => !semana.includes(a.fecha));
   if (!resto.length) { $('lista').innerHTML = '<p class="vacio">Aquí irán apareciendo las semanas anteriores.</p>'; }
   else {
-    const grupos = {};
-    resto.forEach(a => (grupos[a.tema] ||= []).push(a));
-    $('lista').innerHTML = Object.entries(grupos).map(([tema, dias]) => `
+    // resto ya va de más reciente a más antiguo: los meses y los temas salen en ese orden
+    const meses = {};
+    resto.forEach(a => ((meses[a.fecha.slice(0, 7)] ||= {})[a.tema] ||= []).push(a));
+    $('lista').innerHTML = Object.entries(meses).map(([mes, grupos]) => {
+      const [ma, mm] = mes.split('-').map(Number);
+      const n = Object.values(grupos).reduce((t, d) => t + d.length, 0);
+      return `<details class="mes-bloque" data-mes="${mes}"${mes === hoyISO.slice(0, 7) ? ' open' : ''}>
+      <summary><b>${MESES[mm - 1]} ${ma}</b><span>${n} ${n === 1 ? 'DÍA' : 'DÍAS'}</span></summary>
+      <div class="mes-dentro">${Object.entries(grupos).map(([tema, dias]) => `
       <div class="semana"><h3>${tema}</h3><div class="dias">${dias.map(a => {
         const base = `actividades/${a.id}/`;
         return `<div class="dia"><img class="picto" src="${a.portada}" alt="">
           <div><b>${a.titulo}</b><small>${fechaTxt(a.fecha)}</small></div>
           <div class="enlaces"><a class="btn btn-primario" data-f="juego" href="${base}dia.html#juegos">Juegos</a>
           <a class="btn" data-f="ficha" href="${base}dia.html#fichas">Fichas</a></div></div>`;
-      }).join('')}</div></div>`).join('');
+      }).join('')}</div></div>`).join('')}</div></details>`;
+    }).join('');
   }
 
   if (prog) {
