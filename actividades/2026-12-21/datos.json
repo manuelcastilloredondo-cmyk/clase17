@@ -1,0 +1,360 @@
+{
+  "fecha": "2026-12-21",
+  "tema": "REPASO DEL MES",
+  "juego": "toca",
+  "titulo": "TOCA Y ESCUCHA: REPASO DEL MES",
+  "ficha_titulo": "COLOREA: REPASO DEL MES",
+  "elementos": [
+    {
+      "palabra": "FAMILIA",
+      "voz": "la familia",
+      "picto": "../../recursos/pictos/2392.png",
+      "bn": "../../recursos/pictos-bn/2392.png"
+    },
+    {
+      "palabra": "MAMÁ",
+      "voz": "la mamá",
+      "picto": "../../recursos/pictos/31148.png",
+      "bn": "../../recursos/pictos-bn/31148.png"
+    },
+    {
+      "palabra": "GALLETA",
+      "voz": "la galleta",
+      "picto": "../../recursos/pictos/8312.png",
+      "bn": "../../recursos/pictos-bn/8312.png"
+    },
+    {
+      "palabra": "HARINA",
+      "voz": "la harina",
+      "picto": "../../recursos/pictos/8600.png",
+      "bn": "../../recursos/pictos-bn/8600.png"
+    },
+    {
+      "palabra": "BELÉN",
+      "voz": "el belén",
+      "picto": "../../recursos/pictos/5089.png",
+      "bn": "../../recursos/pictos-bn/5089.png"
+    },
+    {
+      "palabra": "CAMPANA",
+      "voz": "la campana",
+      "picto": "../../recursos/pictos/5938.png",
+      "bn": "../../recursos/pictos-bn/5938.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Hacer una tarjeta de Navidad",
+    "lista": [
+      {
+        "palabra": "DOBLAR EL PAPEL",
+        "voz": "doblar el papel",
+        "picto": "../../recursos/pictos/5544.png",
+        "bn": "../../recursos/pictos-bn/5544.png"
+      },
+      {
+        "palabra": "DIBUJAR",
+        "voz": "dibujar",
+        "picto": "../../recursos/pictos/8088.png",
+        "bn": "../../recursos/pictos-bn/8088.png"
+      },
+      {
+        "palabra": "PINTAR",
+        "voz": "pintar",
+        "picto": "../../recursos/pictos/2348.png",
+        "bn": "../../recursos/pictos-bn/2348.png"
+      },
+      {
+        "palabra": "PEGAR",
+        "voz": "pegar",
+        "picto": "../../recursos/pictos/2511.png",
+        "bn": "../../recursos/pictos-bn/2511.png"
+      },
+      {
+        "palabra": "ESCRIBIR EL NOMBRE",
+        "voz": "escribir el nombre",
+        "picto": "../../recursos/pictos/37407.png",
+        "bn": "../../recursos/pictos-bn/37407.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Va en el árbol o en el belén?",
+    "elementos": [
+      {
+        "palabra": "BOLA",
+        "voz": "la bola",
+        "picto": "../../recursos/pictos/8296.png",
+        "bn": "../../recursos/pictos-bn/8296.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "ESTRELLA",
+        "voz": "la estrella",
+        "picto": "../../recursos/pictos/3100.png",
+        "bn": "../../recursos/pictos-bn/3100.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "LUCES",
+        "voz": "las luces",
+        "picto": "../../recursos/pictos/5083.png",
+        "bn": "../../recursos/pictos-bn/5083.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "NIÑO JESÚS",
+        "voz": "el Niño Jesús",
+        "picto": "../../recursos/pictos/7177.png",
+        "bn": "../../recursos/pictos-bn/7177.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "PASTOR",
+        "voz": "el pastor",
+        "picto": "../../recursos/pictos/7788.png",
+        "bn": "../../recursos/pictos-bn/7788.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "OVEJA",
+        "voz": "la oveja",
+        "picto": "../../recursos/pictos/2489.png",
+        "bn": "../../recursos/pictos-bn/2489.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "BURRO",
+        "voz": "el burro",
+        "picto": "../../recursos/pictos/2291.png",
+        "bn": "../../recursos/pictos-bn/2291.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "EN EL ÁRBOL",
+      "picto": "../../recursos/pictos/24859.png"
+    },
+    "b": {
+      "nombre": "EN EL BELÉN",
+      "picto": "../../recursos/pictos/5089.png"
+    }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.087,
+        "y": 0.102,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.242,
+        "y": 0.102,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.397,
+        "y": 0.102,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.1645,
+        "y": 0.2362,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.3195,
+        "y": 0.2362,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.4745,
+        "y": 0.2362,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.087,
+        "y": 0.3705,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.242,
+        "y": 0.3705,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.397,
+        "y": 0.3705,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.552,
+        "y": 0.3705,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.1645,
+        "y": 0.5047,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.3195,
+        "y": 0.5047,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.4745,
+        "y": 0.5047,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.087,
+        "y": 0.6389,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.242,
+        "y": 0.6389,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.397,
+        "y": 0.6389,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.552,
+        "y": 0.6389,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.707,
+        "y": 0.6389,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.1645,
+        "y": 0.7732,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.3195,
+        "y": 0.7732,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.4745,
+        "y": 0.7732,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.7845,
+        "y": 0.7732,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.242,
+        "y": 0.9074,
+        "c": "AMARILLO"
+      }
+    ],
+    "r": 0.062,
+    "colores": [
+      {
+        "nombre": "AZUL",
+        "hex": "#1e88e5"
+      },
+      {
+        "nombre": "AMARILLO",
+        "hex": "#fdd835"
+      }
+    ],
+    "palabra": "HARINA",
+    "voz": "la harina",
+    "picto": "../../recursos/pictos/8600.png",
+    "bn": "../../recursos/pictos-bn/8600.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "FAMILIA",
+      "voz": "la familia",
+      "picto": "../../recursos/pictos/2392.png",
+      "bn": "../../recursos/pictos-bn/2392.png"
+    },
+    {
+      "palabra": "MAMÁ",
+      "voz": "la mamá",
+      "picto": "../../recursos/pictos/31148.png",
+      "bn": "../../recursos/pictos-bn/31148.png"
+    },
+    {
+      "palabra": "GALLETA",
+      "voz": "la galleta",
+      "picto": "../../recursos/pictos/8312.png",
+      "bn": "../../recursos/pictos-bn/8312.png"
+    },
+    {
+      "palabra": "HARINA",
+      "voz": "la harina",
+      "picto": "../../recursos/pictos/8600.png",
+      "bn": "../../recursos/pictos-bn/8600.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "toca",
+      "titulo": "TOCA Y ESCUCHA",
+      "desc": "Escucha y toca el dibujo que te piden.",
+      "picto": "../../recursos/pictos/2392.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/31148.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/8600.png"
+    },
+    {
+      "modo": "igual",
+      "titulo": "BUSCA EL IGUAL",
+      "desc": "Mira el modelo y toca el dibujo igual.",
+      "picto": "../../recursos/pictos/8600.png",
+      "sombra": false
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "COLOREA",
+      "desc": "Colorea 4 dibujos.",
+      "picto": "../../recursos/pictos-bn/31148.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/8600.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "BUSCA EL IGUAL",
+      "desc": "Rodea el dibujo igual al modelo.",
+      "picto": "../../recursos/pictos/8312.png"
+    }
+  ],
+  "taller": null
+}

@@ -1,0 +1,380 @@
+{
+  "fecha": "2026-12-04",
+  "tema": "MI FAMILIA",
+  "juego": "clasifica",
+  "titulo": "CLASIFICA: MI FAMILIA",
+  "ficha_titulo": "UNE LOS PUNTOS: MI FAMILIA",
+  "elementos": [
+    {
+      "palabra": "ABUELA",
+      "voz": "la abuela",
+      "picto": "../../recursos/pictos/23710.png",
+      "bn": "../../recursos/pictos-bn/23710.png"
+    },
+    {
+      "palabra": "BEBÉ",
+      "voz": "el bebé",
+      "picto": "../../recursos/pictos/6060.png",
+      "bn": "../../recursos/pictos-bn/6060.png"
+    },
+    {
+      "palabra": "FAMILIA",
+      "voz": "la familia",
+      "picto": "../../recursos/pictos/2392.png",
+      "bn": "../../recursos/pictos-bn/2392.png"
+    },
+    {
+      "palabra": "MAMÁ",
+      "voz": "la mamá",
+      "picto": "../../recursos/pictos/31148.png",
+      "bn": "../../recursos/pictos-bn/31148.png"
+    },
+    {
+      "palabra": "PAPÁ",
+      "voz": "el papá",
+      "picto": "../../recursos/pictos/2497.png",
+      "bn": "../../recursos/pictos-bn/2497.png"
+    },
+    {
+      "palabra": "HERMANO",
+      "voz": "el hermano",
+      "picto": "../../recursos/pictos/2423.png",
+      "bn": "../../recursos/pictos-bn/2423.png"
+    },
+    {
+      "palabra": "HERMANA",
+      "voz": "la hermana",
+      "picto": "../../recursos/pictos/2422.png",
+      "bn": "../../recursos/pictos-bn/2422.png"
+    },
+    {
+      "palabra": "ABUELO",
+      "voz": "el abuelo",
+      "picto": "../../recursos/pictos/23718.png",
+      "bn": "../../recursos/pictos-bn/23718.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Poner la mesa",
+    "lista": [
+      {
+        "palabra": "PONER EL MANTEL",
+        "voz": "poner el mantel",
+        "picto": "../../recursos/pictos/2460.png",
+        "bn": "../../recursos/pictos-bn/2460.png"
+      },
+      {
+        "palabra": "PONER LOS PLATOS",
+        "voz": "poner los platos",
+        "picto": "../../recursos/pictos/2532.png",
+        "bn": "../../recursos/pictos-bn/2532.png"
+      },
+      {
+        "palabra": "PONER LOS VASOS",
+        "voz": "poner los vasos",
+        "picto": "../../recursos/pictos/2610.png",
+        "bn": "../../recursos/pictos-bn/2610.png"
+      },
+      {
+        "palabra": "PONER LOS CUBIERTOS",
+        "voz": "poner los cubiertos",
+        "picto": "../../recursos/pictos/2588.png",
+        "bn": "../../recursos/pictos-bn/2588.png"
+      },
+      {
+        "palabra": "PONER LAS SERVILLETAS",
+        "voz": "poner las servilletas",
+        "picto": "../../recursos/pictos/2569.png",
+        "bn": "../../recursos/pictos-bn/2569.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Es una persona mayor o un niño?",
+    "elementos": [
+      {
+        "palabra": "ABUELO",
+        "voz": "el abuelo",
+        "picto": "../../recursos/pictos/23718.png",
+        "bn": "../../recursos/pictos-bn/23718.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "ABUELA",
+        "voz": "la abuela",
+        "picto": "../../recursos/pictos/23710.png",
+        "bn": "../../recursos/pictos-bn/23710.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "HOMBRE",
+        "voz": "el hombre",
+        "picto": "../../recursos/pictos/39005.png",
+        "bn": "../../recursos/pictos-bn/39005.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "MUJER",
+        "voz": "la mujer",
+        "picto": "../../recursos/pictos/4703.png",
+        "bn": "../../recursos/pictos-bn/4703.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "BEBÉ",
+        "voz": "el bebé",
+        "picto": "../../recursos/pictos/6060.png",
+        "bn": "../../recursos/pictos-bn/6060.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "NIÑO",
+        "voz": "el niño",
+        "picto": "../../recursos/pictos/2485.png",
+        "bn": "../../recursos/pictos-bn/2485.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "NIÑA",
+        "voz": "la niña",
+        "picto": "../../recursos/pictos/2484.png",
+        "bn": "../../recursos/pictos-bn/2484.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "MAYORES",
+      "picto": "../../recursos/pictos/6886.png"
+    },
+    "b": {
+      "nombre": "NIÑOS",
+      "picto": "../../recursos/pictos/6975.png"
+    }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.306,
+        "y": 0.066,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.421,
+        "y": 0.066,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.2485,
+        "y": 0.1656,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.3635,
+        "y": 0.1656,
+        "c": "AMARILLO"
+      },
+      {
+        "x": 0.306,
+        "y": 0.2652,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.421,
+        "y": 0.2652,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.2485,
+        "y": 0.3648,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.3635,
+        "y": 0.3648,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.4785,
+        "y": 0.3648,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.306,
+        "y": 0.4644,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.421,
+        "y": 0.4644,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.2485,
+        "y": 0.564,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.3635,
+        "y": 0.564,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.4785,
+        "y": 0.564,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.306,
+        "y": 0.6635,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.421,
+        "y": 0.6635,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.651,
+        "y": 0.6635,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.766,
+        "y": 0.6635,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.7085,
+        "y": 0.7631,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.8235,
+        "y": 0.7631,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.306,
+        "y": 0.8627,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.421,
+        "y": 0.8627,
+        "c": "AZUL"
+      },
+      {
+        "x": 0.766,
+        "y": 0.8627,
+        "c": "AZUL"
+      }
+    ],
+    "r": 0.046,
+    "colores": [
+      {
+        "nombre": "AZUL",
+        "hex": "#1e88e5"
+      },
+      {
+        "nombre": "AMARILLO",
+        "hex": "#fdd835"
+      },
+      {
+        "nombre": "VERDE",
+        "hex": "#43a047"
+      },
+      {
+        "nombre": "MARRÓN",
+        "hex": "#6d4c41"
+      }
+    ],
+    "palabra": "MAMÁ",
+    "voz": "la mamá",
+    "picto": "../../recursos/pictos/31148.png",
+    "bn": "../../recursos/pictos-bn/31148.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "ABUELA",
+      "voz": "la abuela",
+      "picto": "../../recursos/pictos/23710.png",
+      "bn": "../../recursos/pictos-bn/23710.png"
+    },
+    {
+      "palabra": "BEBÉ",
+      "voz": "el bebé",
+      "picto": "../../recursos/pictos/6060.png",
+      "bn": "../../recursos/pictos-bn/6060.png"
+    },
+    {
+      "palabra": "FAMILIA",
+      "voz": "la familia",
+      "picto": "../../recursos/pictos/2392.png",
+      "bn": "../../recursos/pictos-bn/2392.png"
+    },
+    {
+      "palabra": "MAMÁ",
+      "voz": "la mamá",
+      "picto": "../../recursos/pictos/31148.png",
+      "bn": "../../recursos/pictos-bn/31148.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "clasifica",
+      "titulo": "CLASIFICA",
+      "desc": "Lleva cada dibujo a su caja.",
+      "picto": "../../recursos/pictos/23710.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/6060.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/31148.png"
+    },
+    {
+      "modo": "tamano",
+      "titulo": "GRANDE Y PEQUEÑO",
+      "desc": "Escucha y toca el grande o el pequeño.",
+      "picto": "../../recursos/pictos/31148.png",
+      "sombra": false
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "UNE LOS PUNTOS",
+      "desc": "Une los puntos y colorea.",
+      "picto": "../../recursos/pictos-bn/6060.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/31148.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "GRANDE Y PEQUEÑO",
+      "desc": "Rodea el grande y tacha el pequeño.",
+      "picto": "../../recursos/pictos/2392.png"
+    }
+  ],
+  "taller": null
+}

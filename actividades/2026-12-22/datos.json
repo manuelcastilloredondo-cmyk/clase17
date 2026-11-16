@@ -1,0 +1,381 @@
+{
+  "fecha": "2026-12-22",
+  "tema": "FELICITAMOS LA NAVIDAD",
+  "juego": "une",
+  "titulo": "UNE CADA DIBUJO: FELICITAMOS LA NAVIDAD",
+  "ficha_titulo": "SIGUE LA LÍNEA: FELICITAMOS LA NAVIDAD",
+  "elementos": [
+    {
+      "palabra": "VILLANCICO",
+      "voz": "el villancico",
+      "picto": "../../recursos/pictos/2778.png",
+      "bn": "../../recursos/pictos-bn/2778.png"
+    },
+    {
+      "palabra": "REGALO",
+      "voz": "el regalo",
+      "picto": "../../recursos/pictos/25381.png",
+      "bn": "../../recursos/pictos-bn/25381.png"
+    },
+    {
+      "palabra": "FIESTA",
+      "voz": "la fiesta",
+      "picto": "../../recursos/pictos/7099.png",
+      "bn": "../../recursos/pictos-bn/7099.png"
+    },
+    {
+      "palabra": "BOLAS DE NAVIDAD",
+      "voz": "las bolas de Navidad",
+      "picto": "../../recursos/pictos/3067.png",
+      "bn": "../../recursos/pictos-bn/3067.png"
+    },
+    {
+      "palabra": "BELÉN",
+      "voz": "el belén",
+      "picto": "../../recursos/pictos/5089.png",
+      "bn": "../../recursos/pictos-bn/5089.png"
+    },
+    {
+      "palabra": "CAMPANA",
+      "voz": "la campana",
+      "picto": "../../recursos/pictos/5938.png",
+      "bn": "../../recursos/pictos-bn/5938.png"
+    },
+    {
+      "palabra": "VELA",
+      "voz": "la vela",
+      "picto": "../../recursos/pictos/6242.png",
+      "bn": "../../recursos/pictos-bn/6242.png"
+    },
+    {
+      "palabra": "TARJETA DE NAVIDAD",
+      "voz": "la tarjeta de Navidad",
+      "picto": "../../recursos/pictos/7269.png",
+      "bn": "../../recursos/pictos-bn/7269.png"
+    }
+  ],
+  "pasos": {
+    "titulo": "Hacer una tarjeta de Navidad",
+    "lista": [
+      {
+        "palabra": "DOBLAR EL PAPEL",
+        "voz": "doblar el papel",
+        "picto": "../../recursos/pictos/5544.png",
+        "bn": "../../recursos/pictos-bn/5544.png"
+      },
+      {
+        "palabra": "DIBUJAR",
+        "voz": "dibujar",
+        "picto": "../../recursos/pictos/8088.png",
+        "bn": "../../recursos/pictos-bn/8088.png"
+      },
+      {
+        "palabra": "PINTAR",
+        "voz": "pintar",
+        "picto": "../../recursos/pictos/2348.png",
+        "bn": "../../recursos/pictos-bn/2348.png"
+      },
+      {
+        "palabra": "PEGAR",
+        "voz": "pegar",
+        "picto": "../../recursos/pictos/2511.png",
+        "bn": "../../recursos/pictos-bn/2511.png"
+      },
+      {
+        "palabra": "ESCRIBIR EL NOMBRE",
+        "voz": "escribir el nombre",
+        "picto": "../../recursos/pictos/37407.png",
+        "bn": "../../recursos/pictos-bn/37407.png"
+      }
+    ]
+  },
+  "clasifica": {
+    "pregunta": "¿Va en el árbol o en el belén?",
+    "elementos": [
+      {
+        "palabra": "BOLA",
+        "voz": "la bola",
+        "picto": "../../recursos/pictos/8296.png",
+        "bn": "../../recursos/pictos-bn/8296.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "ESTRELLA",
+        "voz": "la estrella",
+        "picto": "../../recursos/pictos/3100.png",
+        "bn": "../../recursos/pictos-bn/3100.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "LUCES",
+        "voz": "las luces",
+        "picto": "../../recursos/pictos/5083.png",
+        "bn": "../../recursos/pictos-bn/5083.png",
+        "grupo": "a"
+      },
+      {
+        "palabra": "NIÑO JESÚS",
+        "voz": "el Niño Jesús",
+        "picto": "../../recursos/pictos/7177.png",
+        "bn": "../../recursos/pictos-bn/7177.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "PASTOR",
+        "voz": "el pastor",
+        "picto": "../../recursos/pictos/7788.png",
+        "bn": "../../recursos/pictos-bn/7788.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "OVEJA",
+        "voz": "la oveja",
+        "picto": "../../recursos/pictos/2489.png",
+        "bn": "../../recursos/pictos-bn/2489.png",
+        "grupo": "b"
+      },
+      {
+        "palabra": "BURRO",
+        "voz": "el burro",
+        "picto": "../../recursos/pictos/2291.png",
+        "bn": "../../recursos/pictos-bn/2291.png",
+        "grupo": "b"
+      }
+    ],
+    "a": {
+      "nombre": "EN EL ÁRBOL",
+      "picto": "../../recursos/pictos/24859.png"
+    },
+    "b": {
+      "nombre": "EN EL BELÉN",
+      "picto": "../../recursos/pictos/5089.png"
+    }
+  },
+  "puntitos": {
+    "puntos": [
+      {
+        "x": 0.2785,
+        "y": 0.1585,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.6085,
+        "y": 0.1585,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.196,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.361,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.526,
+        "y": 0.3014,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.691,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.856,
+        "y": 0.3014,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.2785,
+        "y": 0.4443,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.4435,
+        "y": 0.4443,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.6085,
+        "y": 0.4443,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.7735,
+        "y": 0.4443,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.196,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.361,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.526,
+        "y": 0.5872,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.691,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.856,
+        "y": 0.5872,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.2785,
+        "y": 0.7301,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.4435,
+        "y": 0.7301,
+        "c": "MARRÓN"
+      },
+      {
+        "x": 0.6085,
+        "y": 0.7301,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.7735,
+        "y": 0.7301,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.196,
+        "y": 0.873,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.361,
+        "y": 0.873,
+        "c": "VERDE"
+      },
+      {
+        "x": 0.526,
+        "y": 0.873,
+        "c": "ROJO"
+      },
+      {
+        "x": 0.691,
+        "y": 0.873,
+        "c": "VERDE"
+      }
+    ],
+    "r": 0.066,
+    "colores": [
+      {
+        "nombre": "ROJO",
+        "hex": "#e53935"
+      },
+      {
+        "nombre": "VERDE",
+        "hex": "#43a047"
+      },
+      {
+        "nombre": "MARRÓN",
+        "hex": "#6d4c41"
+      }
+    ],
+    "palabra": "REGALO",
+    "voz": "el regalo",
+    "picto": "../../recursos/pictos/25381.png",
+    "bn": "../../recursos/pictos-bn/25381.png",
+    "hex": {
+      "ROJO": "#e53935",
+      "AZUL": "#1e88e5",
+      "AMARILLO": "#fdd835",
+      "VERDE": "#43a047",
+      "NARANJA": "#fb8c00",
+      "MORADO": "#8e24aa",
+      "MARRÓN": "#6d4c41",
+      "ROSA": "#ec407a"
+    }
+  },
+  "colorear": [
+    {
+      "palabra": "VILLANCICO",
+      "voz": "el villancico",
+      "picto": "../../recursos/pictos/2778.png",
+      "bn": "../../recursos/pictos-bn/2778.png"
+    },
+    {
+      "palabra": "REGALO",
+      "voz": "el regalo",
+      "picto": "../../recursos/pictos/25381.png",
+      "bn": "../../recursos/pictos-bn/25381.png"
+    },
+    {
+      "palabra": "FIESTA",
+      "voz": "la fiesta",
+      "picto": "../../recursos/pictos/7099.png",
+      "bn": "../../recursos/pictos-bn/7099.png"
+    },
+    {
+      "palabra": "BOLAS DE NAVIDAD",
+      "voz": "las bolas de Navidad",
+      "picto": "../../recursos/pictos/3067.png",
+      "bn": "../../recursos/pictos-bn/3067.png"
+    }
+  ],
+  "actividades": [
+    {
+      "modo": "une",
+      "titulo": "UNE CADA DIBUJO",
+      "desc": "Une cada dibujo con su nombre.",
+      "picto": "../../recursos/pictos/2778.png"
+    },
+    {
+      "modo": "colorear",
+      "titulo": "COLOREA CON EL DEDO",
+      "desc": "Elige un color y toca las zonas del dibujo para pintarlas.",
+      "picto": "../../recursos/pictos/25381.png"
+    },
+    {
+      "modo": "puntitos",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Toca los círculos para pintarlos; nivel 2: elige el color.",
+      "picto": "../../recursos/pictos/25381.png"
+    },
+    {
+      "modo": "sombras",
+      "titulo": "CADA UNO CON SU SOMBRA",
+      "desc": "Toca la sombra de cada dibujo.",
+      "picto": "../../recursos/pictos/3067.png",
+      "sombra": true
+    }
+  ],
+  "fichas": [
+    {
+      "pdf": "ficha.pdf",
+      "titulo": "SIGUE LA LÍNEA",
+      "desc": "Repasa los caminos.",
+      "picto": "../../recursos/pictos-bn/25381.png"
+    },
+    {
+      "pdf": "puntitos.pdf",
+      "titulo": "PINTA LOS PUNTITOS",
+      "desc": "Rotulador de punta redonda, gomets o dedo.",
+      "picto": "../../recursos/pictos-bn/25381.png"
+    },
+    {
+      "pdf": "extra.pdf",
+      "titulo": "CADA UNO CON SU SOMBRA",
+      "desc": "Une cada dibujo con su sombra.",
+      "picto": "../../recursos/pictos/7099.png"
+    }
+  ],
+  "taller": null
+}
